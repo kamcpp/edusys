@@ -1,0 +1,4 @@
+include 'org.labcrypto.edusys.common', 
+        'org.labcrypto.edusys.domain.pg', 
+        'org.labcrypto.edusys.facade',
+        'org.labcrypto.edusys.ws'
