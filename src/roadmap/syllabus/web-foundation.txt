@@ -1,0 +1,88 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+--------------------------------------------------------------------
+
+  SYLLABUS OF 
+"WEB FOUNDATION"
+
+Course details
+--------------
+
+Course code:      
+Course name:      Web Foundation
+Duration:         54 hours
+
+Revisions
+----------
+
+03 Mar 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+08 Apr 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+
+Syllabus for 3 hours long sessions
+----------------------------------
+
+Session1   (3h): Networking, OSI Network, Internet Protocol Suite, We talk about 
+                 IPS, Link Layer, Internet Layer, Transport Layer, Application 
+                 Layer, Packets
+                 
+Session2   (3h): Ethernet Frames, ARP, IPv4, IPv6, TCP, UDP, ICMP Protocols 
+
+Session3   (3h): Working with Wireshark, Capturin packets, Analyzing TCP stream, 
+                 Analyzing UDP datagrams, Application layer protocols, Stack of 
+                 protocols
+                 
+Session4   (3h): EXAM
+
+Session5   (3h): Application architecture, Client-Server applications, Clients 
+                 and servers use TCP and UDP for communication, Web architecture, 
+                 HTTP protocol, Web Server, Web Client, Introduction to Apache 
+                 and IIS, Installing Apache on a Windows machine, HTML & CSS, 
+                 Web is stateless!
+                 
+Session6   (3h): HTTP protocol, HTTP Request, HTTP Response, Headers and Content, 
+                 Using Firebug and Fiddler for analysing HTTP connections, 
+                 Compression algorithms, Deflate and GZip
+                 
+Session7   (3h): Headers in a HTTP Request and a HTTP Response, GET and POST 
+                 methods, Content in different methods, What is REST?
+                 
+Session8   (3h): Sharing information among different requests, Query String, 
+                 Cookies, POST method
+
+Session9   (3h): EXAM
+
+Session10  (3h): There is no logic behind a Web Server!, Handlers, What is PHP?, 
+                 What is ASP.NET?, MIME types, Handler mappings, Scripting 
+                 languages and programming languages, Introduction to Session
+                 
+Session11  (3h): DNS and Domains, What is Zone?, Nameservers, A Record, CNAME 
+                 Reocrd, How a domain is resolved?, 'hosts' file, DNS Servers, 
+                 Load Balancing, Analyzing DNS packets, How Web Servers use 
+                 domains?
+                 
+Session12  (3h): SMTP Servers and emalis, How emails are sent?, MX record, IMAP 
+                 Server, POP3 Server, WebMail clients, File Transfer Protocol (FTP),
+                 FTP Servers and Clients, FTP Commands
+                 
+Session13  (3h): EXAM
+
+Session14  (3h): Caching in web, Last-Modified header, Web Search Engines, 
+                 Crawlers, SEO, robot.txt, Sitemap, Performance issues
+
+Session15  (3h): Web Design, HTML, CSS, Javascript, HTML5, W3Schools.com
+                 
+Session16  (3h): XAMPP Package, Apache Web Server, Running a sample website on 
+                 your network, designing an Authentication (Login) System, Web 
+                 pages, Navigations, a bit PHP for handling login request
+                 
+Session17  (3h): Making a new domain, Finding a free web hosting service, Uploading
+                 Login system
+                 
+Session18  (3h): FINAL EXAM
+
+
+
+

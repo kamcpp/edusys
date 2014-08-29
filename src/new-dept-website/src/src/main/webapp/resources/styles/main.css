@@ -1,0 +1,88 @@
+select {
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+}
+
+body, div, input, input[type="text"], option, select, button {
+	font-family: Droid Arabic Naskh;
+}
+
+input, select, button {
+	border: 1px gray solid;
+	border-radius: 3px;
+	background-color: white;
+	margin-top: 5px;
+}
+
+body {
+	background-color: #C5C5C5;
+}
+
+body, div {
+	padding: 0px;
+	margin: 0px;
+}
+
+button {
+	margin-top: 10px;
+	background-color: gray;
+	color: white;
+}
+
+button:hover {
+	border: 1px black solid;
+}
+
+div.jqx-grid-cell, div.jqx-item {
+	font-family: Droid Arabic Naskh !important;
+}
+
+.tab-data {
+	text-align: right;
+	direction: rtl !important;
+}
+
+.report-grid {
+	width: 850px;
+	margin: auto;
+}
+
+#tabs div.tab-data {
+	padding: 5px;
+}
+
+#report-panel {
+	width: 850px;
+	margin: auto;
+}
+
+#topline {
+	background-color: #660033;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 40px;
+	width: 100% box-shadow: 20px 20px 20px 30px black;
+	direction: rtl;
+}
+
+#main {
+	width: 1000px;
+	margin: auto;
+	min-height: 350px;
+	border: 1px gray solid;
+	border-radius: 3px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	z-index: 0;
+	background-color: white;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+#dept-text {
+	color: white;
+	padding-top: 7px;
+	padding-right: 15px;
+	font-size: 14px;
+}

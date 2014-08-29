@@ -1,0 +1,59 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+-----------------------------------------------------------------
+
+   SYLLABUS FOR
+"JAVA FUNDAMENTAL"
+
+Course details
+--------------
+
+Course code:      ?
+Course name:      Programming with Android - Fundamental
+Duration:         50 hours
+
+Revisions
+---------
+
+03 Mar 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+Syllabus
+--------
+
+Session1  (5h): Java history, Introduction to this language, Eclipse IDE, 
+                First project, Data types and variables, Control structures, 
+				conditional and loop statements
+
+Session2  (5h): Arrays, Functions and procedural programming, Definition
+                vs Implementation, Why definitions are important?, Breaking
+                a problem into functions, Introduction to Flows
+
+Session3  (5h): Stack example using procedural programming, Queue 
+                concept, Implementing our world's concepts, Introduction
+                to Object Oriented, Why procedural programming failed to
+                give an easy-to-analyse solution to a problem?
+
+Session4  (5h): Why Object Oriented?, Encapsulation, Access modifiers,
+                Introduction to classes, Constructors, Getters and Setters
+
+Session5  (5h): Stack class example, Queue class example, Calculator analysis 
+                + other examples
+
+Session6  (5h):  Relations among classes, Composition and Inherticance methods, 
+                 Composition concept, Hiding inner references, Garbage Collection
+				 concept, Composition and Garbage Collection, 
+
+Session7  (5h): Mutable objects and Immutable objects, More examples on designing
+				object models, A physical simulation example, Billiard example				
+				
+Session8  (5h): Inheritance, protected keyword, super keyword, Inheritance
+                tree, Generalization and Specification, Fundamental introduction 
+				to Exception Handling concept
+
+Session9  (5h): Polymorphism, Why polymorphism?, Abstraction, Abstract 
+                classes, Virtual and Abstract methods, Using Inheritance and
+                Polymorphism to make Object Models
+				
+Session10 (5h): More examples on designing object models, FINAL EXAM

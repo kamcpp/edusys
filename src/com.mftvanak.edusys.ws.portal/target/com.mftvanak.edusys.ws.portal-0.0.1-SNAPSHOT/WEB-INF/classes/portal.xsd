@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://portal.ws.edusys.mftvanak.com/schemas"
+	xmlns:Q1="http://portal.ws.edusys.mftvanak.com/schemas">
+
+	<xs:complexType name="DepartmentType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="PersianName" type="xs:string" />
+			<xs:element name="EnglishName" type="xs:string" />
+			<xs:element name="Color" type="xs:string" />
+			<xs:element name="SeoKeywords" type="xs:string" />
+			<xs:element name="SeoDescription" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:element name="GetDefaultInstituteIdRequest">
+		<xs:complexType>
+			<xs:sequence></xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetDefaultInstituteIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="InstituteId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetDepartmentsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="InstituteId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetDepartmentsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="Departments"
+					type="Q1:DepartmentType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

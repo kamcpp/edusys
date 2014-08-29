@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	   		http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-3.1.xsd
+            http://www.springframework.org/schema/mvc 
+            http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<context:component-scan base-package="com.mftvanak.edusys" />
+
+	<mvc:annotation-driven />
+
+	<mvc:resources mapping="/styles/**" location="/resources/styles/" />
+	<mvc:resources mapping="/scripts/**" location="/resources/scripts/" />
+	<mvc:resources mapping="/images/**" location="/resources/images/" />
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver"
+		p:basename="views" />
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		p:definitions="/WEB-INF/tiles-defs.xml" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB-INF/messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="authenticationWsTemplate" class="org.springframework.ws.client.core.WebServiceTemplate"
+		p:defaultUri="http://localhost:8080/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication/"
+		p:marshaller-ref="marshaller" p:unmarshaller-ref="marshaller" />
+
+	<bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
+		p:contextPath="com.mftvanak.edusys.ws.authentication.schemas" />
+
+</beans>

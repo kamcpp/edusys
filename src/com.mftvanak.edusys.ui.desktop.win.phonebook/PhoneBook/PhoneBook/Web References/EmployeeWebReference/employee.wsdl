@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://official.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://official.ws.edusys.mftvanak.com/schemas" targetNamespace="http://official.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://official.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://official.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://official.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddEmployeeRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Employee" type="pref:EmployeeType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddEmployeeResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateEmployeeRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Employee" type="pref:EmployeeType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateEmployeeResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="EmployeeId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEmployeeRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="EmployeeId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteEmployeeResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="EmployeeId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeByIdResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Employee" type="pref:EmployeeType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeByEmployeeNumberRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="EmployeeNumber" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeByEmployeeNumberResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Employee" type="pref:EmployeeType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeesRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Employees" type="pref:EmployeeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeSummariesRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetEmployeeSummariesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="EmployeeSummaries" type="pref:EmployeeSummaryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmployeeExistsByEmployeeNumberRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="EmployeeNumber" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EmployeeExistsByEmployeeNumberResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AddEmployeeResponse">
+    <wsdl:part name="AddEmployeeResponse" element="tns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeRequest">
+    <wsdl:part name="UpdateEmployeeRequest" element="tns:UpdateEmployeeRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeRequest">
+    <wsdl:part name="DeleteEmployeeRequest" element="tns:DeleteEmployeeRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSummariesRequest">
+    <wsdl:part name="GetEmployeeSummariesRequest" element="tns:GetEmployeeSummariesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeByIdResponse">
+    <wsdl:part name="GetEmployeeByIdResponse" element="tns:GetEmployeeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeByEmployeeNumberRequest">
+    <wsdl:part name="GetEmployeeByEmployeeNumberRequest" element="tns:GetEmployeeByEmployeeNumberRequest" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeExistsByEmployeeNumberResponse">
+    <wsdl:part name="EmployeeExistsByEmployeeNumberResponse" element="tns:EmployeeExistsByEmployeeNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeExistsByEmployeeNumberRequest">
+    <wsdl:part name="EmployeeExistsByEmployeeNumberRequest" element="tns:EmployeeExistsByEmployeeNumberRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesResponse">
+    <wsdl:part name="GetEmployeesResponse" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEmployeeRequest">
+    <wsdl:part name="AddEmployeeRequest" element="tns:AddEmployeeRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeResponse">
+    <wsdl:part name="DeleteEmployeeResponse" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSummariesResponse">
+    <wsdl:part name="GetEmployeeSummariesResponse" element="tns:GetEmployeeSummariesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeResponse">
+    <wsdl:part name="UpdateEmployeeResponse" element="tns:UpdateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeByEmployeeNumberResponse">
+    <wsdl:part name="GetEmployeeByEmployeeNumberResponse" element="tns:GetEmployeeByEmployeeNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesRequest">
+    <wsdl:part name="GetEmployeesRequest" element="tns:GetEmployeesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeByIdRequest">
+    <wsdl:part name="GetEmployeeByIdRequest" element="tns:GetEmployeeByIdRequest" />
+  </wsdl:message>
+  <wsdl:portType name="Employee">
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input name="AddEmployeeRequest" message="tns:AddEmployeeRequest" />
+      <wsdl:output name="AddEmployeeResponse" message="tns:AddEmployeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <wsdl:input name="UpdateEmployeeRequest" message="tns:UpdateEmployeeRequest" />
+      <wsdl:output name="UpdateEmployeeResponse" message="tns:UpdateEmployeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input name="DeleteEmployeeRequest" message="tns:DeleteEmployeeRequest" />
+      <wsdl:output name="DeleteEmployeeResponse" message="tns:DeleteEmployeeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeSummaries">
+      <wsdl:input name="GetEmployeeSummariesRequest" message="tns:GetEmployeeSummariesRequest" />
+      <wsdl:output name="GetEmployeeSummariesResponse" message="tns:GetEmployeeSummariesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeById">
+      <wsdl:input name="GetEmployeeByIdRequest" message="tns:GetEmployeeByIdRequest" />
+      <wsdl:output name="GetEmployeeByIdResponse" message="tns:GetEmployeeByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByEmployeeNumber">
+      <wsdl:input name="GetEmployeeByEmployeeNumberRequest" message="tns:GetEmployeeByEmployeeNumberRequest" />
+      <wsdl:output name="GetEmployeeByEmployeeNumberResponse" message="tns:GetEmployeeByEmployeeNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeExistsByEmployeeNumber">
+      <wsdl:input name="EmployeeExistsByEmployeeNumberRequest" message="tns:EmployeeExistsByEmployeeNumberRequest" />
+      <wsdl:output name="EmployeeExistsByEmployeeNumberResponse" message="tns:EmployeeExistsByEmployeeNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <wsdl:input name="GetEmployeesRequest" message="tns:GetEmployeesRequest" />
+      <wsdl:output name="GetEmployeesResponse" message="tns:GetEmployeesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmployeeSoap11" type="tns:Employee">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddEmployeeRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddEmployeeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateEmployeeRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateEmployeeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteEmployeeRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteEmployeeResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeSummaries">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetEmployeeSummariesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEmployeeSummariesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetEmployeeByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEmployeeByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByEmployeeNumber">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetEmployeeByEmployeeNumberRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEmployeeByEmployeeNumberResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeExistsByEmployeeNumber">
+      <soap:operation soapAction="" />
+      <wsdl:input name="EmployeeExistsByEmployeeNumberRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EmployeeExistsByEmployeeNumberResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetEmployeesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetEmployeesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmployeeService">
+    <wsdl:port name="EmployeeSoap11" binding="tns:EmployeeSoap11">
+      <soap:address location="http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

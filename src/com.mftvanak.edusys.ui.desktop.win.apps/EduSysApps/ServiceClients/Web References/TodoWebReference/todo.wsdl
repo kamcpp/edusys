@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://messaging.ws.edusys.mftvanak.com/schemas" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddTodoItemRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="TodoItem" type="pref:TodoItemType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddTodoItemResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="TodoItemId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTodoItemRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="TodoItem" type="pref:TodoItemType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateTodoItemResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteTodoItemRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="TodoItemId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteTodoItemResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="TodoItemId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TodoItem" type="pref:TodoItemType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:annotation />
+      <xs:element name="GetTodoItemsRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="TodoItems" type="pref:TodoItemType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemsForPersonRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PersonId" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemsForPersonResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="TodoItems" type="pref:TodoItemType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemsAssignedByPersonRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PersonId" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTodoItemsAssignedByPersonResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="TodoItems" type="pref:TodoItemType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetTodoItemsResponse">
+    <wsdl:part name="GetTodoItemsResponse" element="tns:GetTodoItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsAssignedByPersonResponse">
+    <wsdl:part name="GetTodoItemsAssignedByPersonResponse" element="tns:GetTodoItemsAssignedByPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTodoItemRequest">
+    <wsdl:part name="UpdateTodoItemRequest" element="tns:UpdateTodoItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsForPersonRequest">
+    <wsdl:part name="GetTodoItemsForPersonRequest" element="tns:GetTodoItemsForPersonRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsAssignedByPersonRequest">
+    <wsdl:part name="GetTodoItemsAssignedByPersonRequest" element="tns:GetTodoItemsAssignedByPersonRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddTodoItemResponse">
+    <wsdl:part name="AddTodoItemResponse" element="tns:AddTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTodoItemResponse">
+    <wsdl:part name="DeleteTodoItemResponse" element="tns:DeleteTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemByIdRequest">
+    <wsdl:part name="GetTodoItemByIdRequest" element="tns:GetTodoItemByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTodoItemRequest">
+    <wsdl:part name="DeleteTodoItemRequest" element="tns:DeleteTodoItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddTodoItemRequest">
+    <wsdl:part name="AddTodoItemRequest" element="tns:AddTodoItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsRequest">
+    <wsdl:part name="GetTodoItemsRequest" element="tns:GetTodoItemsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemsForPersonResponse">
+    <wsdl:part name="GetTodoItemsForPersonResponse" element="tns:GetTodoItemsForPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTodoItemResponse">
+    <wsdl:part name="UpdateTodoItemResponse" element="tns:UpdateTodoItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTodoItemByIdResponse">
+    <wsdl:part name="GetTodoItemByIdResponse" element="tns:GetTodoItemByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Todo">
+    <wsdl:operation name="GetTodoItems">
+      <wsdl:input name="GetTodoItemsRequest" message="tns:GetTodoItemsRequest" />
+      <wsdl:output name="GetTodoItemsResponse" message="tns:GetTodoItemsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemsAssignedByPerson">
+      <wsdl:input name="GetTodoItemsAssignedByPersonRequest" message="tns:GetTodoItemsAssignedByPersonRequest" />
+      <wsdl:output name="GetTodoItemsAssignedByPersonResponse" message="tns:GetTodoItemsAssignedByPersonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTodoItem">
+      <wsdl:input name="UpdateTodoItemRequest" message="tns:UpdateTodoItemRequest" />
+      <wsdl:output name="UpdateTodoItemResponse" message="tns:UpdateTodoItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemsForPerson">
+      <wsdl:input name="GetTodoItemsForPersonRequest" message="tns:GetTodoItemsForPersonRequest" />
+      <wsdl:output name="GetTodoItemsForPersonResponse" message="tns:GetTodoItemsForPersonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTodoItem">
+      <wsdl:input name="AddTodoItemRequest" message="tns:AddTodoItemRequest" />
+      <wsdl:output name="AddTodoItemResponse" message="tns:AddTodoItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTodoItem">
+      <wsdl:input name="DeleteTodoItemRequest" message="tns:DeleteTodoItemRequest" />
+      <wsdl:output name="DeleteTodoItemResponse" message="tns:DeleteTodoItemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemById">
+      <wsdl:input name="GetTodoItemByIdRequest" message="tns:GetTodoItemByIdRequest" />
+      <wsdl:output name="GetTodoItemByIdResponse" message="tns:GetTodoItemByIdResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TodoSoap11" type="tns:Todo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTodoItems">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetTodoItemsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTodoItemsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemsAssignedByPerson">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetTodoItemsAssignedByPersonRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTodoItemsAssignedByPersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTodoItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateTodoItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateTodoItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemsForPerson">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetTodoItemsForPersonRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTodoItemsForPersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTodoItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddTodoItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddTodoItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTodoItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteTodoItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteTodoItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTodoItemById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetTodoItemByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTodoItemByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TodoService">
+    <wsdl:port name="TodoSoap11" binding="tns:TodoSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/todo/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

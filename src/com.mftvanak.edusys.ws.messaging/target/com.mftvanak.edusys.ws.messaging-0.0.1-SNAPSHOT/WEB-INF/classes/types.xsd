@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas/types"
+	xmlns:Q1="http://messaging.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:simpleType name="ColorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Blue" />
+			<xs:enumeration value="Green" />
+			<xs:enumeration value="Orange" />
+			<xs:enumeration value="Pink" />
+			<xs:enumeration value="Purple" />
+			<xs:enumeration value="Red" />
+			<xs:enumeration value="Yellow" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="TodoItemType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="OwnerId" type="xs:long" />
+			<xs:element name="OwnerFullName" type="xs:string" />
+			<xs:element name="ReceiverId" type="xs:long" />
+			<xs:element name="ReceiverFullName" type="xs:string" />
+			<xs:element name="Done" type="xs:boolean" />
+			<xs:element name="Color" type="Q1:ColorType" nillable="true" />
+			<xs:element name="Priority" type="xs:int" />
+			<xs:element name="SubmitDateYear" type="xs:int" />
+			<xs:element name="SubmitDateMonth" type="xs:int" />
+			<xs:element name="SubmitDateDay" type="xs:int" />
+			<xs:element name="SubmitDateHour" type="xs:int" />
+			<xs:element name="SubmitDateMinute" type="xs:int" />
+			<xs:element name="SubmitDateSecond" type="xs:int" />
+			<xs:element name="SubmitDateMilliSecond" type="xs:int" />
+			<xs:element name="HasDeadlineDateTime" type="xs:boolean" />
+			<xs:element name="DeadlineDateYear" type="xs:int"
+				nillable="true" />
+			<xs:element name="DeadlineDateMonth" type="xs:int"
+				nillable="true" />
+			<xs:element name="DeadlineDateDay" type="xs:int" nillable="true" />
+			<xs:element name="DeadlineDateHour" type="xs:int"
+				nillable="true" />
+			<xs:element name="DeadlineDateMinute" type="xs:int"
+				nillable="true" />
+			<xs:element name="DeadlineDateSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="DeadlineDateMilliSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="Subject" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+			<xs:element name="Response" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="SendListItemType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="RefId" type="xs:string" />
+			<xs:element name="SendRequestId" type="xs:long" nillable="false" />
+			<xs:element name="OwnerId" type="xs:long" nillable="false" />
+			<xs:element name="OwnerFullName" type="xs:string" />
+			<xs:element name="Type" type="xs:int" nillable="false" />
+			<xs:element name="ContentType" type="xs:int" nillable="false" />
+			<xs:element name="Status" type="xs:int" nillable="false" />
+			<xs:element name="Delivery" type="xs:int" nillable="false" />
+			<xs:element name="NumberOfTries" type="xs:int" nillable="false" />
+			<xs:element name="ClientSubmitDateTimeYear" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeMonth" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeDay" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeHour" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeMinute" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="ClientSubmitDateTimeMilliSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="ServerSubmitDateTimeYear" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeMonth" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeDay" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeHour" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeMinute" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="ServerSubmitDateTimeMilliSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeYear" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeMonth" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeDay" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeHour" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeMinute" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="LastTryDateTimeMilliSecond" type="xs:int"
+				nillable="true" />
+			<xs:element name="From" type="xs:string" nillable="true" />
+			<xs:element name="To" type="xs:string" nillable="false" />
+			<xs:element name="Subject" type="xs:string" nillable="true" />
+			<xs:element name="Body" type="xs:string" nillable="true" />
+			<xs:element name="Description" type="xs:string" nillable="true" />
+			<xs:element name="RetryReason" type="xs:string" nillable="true" />
+			<xs:element name="CancellationReason" type="xs:string"
+				nillable="true" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="SendRequestType">
+		<xs:all>			
+			<xs:element name="Id" type="xs:long" />			
+			<xs:element name="OwnerId" type="xs:long" nillable="false" />
+			<xs:element name="OwnerFullName" type="xs:string" />
+			<xs:element name="SubmitDateTimeYear" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMonth" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeDay" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeHour" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMinute" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMilliSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="Name" type="xs:string" nillable="false" />
+			<xs:element name="NumberOfSendListItems" type="xs:int"
+				nillable="false" />
+			<xs:element name="NumberOfDeliveredSendListItems" type="xs:int"
+				nillable="false" />
+			<xs:element name="Description" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="MessageTemplateType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="OwnerId" type="xs:long" nillable="false" />
+			<xs:element name="OwnerFullName" type="xs:string" />
+			<xs:element name="Type" type="xs:int" nillable="false" />
+			<xs:element name="SubmitDateTimeYear" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMonth" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeDay" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeHour" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMinute" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="SubmitDateTimeMilliSecond" type="xs:int"
+				nillable="false" />
+			<xs:element name="Text" type="xs:string" />
+			<xs:element name="Name" type="xs:string" nillable="false" />
+			<xs:element name="Description" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,137 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014 
+--------------------------------------------------------------------
+
+              SYLLABUS OF 
+"JAVA DB PROGRAMMING AND XML PRINCIPLES"
+
+Course details
+--------------
+
+Course code:      
+Course name:      Java DB Programming and XML Principles
+Duration:         50 hours
+
+Revisions
+---------
+
+03 Dec 2013:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+03 Mar 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+Syllabus
+--------
+
+[0-2 from 50 hours]:    Architecture of a data oriented application - What is permanent data?
+                        Traditional methods for accessing databases - Network is a big part -
+                        Introduction to Host-To-Host and Process-To-Process protocols - What
+                        is an Application Protocol? - Drivers do provide us an Application 
+                        Protocol - JDBC and ADO.NET - JDBC Drivers - A review on JDBC core
+                        interfaces
+
+[2-4 from 50 hours]:    So what is SQL? - SQL is a Standard! - Models of authentication and 
+                        authorization in different DBMSs - Security issues regarding to data 
+                        oriented applications - Why models for storing data? - Relational 
+                        model - Other models like Graph, Hash or Document based models for 
+                        storing data - What is NoSQL? - A Java developer should know about 
+                        relational and NoSQL DBMSs - Introduction to DBMSs - MySQL - Oracle
+                        PostgreSQL - Neo4J - MongoDb
+
+[4-7 from 50 hours]:    Introduction to JDBC core interfaces and classes - java.sql.* package
+                        Making a simple project to connect to a  MySQL database - Design and 
+                        implementation of a simple phonebook database - Writing the project
+                        for connecting to phonebook database - java.sql.Connection class -
+                        SQLException class - Different and possible source of error - How to
+                        manage and handle database exceptions - java.sql.Statement class -
+                        Executing INSERT INTO, UPDATE and DELETE commands using execute()
+                        method on java.sql.Statement class - SQL Injection attack
+
+[7-10 from 50 hours]:   Reading SELECT results using java.sql.ResultSet class - Iterating
+                        through read rows - Overview on transactions - Transactions in JDBC
+                        Auto commit mode - Using commit and rollback methods - Prepared
+                        statements using java.sql.PreparedStatement class - Writing a swing
+                        application which performs CRUD operations
+
+[10-12 from 50 hours]:  Storing and retrieving CLOBs and BLOBs - Storing a file in database
+                        Retrieving the stored file from database
+
+[10-13 from 50 hours]:  Introduction to Entity Models - There is a mapping between tables
+                        and classes - Introducing ORM concept - Architecture of an ORM -
+                        Abstraction and core classes - SQL Generation phase - ORM has 
+                        performance issues - Data first design - Code first design - Other
+                        ORMs - JPA and Hibernate for Java - NHibernate and Entity Framework 
+                        and for .NET
+
+[13-18 from 50 hours]:  Design and implementation of a simple ORM framework - Different 
+                        methods for writing an ORM - Inheritance based ORMs - Annotation
+                        based ORMs - Reflective ORMs - Implementation of an inheritance based
+                        ORM - Adding annotations to our ORM framework - SQL Generation - 
+                        Reading rows and using criterias - Row fetching techniques - Fetch
+                        graph - Testing our ORM FW
+
+[18-20 from 50 hours]:  What is JPA? - What is EJB? - History of JPA - JPA versions - What
+                        is Hibernate? - JPA and Hibernate - Introducing core classes and
+                        interfaces inside JPA - What is HQL? - What is JPQL? - Demonstration
+                        of using JPA for a simple relational model - JPA is designed for
+                        relational databases - So what about other data models?
+
+[20-22 from 50 hours]:  A deeper look at Hibernate - XML configuration vs Annotation based
+                        conifguration - What are POJOs? - Why use POJOs? - A deeper look at
+                        Java reflection
+
+[22-25 from 50 hours]:  Writing a package scanner using reflection - What are package 
+                        scanners? - Hibernate has an internal scanner
+
+[25-30 from 50 hours]:  A simple Hibernate project using code first method with MySQL - 
+                        Using external XML configuration - hibernate.cfg.xml and 
+                        hibernate.properties file - Using JPA annotations - persistence.xml 
+                        file - Settings for DBMS  and package scanning in persistence.xml - 
+                        javax.persistence.EntityManager class - Hibernate SessionFactory 
+                        class - org.hibernate.SessionFactory interface - org.hibernate.Session 
+                        interface - JTA and javax.transaction.Transaction interface - 
+                        org.hibernate.Query interface - Using returned collections 
+
+[30-35 from 50 hours]:  A complex database - One to many, One to One and Many to many 
+                        relations among tables - JPA annotations used for tables with
+                        different ordinalities - Hibernate XML configurations for entities
+                        with different kind of ordinalities - org.hibernate.Criteria 
+                        interface - Introduction to Hibernate Query Language (HQL) -
+                        Writing simple queries
+
+[35-38 from 50 hours]:  A deeper look at HQL syntax - Writing complex queries using HQL -
+                        Writing complex queries using Criteria interface - Using aggregate 
+                        methods in HQL - Paging with HQL
+
+[38-40 from 50 hours]:  javax.persistence.NamedQuery annotation - Using named queries -
+                        Native SQL queries - Named native queries
+
+[40-42 from 50 hours]:  Hibernate caching - First level caching - Second level caching -
+                        Query caching - Concurrency issues while accessing cached values -
+                        Hibernate batch processing
+
+[42-45 from 50 hours]:  Introduction to XML format - Why XML? - Java APIs for working with
+                        XML content - Writing an example of data in XML format - Reading 
+                        XML format using DOM Parser API - A simple XML configuration 
+                        reader 
+[45-47 from 50 hours]:  Working with JAXP API - Writing a xml to database convertor using
+                        JAXP - Working with JtAX - A simple RSS reader using JtAX - Storing 
+                        read data in a database using Hibernate
+ 
+[47-50 from 50 hours]:  Final Exam
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+

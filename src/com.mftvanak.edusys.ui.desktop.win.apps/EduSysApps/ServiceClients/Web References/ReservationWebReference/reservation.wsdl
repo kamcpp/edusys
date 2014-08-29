@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://education.ws.edusys.mftvanak.com/schemas/reservation" xmlns:tns="http://education.ws.edusys.mftvanak.com/schemas/reservation" targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/reservation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://education.ws.edusys.mftvanak.com/schemas/types" xmlns:ms="http://edu.ws.edusys.mftvanak.com/schemas" elementFormDefault="qualified" targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/reservation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://education.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="UpdateCmsGeneralReservationRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="CmsGeneralReservation" type="pref:CmsGeneralReservationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCmsGeneralReservationResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCmsGeneralReservationsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="DepartmentId" type="xs:long" />
+            <xs:element name="GroupId" nillable="true" type="xs:long" />
+            <xs:element name="ClassId" nillable="true" type="xs:long" />
+            <xs:element name="Count" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCmsGeneralReservationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="CmsGeneralReservations" type="pref:CmsGeneralReservationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCmsReservationRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="CmsReservation" type="pref:CmsReservationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCmsReservationResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCmsReservationsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="DepartmentId" type="xs:long" />
+            <xs:element name="ReservationPlanId" type="xs:long" />
+            <xs:element name="Count" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCmsReservationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="CmsReservations" type="pref:CmsReservationType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCmsReservationsRequest">
+    <wsdl:part name="GetCmsReservationsRequest" element="tns:GetCmsReservationsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsGeneralReservationsRequest">
+    <wsdl:part name="GetCmsGeneralReservationsRequest" element="tns:GetCmsGeneralReservationsRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCmsGeneralReservationRequest">
+    <wsdl:part name="UpdateCmsGeneralReservationRequest" element="tns:UpdateCmsGeneralReservationRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCmsReservationResponse">
+    <wsdl:part name="UpdateCmsReservationResponse" element="tns:UpdateCmsReservationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCmsReservationRequest">
+    <wsdl:part name="UpdateCmsReservationRequest" element="tns:UpdateCmsReservationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsGeneralReservationsResponse">
+    <wsdl:part name="GetCmsGeneralReservationsResponse" element="tns:GetCmsGeneralReservationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCmsReservationsResponse">
+    <wsdl:part name="GetCmsReservationsResponse" element="tns:GetCmsReservationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCmsGeneralReservationResponse">
+    <wsdl:part name="UpdateCmsGeneralReservationResponse" element="tns:UpdateCmsGeneralReservationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReservationService">
+    <wsdl:operation name="GetCmsReservations">
+      <wsdl:input name="GetCmsReservationsRequest" message="tns:GetCmsReservationsRequest" />
+      <wsdl:output name="GetCmsReservationsResponse" message="tns:GetCmsReservationsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsGeneralReservations">
+      <wsdl:input name="GetCmsGeneralReservationsRequest" message="tns:GetCmsGeneralReservationsRequest" />
+      <wsdl:output name="GetCmsGeneralReservationsResponse" message="tns:GetCmsGeneralReservationsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCmsGeneralReservation">
+      <wsdl:input name="UpdateCmsGeneralReservationRequest" message="tns:UpdateCmsGeneralReservationRequest" />
+      <wsdl:output name="UpdateCmsGeneralReservationResponse" message="tns:UpdateCmsGeneralReservationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCmsReservation">
+      <wsdl:input name="UpdateCmsReservationRequest" message="tns:UpdateCmsReservationRequest" />
+      <wsdl:output name="UpdateCmsReservationResponse" message="tns:UpdateCmsReservationResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReservationServiceSoap11" type="tns:ReservationService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCmsReservations">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetCmsReservationsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCmsReservationsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCmsGeneralReservations">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetCmsGeneralReservationsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCmsGeneralReservationsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCmsGeneralReservation">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateCmsGeneralReservationRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateCmsGeneralReservationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCmsReservation">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateCmsReservationRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateCmsReservationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReservationServiceService">
+    <wsdl:port name="ReservationServiceSoap11" binding="tns:ReservationServiceSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/reservation/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

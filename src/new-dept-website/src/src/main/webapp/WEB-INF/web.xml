@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <servlet>
+    <servlet-name>web-dept-portal</servlet-name>
+    <servlet-class>com.mftvanak.web.portal.web.servlets.MyDispatcherServlet</servlet-class>
+
+    <init-param>
+      <param-name>kaptcha.border</param-name>
+      <param-value>no</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>kaptcha.textproducer.font.color</param-name>
+      <param-value>black</param-value>
+    </init-param>
+
+    <init-param>
+      <param-name>kaptcha.textproducer.char.space</param-name>
+      <param-value>5</param-value>
+    </init-param>
+    
+    <init-param>
+      <param-name>trimSpaces</param-name>
+      <param-value>true</param-value>
+    </init-param>
+
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>web-dept-portal</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <listener> 
+    <listener-class> 
+      org.springframework.web.context.ContextLoaderListener 
+    </listener-class> 
+  </listener> 
+		
+  <context-param> 
+    <param-name>
+      contextConfigLocation
+    </param-name>
+    <param-value> 
+      /WEB-INF/web-dept-portal-servlet.xml
+    </param-value>
+  </context-param> 
+		
+  <!-- <filter> 
+    <filter-name>springSecurityFilterChain</filter-name> 
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> 
+  </filter> 
+  <filter-mapping> 
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  -->
+  
+  <jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+        <trim-directive-whitespaces>true</trim-directive-whitespaces>
+     </jsp-property-group>
+  </jsp-config>
+
+  <!-- <filter> 
+    <filter-name>trimmerFilter</filter-name>
+    <filter-class>com.mftvanak.edusys.ui.web.staff.filters.TrimmerFilter</filter-class> 
+  </filter> 
+  <filter-mapping> 
+    <filter-name>trimmerFilter</filter-name>
+    <url-pattern>/*</url-pattern> 
+  </filter-mapping> --> 
+
+</web-app>

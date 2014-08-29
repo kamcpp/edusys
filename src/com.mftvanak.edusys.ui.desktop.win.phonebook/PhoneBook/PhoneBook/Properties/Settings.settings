@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Com.Mftvanak.Edusys.Ui.Desktop.PhoneBook.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_AuthenticationServiceWebReference_AuthService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8080/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication/</Value>
+    </Setting>
+    <Setting Name="Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_PhoneBookServiceWebReference_PhoneBookService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8080/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook/</Value>
+    </Setting>
+    <Setting Name="Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_EmployeeWebReference_EmployeeService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee/</Value>
+    </Setting>
+    <Setting Name="Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_UserWebReference_UserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8080/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

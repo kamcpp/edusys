@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://personnel.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://personnel.ws.edusys.mftvanak.com/schemas" targetNamespace="http://personnel.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://personnel.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://personnel.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://personnel.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddPersonRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Person" type="pref:PersonType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPersonResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="PersonId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePersonRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Person" type="pref:PersonType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePersonResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePersonRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PersonId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePersonResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPersonByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PersonId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPersonByIdResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Person" type="pref:PersonType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPersonsRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPersonsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Persons" type="pref:PersonType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPersonByIdResponse">
+    <wsdl:part name="GetPersonByIdResponse" element="tns:GetPersonByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersonResponse">
+    <wsdl:part name="UpdatePersonResponse" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPersonRequest">
+    <wsdl:part name="AddPersonRequest" element="tns:AddPersonRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersonRequest">
+    <wsdl:part name="UpdatePersonRequest" element="tns:UpdatePersonRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeletePersonResponse">
+    <wsdl:part name="DeletePersonResponse" element="tns:DeletePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePersonRequest">
+    <wsdl:part name="DeletePersonRequest" element="tns:DeletePersonRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddPersonResponse">
+    <wsdl:part name="AddPersonResponse" element="tns:AddPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsResponse">
+    <wsdl:part name="GetPersonsResponse" element="tns:GetPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonsRequest">
+    <wsdl:part name="GetPersonsRequest" element="tns:GetPersonsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonByIdRequest">
+    <wsdl:part name="GetPersonByIdRequest" element="tns:GetPersonByIdRequest" />
+  </wsdl:message>
+  <wsdl:portType name="Person">
+    <wsdl:operation name="GetPersonById">
+      <wsdl:input name="GetPersonByIdRequest" message="tns:GetPersonByIdRequest" />
+      <wsdl:output name="GetPersonByIdResponse" message="tns:GetPersonByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input name="UpdatePersonRequest" message="tns:UpdatePersonRequest" />
+      <wsdl:output name="UpdatePersonResponse" message="tns:UpdatePersonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPerson">
+      <wsdl:input name="AddPersonRequest" message="tns:AddPersonRequest" />
+      <wsdl:output name="AddPersonResponse" message="tns:AddPersonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <wsdl:input name="DeletePersonRequest" message="tns:DeletePersonRequest" />
+      <wsdl:output name="DeletePersonResponse" message="tns:DeletePersonResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersons">
+      <wsdl:input name="GetPersonsRequest" message="tns:GetPersonsRequest" />
+      <wsdl:output name="GetPersonsResponse" message="tns:GetPersonsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonSoap11" type="tns:Person">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPersonById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetPersonByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPersonByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdatePersonRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdatePersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPerson">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddPersonRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddPersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeletePersonRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeletePersonResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersons">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetPersonsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPersonsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonService">
+    <wsdl:port name="PersonSoap11" binding="tns:PersonSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.personnel-0.0.1-SNAPSHOT/person/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

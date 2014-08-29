@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37B763D4-7F63-4B1A-AD84-9CC890A16645}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.MftVanak.EduSys.Ui.Desktop.Win.Apps.ServiceClients</RootNamespace>
+    <AssemblyName>Com.MftVanak.EduSys.Ui.Desktop.Win.Apps.ServiceClients</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AuthenticationWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DepartmentWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EmployeeWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GheyasWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\InstituteWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MessageTemplateWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PersonWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PhonebookWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReservationWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\RoleWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SendListWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SendRequestWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SmsWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TodoWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UserWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AuthenticationWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_AuthenticationWebReference_AuthenticationService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/department.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DepartmentWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/department.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_DepartmentWebReference_DepartmentServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/institute.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\InstituteWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/institute.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_InstituteWebReference_InstituteServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/reservation.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReservationWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/reservation.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_ReservationWebReference_ReservationServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GheyasWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_GheyasWebReference_GheyasService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/role.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RoleWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/role.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_RoleWebReference_RoleService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UserWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_UserWebReference_UserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/message-template.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MessageTemplateWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/message-template.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_MessageTemplateWebReference_SendListService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/send-request.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SendRequestWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/send-request.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SendRequestWebReference_SendRequestService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sendlist.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SendListWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sendlist.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SendListWebReference_TodoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sms.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SmsWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sms.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SmsWebReference_SmsService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/todo.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TodoWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/todo.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_TodoWebReference_TodoService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EmployeeWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_EmployeeWebReference_EmployeeService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.personnel-0.0.1-SNAPSHOT/person.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PersonWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.personnel-0.0.1-SNAPSHOT/person.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_PersonWebReference_PersonService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8090/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PhonebookWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8090/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_PhonebookWebReference_PhoneBookService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\authentication.wsdl" />
+    <None Include="Web References\AuthenticationWebReference\AuthenticationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\ChangePasswordResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\DeactivateTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\UserExistsByEmailResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\UserExistsByUsernameResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationWebReference\ValidateTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DepartmentWebReference\AddDepartmentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DepartmentWebReference\DeleteDepartmentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DepartmentWebReference\department.wsdl" />
+    <None Include="Web References\DepartmentWebReference\DepartmentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DepartmentWebReference\GetDepartmentByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\DepartmentWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DepartmentWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\DepartmentWebReference\UpdateDepartmentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\AddEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\DeleteEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\employee.wsdl" />
+    <None Include="Web References\EmployeeWebReference\EmployeeExistsByEmployeeNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\EmployeeSummaryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\EmployeeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\GetEmployeeByEmployeeNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\GetEmployeeByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EmployeeWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeWebReference\UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\gheyas.wsdl" />
+    <None Include="Web References\GheyasWebReference\GheyasClassGroupType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasClassType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasDebtorType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasStudentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasTermType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GheyasWebReference\UpdateStudentDaneshgahFieldResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\AddDepartmentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\AddInstituteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\DeleteInstituteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\GetInstituteByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\institute.wsdl" />
+    <None Include="Web References\InstituteWebReference\InstituteType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\InstituteWebReference\RemoveDepartmentResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\InstituteWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\InstituteWebReference\UpdateInstituteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\AddMessageTemplateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\DeleteMessageTemplateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\GetMessageTemplateByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\message-template.wsdl" />
+    <None Include="Web References\MessageTemplateWebReference\MessageTemplateType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\MessageTemplateWebReference\UpdateMessageTemplateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PersonWebReference\AddPersonResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PersonWebReference\DeletePersonResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PersonWebReference\GetPersonByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PersonWebReference\person.wsdl" />
+    <None Include="Web References\PersonWebReference\PersonType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PersonWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PersonWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\PersonWebReference\UpdatePersonResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\AddFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\AddPhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\DeleteFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\DeletePhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\FollowUpType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\GetFollowUpByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\GetPhoneEntryByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\phonebook.wsdl" />
+    <None Include="Web References\PhonebookWebReference\PhoneEntryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PhonebookWebReference\UpdateFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhonebookWebReference\UpdatePhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ReservationWebReference\CmsGeneralReservationType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ReservationWebReference\CmsReservationType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ReservationWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReservationWebReference\reservation.wsdl" />
+    <None Include="Web References\ReservationWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ReservationWebReference\UpdateCmsGeneralReservationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ReservationWebReference\UpdateCmsReservationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\AddRoleResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\GetRoleByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\GetRoleByNameResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\RoleWebReference\role.wsdl" />
+    <None Include="Web References\RoleWebReference\RoleType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\RoleWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\RoleWebReference\UpdateRoleResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendListWebReference\AddSendListItemResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendListWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SendListWebReference\sendlist.wsdl" />
+    <None Include="Web References\SendListWebReference\SendListItemType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendListWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SendRequestWebReference\AddSendRequestResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendRequestWebReference\DeleteSendRequestResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendRequestWebReference\GetSendRequestByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendRequestWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SendRequestWebReference\send-request.wsdl" />
+    <None Include="Web References\SendRequestWebReference\SendRequestType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SendRequestWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SendRequestWebReference\UpdateSendRequestResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SmsWebReference\GetCurrentBalanceResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SmsWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SmsWebReference\sms.wsdl" />
+    <None Include="Web References\TodoWebReference\AddTodoItemResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TodoWebReference\DeleteTodoItemResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TodoWebReference\GetTodoItemByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TodoWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TodoWebReference\todo.wsdl" />
+    <None Include="Web References\TodoWebReference\TodoItemType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\TodoWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\TodoWebReference\UpdateTodoItemResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\AddUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\DeleteUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\GetUserByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\GrantRoleToUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UserWebReference\RevokeRoleFromUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\RoleType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UserWebReference\UpdateUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\user.wsdl" />
+    <None Include="Web References\UserWebReference\UserType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

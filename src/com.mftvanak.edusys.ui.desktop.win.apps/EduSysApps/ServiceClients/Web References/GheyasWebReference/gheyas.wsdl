@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://gheyas.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://gheyas.ws.edusys.mftvanak.com/schemas" targetNamespace="http://gheyas.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:Q1="http://gheyas.ws.edusys.mftvanak.com/schemas" elementFormDefault="qualified" targetNamespace="http://gheyas.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="GheyasTermType">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GheyasClassGroupType">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GheyasClassType">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="TeacherTarafHesabCode" type="xs:string" />
+          <xs:element name="TeacherName" type="xs:string" />
+          <xs:element name="TeacherFamily" type="xs:string" />
+          <xs:element name="TeacherPhone1" type="xs:string" />
+          <xs:element name="TeacherPhone2" type="xs:string" />
+          <xs:element name="TeacherEmail" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element name="ActiveDays" type="xs:string" />
+          <xs:element name="StartDate" type="xs:string" />
+          <xs:element name="EndDate" type="xs:string" />
+          <xs:element name="NumberOfStudents" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GheyasStudentType">
+        <xs:sequence>
+          <xs:element name="KaramuzCode" type="xs:string" />
+          <xs:element name="TarafHesabCode" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Family" type="xs:string" />
+          <xs:element name="BirthDate" type="xs:string" />
+          <xs:element name="Address" type="xs:string" />
+          <xs:element name="Phone" type="xs:string" />
+          <xs:element name="EmergencyPhone" type="xs:string" />
+          <xs:element name="Email" type="xs:string" />
+          <xs:element name="Paid" type="xs:string" />
+          <xs:element name="Payment" type="xs:string" />
+          <xs:element name="PaymentDate" type="xs:string" />
+          <xs:element name="PaymentDiscount" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element name="Reshteh" type="xs:string" />
+          <xs:element name="Daneshgah" type="xs:string" />
+          <xs:element name="ClassCode" type="xs:string" />
+          <xs:element name="ClassName" type="xs:string" />
+          <xs:element name="State" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GheyasDebtorType">
+        <xs:sequence>
+          <xs:element name="Code" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Family" type="xs:string" />
+          <xs:element name="Phone1" type="xs:string" />
+          <xs:element name="Phone2" type="xs:string" />
+          <xs:element name="Email" type="xs:string" />
+          <xs:element name="Address" type="xs:string" />
+          <xs:element name="ShouldPay" type="xs:string" />
+          <xs:element name="Paid" type="xs:string" />
+          <xs:element name="Discount" type="xs:string" />
+          <xs:element name="Debt" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetTermsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetTermsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasGroups" type="Q1:GheyasTermType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGroupsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetGroupsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasGroups" type="Q1:GheyasClassGroupType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClassesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+            <xs:element name="GroupCodes" type="xs:string" />
+            <xs:element name="TermCodes" type="xs:string" />
+            <xs:element name="ClassNamePattern" type="xs:string" />
+            <xs:element name="ClassName" type="xs:string" />
+            <xs:element name="ClassCode" type="xs:long" />
+            <xs:element name="ShowAll" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetClassesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasClasses" type="Q1:GheyasClassType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStudentsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+            <xs:element name="ClassCode" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStudentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasStudents" type="Q1:GheyasStudentType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SearchStudentsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="Family" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SearchStudentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasStudents" type="Q1:GheyasStudentType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDebtorsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDebtorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="GheyasDebtors" type="Q1:GheyasDebtorType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateStudentDaneshgahFieldRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:int" />
+            <xs:element name="KaramuzCode" type="xs:string" />
+            <xs:element name="DaneshaghFieldNewValue" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateStudentDaneshgahFieldResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGroupsResponse">
+    <wsdl:part name="GetGroupsResponse" element="tns:GetGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDebtorsRequest">
+    <wsdl:part name="GetDebtorsRequest" element="tns:GetDebtorsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetClassesRequest">
+    <wsdl:part name="GetClassesRequest" element="tns:GetClassesRequest" />
+  </wsdl:message>
+  <wsdl:message name="SearchStudentsRequest">
+    <wsdl:part name="SearchStudentsRequest" element="tns:SearchStudentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupsRequest">
+    <wsdl:part name="GetGroupsRequest" element="tns:GetGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentsRequest">
+    <wsdl:part name="GetStudentsRequest" element="tns:GetStudentsRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStudentDaneshgahFieldResponse">
+    <wsdl:part name="UpdateStudentDaneshgahFieldResponse" element="tns:UpdateStudentDaneshgahFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTermsRequest">
+    <wsdl:part name="GetTermsRequest" element="tns:GetTermsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDebtorsResponse">
+    <wsdl:part name="GetDebtorsResponse" element="tns:GetDebtorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStudentsResponse">
+    <wsdl:part name="GetStudentsResponse" element="tns:GetStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTermsResponse">
+    <wsdl:part name="GetTermsResponse" element="tns:GetTermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStudentDaneshgahFieldRequest">
+    <wsdl:part name="UpdateStudentDaneshgahFieldRequest" element="tns:UpdateStudentDaneshgahFieldRequest" />
+  </wsdl:message>
+  <wsdl:message name="SearchStudentsResponse">
+    <wsdl:part name="SearchStudentsResponse" element="tns:SearchStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClassesResponse">
+    <wsdl:part name="GetClassesResponse" element="tns:GetClassesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Gheyas">
+    <wsdl:operation name="GetGroups">
+      <wsdl:input name="GetGroupsRequest" message="tns:GetGroupsRequest" />
+      <wsdl:output name="GetGroupsResponse" message="tns:GetGroupsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDebtors">
+      <wsdl:input name="GetDebtorsRequest" message="tns:GetDebtorsRequest" />
+      <wsdl:output name="GetDebtorsResponse" message="tns:GetDebtorsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <wsdl:input name="GetClassesRequest" message="tns:GetClassesRequest" />
+      <wsdl:output name="GetClassesResponse" message="tns:GetClassesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchStudents">
+      <wsdl:input name="SearchStudentsRequest" message="tns:SearchStudentsRequest" />
+      <wsdl:output name="SearchStudentsResponse" message="tns:SearchStudentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudents">
+      <wsdl:input name="GetStudentsRequest" message="tns:GetStudentsRequest" />
+      <wsdl:output name="GetStudentsResponse" message="tns:GetStudentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStudentDaneshgahField">
+      <wsdl:input name="UpdateStudentDaneshgahFieldRequest" message="tns:UpdateStudentDaneshgahFieldRequest" />
+      <wsdl:output name="UpdateStudentDaneshgahFieldResponse" message="tns:UpdateStudentDaneshgahFieldResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTerms">
+      <wsdl:input name="GetTermsRequest" message="tns:GetTermsRequest" />
+      <wsdl:output name="GetTermsResponse" message="tns:GetTermsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GheyasSoap11" type="tns:Gheyas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGroups">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetGroupsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetGroupsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebtors">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetDebtorsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDebtorsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClasses">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetClassesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetClassesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchStudents">
+      <soap:operation soapAction="" />
+      <wsdl:input name="SearchStudentsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SearchStudentsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudents">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetStudentsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetStudentsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStudentDaneshgahField">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateStudentDaneshgahFieldRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateStudentDaneshgahFieldResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTerms">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetTermsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTermsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GheyasService">
+    <wsdl:port name="GheyasSoap11" binding="tns:GheyasSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,64 @@
+.tree_node {
+  clear: both;
+  float: right;
+  cursor: pointer;
+}
+
+.tree_node_not_expanded {
+  height: 16px;
+  width: 16px;
+  float: right;
+  margin-top: 4px;
+  clear: left;
+  background-image: url("/images/tree_node_not_expanded.png")
+}
+
+.tree_node_expanded {
+  height: 16px;
+  width: 16px;
+  float: right;
+  margin-top: 4px;
+  background-image: url("/images/tree_node_expanded.png");
+}
+
+.tree_node_without_children {
+  height: 16px;
+  width: 16px;
+  float: right;
+  margin-top: 4px;
+  background-image: url("/images/tree_node_without_children.png");
+}
+
+.tree_node_text {
+  float: right;
+  direction: ltr;
+}
+
+.tree_node_text a {
+  color: black;
+  text-decoration: none;
+}
+
+.tree_new_node_form {
+  visibility: hidden;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12%;
+  z-index: 100;
+}
+
+.input_form_frame {
+  padding: 0px;
+  margine: 5px;
+  border: 1px solid gray;
+  height: 100px;
+  width: auto;
+  margin: 5px;
+  display: block;
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas"
+	xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:import schemaLocation="types.xsd"
+		namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types"></xs:import>
+
+	<xs:element name="AddSendRequestRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="SendRequest" type="pref:SendRequestType" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddSendRequestResponse">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="SendRequestId" type="xs:long" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateSendRequestRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="SendRequest" type="pref:SendRequestType" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateSendRequestResponse">
+		<xs:complexType>
+			<xs:all>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteSendRequestRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="SendRequestId" type="xs:long" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteSendRequestResponse">
+		<xs:complexType>
+			<xs:all>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendRequestByIdRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="SendRequestId" type="xs:long" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendRequestByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SendRequest" type="pref:SendRequestType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:annotation></xs:annotation>
+	<xs:element name="GetSendRequestsRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendRequestsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="SendRequests"
+					type="pref:SendRequestType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendRequestsByOwnerIdRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="OwnerId" type="xs:long" />
+				<xs:element name="Count" type="xs:int" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendRequestsByOwnerIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="SendRequests"
+					type="pref:SendRequestType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3D752A1-BD66-4663-9B34-B6760ECC38AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.MftVanak.EduSys.Ui.Desktop.Win.GheyasManager</RootNamespace>
+    <AssemblyName>Com.MftVanak.EduSys.Ui.Desktop.Win.EducationalReport</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Authentication\BypassAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\EduSysAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\EduSysToken.cs" />
+    <Compile Include="Classes\Authentication\ICredential.cs" />
+    <Compile Include="Classes\Authentication\IAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\IToken.cs" />
+    <Compile Include="Classes\Authentication\IUsernamePasswordCredential.cs" />
+    <Compile Include="Classes\Authentication\Principle.cs" />
+    <Compile Include="Classes\Authentication\Role.cs" />
+    <Compile Include="Classes\Authentication\UsernamePasswordCredentialImpl.cs" />
+    <Compile Include="Classes\Context.cs" />
+    <Compile Include="Classes\StringHelper.cs" />
+    <Compile Include="Forms\formBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formBase.Designer.cs">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formListOfClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formListOfClasses.Designer.cs">
+      <DependentUpon>formListOfClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formListOfStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formListOfStudents.Designer.cs">
+      <DependentUpon>formListOfStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\GheyasWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\formBase.resx">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formListOfClasses.resx">
+      <DependentUpon>formListOfClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formListOfStudents.resx">
+      <DependentUpon>formListOfStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\GheyasWebReference\gheyas.wsdl" />
+    <None Include="Web References\GheyasWebReference\GheyasClassGroupType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasClassType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasStudentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\GheyasTermType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GheyasWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.10.2.23:8080/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GheyasWebReference\</RelPath>
+      <UpdateFromURL>http://10.10.2.23:8080/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_MftVanak_EduSys_Ui_Desktop_Win_GheyasManager_GheyasWebReference_GheyasService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

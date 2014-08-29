@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://phonebook.ws.edusys.mftvanak.com/schemas"
+	xmlns:pref="http://phonebook.ws.edusys.mftvanak.com/schemas/types"
+	xmlns:Q1="http://phonebook.ws.edusys.mftvanak.com/schemas">
+
+	<xs:simpleType name="ColorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Blue" />
+			<xs:enumeration value="Green" />
+			<xs:enumeration value="Orange" />
+			<xs:enumeration value="Pink" />
+			<xs:enumeration value="Purple" />
+			<xs:enumeration value="Red" />
+			<xs:enumeration value="Yellow" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="FollowUpType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="PhoneEntryId" type="xs:long" />
+			<xs:element name="OwnerId" type="xs:long" />
+			<xs:element name="OwnerName" type="xs:string" />
+			<xs:element name="Color" type="Q1:ColorType" nillable="true" />
+			<xs:element name="Description" type="xs:string" />
+			<xs:element name="DesiredCourses" type="xs:string" />
+			<xs:element name="DesiredTimes" type="xs:string" />
+			<xs:element name="Status" type="xs:int" />
+			<xs:element name="Answered" type="xs:boolean" />
+			<xs:element name="PhoneNumberIsNotActive" type="xs:boolean" />
+			<xs:element name="Question" type="xs:string" />
+			<xs:element name="SubmitDate" type="xs:long" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PhoneEntryType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="InstituteId" type="xs:long" />
+			<xs:element name="DepartmentId" type="xs:long" />
+			<xs:element name="OwnerId" type="xs:long" />
+			<xs:element name="DepartmentName" type="xs:string" />
+			<xs:element name="OwnerName" type="xs:string" />
+			<xs:element name="Color" type="Q1:ColorType" nillable="true" />
+			<xs:element name="MethodDeConnaissance" type="xs:int" />
+			<xs:element name="Seen" type="xs:boolean" nillable="true" />
+			<xs:element name="ShouldBeFollowed" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Registered" type="xs:boolean" nillable="true" />
+			<xs:element name="Private" type="xs:boolean" nillable="true" />
+			<xs:element name="SubmitDate" type="xs:long" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Number" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+			<xs:element name="Response" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PhoneEntrySearchPredicateType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string" nillable="true" />
+			<xs:element name="InstituteId" type="xs:long" nillable="true" />
+			<xs:element name="DepartmentId" type="xs:long" nillable="true" />
+			<xs:element name="OwnerId" type="xs:long" nillable="true" />
+			<xs:element name="SubmitDateStartYear" type="xs:int"
+				nillable="true" />
+			<xs:element name="SubmitDateStartMonth" type="xs:int"
+				nillable="true" />
+			<xs:element name="SubmitDateStartDay" type="xs:int"
+				nillable="true" />
+			<xs:element name="SubmitDateEndYear" type="xs:int"
+				nillable="true" />
+			<xs:element name="SubmitDateEndMonth" type="xs:int"
+				nillable="true" />
+			<xs:element name="SubmitDateEndDay" type="xs:int"
+				nillable="true" />
+			<xs:element name="Seen" type="xs:boolean" nillable="true" />
+			<xs:element name="ShouldBeFollowed" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Registered" type="xs:boolean" nillable="true" />
+			<xs:element name="Private" type="xs:boolean" nillable="true" />
+			<xs:element name="Name" type="xs:string" nillable="true" />
+			<xs:element name="Number" type="xs:string" nillable="true" />
+			<xs:element name="Description" type="xs:string" nillable="true" />
+			<xs:element minOccurs="1" maxOccurs="unbounded" name="FollowUpTypes"
+				type="xs:string" nillable="true" />
+			<xs:element minOccurs="1" maxOccurs="unbounded" name="Colors"
+				type="Q1:ColorType" nillable="true" />
+			<xs:element minOccurs="1" maxOccurs="unbounded"
+				name="MethodesDeConnaissance" type="xs:int" nillable="true" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="AddPhoneEntryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddPhoneEntryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PhoneEntryId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePhoneEntryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdatePhoneEntryResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeletePhoneEntryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="PhoneEntryId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeletePhoneEntryResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntryByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string"></xs:element>
+				<xs:element name="PhoneEntryId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntryByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntriesByOwnerIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string"></xs:element>
+				<xs:element name="OwnerId" type="xs:long" />
+				<xs:element name="Count" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntriesByOwnerIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="PhoneEntries"
+					type="Q1:PhoneEntryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntriesByPredicateRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string"></xs:element>
+				<xs:element name="JustToday" type="xs:boolean" />
+				<xs:element name="Predicate" type="Q1:PhoneEntrySearchPredicateType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetPhoneEntriesByPredicateResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="PhoneEntries"
+					type="Q1:PhoneEntryType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetFollowUpsByPhoneEntryIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string"></xs:element>
+				<xs:element name="PhoneEntryId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetFollowUpsByPhoneEntryIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="FollowUps"
+					type="Q1:FollowUpType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddFollowUpRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="FollowUp" type="Q1:FollowUpType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddFollowUpResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FollowUpId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateFollowUpRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="FollowUp" type="Q1:FollowUpType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateFollowUpResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteFollowUpRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="FollowUpId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteFollowUpResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="GetFollowUpByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string"></xs:element>
+				<xs:element name="FollowUpId" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetFollowUpByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FollowUp" type="Q1:FollowUpType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Com.MftVanak.EduSys.Ui.Desktop.Win.Apps.ServiceClients.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">edusys.mftvanak.com:8090</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_GheyasWebReference_GheyasService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.gheyas-0.0.1-SNAPSHOT/gheyas/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_InstituteWebReference_InstituteServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/institute/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_DepartmentWebReference_DepartmentServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/department/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_AuthenticationWebReference_AuthenticationService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_UserWebReference_UserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_RoleWebReference_RoleService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/role/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_EmployeeWebReference_EmployeeService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_PersonWebReference_PersonService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.personnel-0.0.1-SNAPSHOT/person/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_PhonebookWebReference_PhoneBookService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_TodoWebReference_TodoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/todo/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_ReservationWebReference_ReservationServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/reservation/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SendListWebReference_TodoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sendlist/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_MessageTemplateWebReference_SendListService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/message-template/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SendRequestWebReference_SendRequestService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/send-request/</Value>
+    </Setting>
+    <Setting Name="Com_MftVanak_EduSys_Ui_Desktop_Win_Apps_ServiceClients_SmsWebReference_SmsService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sms/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

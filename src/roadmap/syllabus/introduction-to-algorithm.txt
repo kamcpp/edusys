@@ -1,0 +1,126 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+--------------------------------------------------------------------
+
+        SYLLABUS OF 
+"INTRODUCTION TO ALGORITHM"
+
+Course details
+--------------
+
+Course code:      
+Course name:      Introduction to Algorithm
+Duration:         60 hours
+
+Revisions
+---------
+
+03 Mar 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+Syllabus
+--------
+
+[Intorduction to Logo] (1 hours)
+- What is Logo?
+- Story behind Logo
+- Getting familiar with Logo turtle
+- Installation of FMSLogo
+- A simple run
+
+[Basic Commands] (6 hours)
+- How to move Logo turtle?
+- FORWARD or FD command
+- Introduction to angles
+- RIGHT or RT command
+- CLEARSCREEN or CS command
+- HOME command
+- PRINT command
+- SHOW command
+- Arithmetic operations
+- Drawing simple shapes
+- Drawing complex shapes
+- Repeating commands and loops
+- Saving and opening commands with FMSLogo applications
+
+[Loops] (5 hours)
+- Complex examples need loops
+- REPEAST command
+- Setting color of the pen with SETPENCOLOR command
+- PENUP command
+- PENDOWN command
+- BACK or BK command
+- LEFT or LT command
+
+[Exam] (3 hours)
+
+[Variables] (5 hours)
+- Define a new variable
+- Assign value to a variable
+- Change the value of a variable
+- Using the value of a variable
+- Mixing loops and variables
+- Even more complex examples
+
+[Conditions] (5 hours)
+- Why conditions ?
+- Boolean statements
+- Boolean operators
+- TRUE and FALSE
+- IF command
+- IFELSE command
+- TEST, IFTRUE, IFFALSE commands
+
+[Builtin Procedures] (2 hours)
+- Time and Randomness
+- Math functions
+
+[Procedures] (5 hours)
+- Define a new procedure
+- Calling a saved procedure
+- Passing variabels to procedures
+- Returning values from procedures
+- Introduction to Call Tree
+- Recursive procedures
+- Procedures and Functions in different languages
+
+[Exam] (3 hours)
+
+[Strings] (5 hours)
+- WORD command
+- LIST command
+- SENTENCE command
+- String processing
+- String matching
+- Substrings
+- Search in strings
+
+[Lists and Arrays] (5 hours)
+- Making a list of items with LIST command
+- FPUT command
+- LPUT command
+- Comparison of lists and arrays
+- Making an array with ARRAY command
+- SETITEM command
+- REVERSE command
+- Combination of lists, arrays and procedures
+
+[Exam] (3 hours)
+
+[Sort and Search Agorithms] (5 hours)
+- SORT command
+- Implementing bubble sort algorithm
+- Other sorting algorithms
+- Searching algorithms
+
+[Programming Languages] (2 hours)
+- Kind of programming languages: Scripting, General Purpose, etc.
+- What is compiler?
+- What is interpreter?
+- Procedural and Object Oriented way of thinking
+- Procedural and Object Oriented differences
+- C as a procedural language
+- C#.NET and Java as Object Oriented languages
+
+[FINAL EXAM] (5 hours)

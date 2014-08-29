@@ -1,0 +1,42 @@
+#div_course_category_tree {
+  
+}
+
+#div_course_category_tree ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#div_course_category_tree ul li {
+  list-style: none;
+  float: right;
+  padding: 5px;
+}
+
+#div_course_category_tree ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  width: 300px;
+  border: solid 1px gray;
+  padding: 5px;
+  background-color: #d2d6db;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: black;
+}
+
+#div_course_category_tree ul li a:hover {
+  background-color: rgb(188, 191, 196);
+}
+
+#nav_course_category_tree {
+  height: 30px;
+}
+
+#div_course_category_tree_nodes {
+  clear: both;
+  height: 400px;
+  border: 1px solid gray;
+  width: 700px;
+  padding-top: 5px;
+}

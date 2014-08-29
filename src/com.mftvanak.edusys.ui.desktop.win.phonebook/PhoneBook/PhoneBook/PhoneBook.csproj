@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{388872B3-5819-4E32-986B-937EB24E6746}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.Mftvanak.Edusys.Ui.Desktop.PhoneBook</RootNamespace>
+    <AssemblyName>Com.Mftvanak.Edusys.Ui.Desktop.PhoneBook</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Authentication\BypassAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\EduSysAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\EduSysToken.cs" />
+    <Compile Include="Classes\Authentication\IAuthenticationManager.cs" />
+    <Compile Include="Classes\Authentication\ICredential.cs" />
+    <Compile Include="Classes\Authentication\IToken.cs" />
+    <Compile Include="Classes\Authentication\IUsernamePasswordCredential.cs" />
+    <Compile Include="Classes\Authentication\Principle.cs" />
+    <Compile Include="Classes\Authentication\Role.cs" />
+    <Compile Include="Classes\Authentication\UsernamePasswordCredentialImpl.cs" />
+    <Compile Include="Classes\Context.cs" />
+    <Compile Include="Classes\StringHelper.cs" />
+    <Compile Include="Forms\formBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formBase.Designer.cs">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formFollowEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formFollowEditor.Designer.cs">
+      <DependentUpon>formFollowEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formPhoneEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formPhoneEditor.Designer.cs">
+      <DependentUpon>formPhoneEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReport.Designer.cs">
+      <DependentUpon>formReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VersionInfo.cs" />
+    <Compile Include="Web References\AuthenticationServiceWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EmployeeWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PhoneBookServiceWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UserWebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\formBase.resx">
+      <DependentUpon>formBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formFollowEditor.resx">
+      <DependentUpon>formFollowEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formPhoneEditor.resx">
+      <DependentUpon>formPhoneEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReport.resx">
+      <DependentUpon>formReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\AuthenticationServiceWebReference\authentication.wsdl" />
+    <None Include="Web References\AuthenticationServiceWebReference\AuthenticationResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationServiceWebReference\DeactivateTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationServiceWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AuthenticationServiceWebReference\UserExistsByEmailResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationServiceWebReference\UserExistsByUsernameResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AuthenticationServiceWebReference\ValidateTokenResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\AddEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\DeleteEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\employee.wsdl" />
+    <None Include="Web References\EmployeeWebReference\EmployeeExistsByEmployeeNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\EmployeeSummaryType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\EmployeeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\GetEmployeeByEmployeeNumberResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\GetEmployeeByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EmployeeWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EmployeeWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\EmployeeWebReference\UpdateEmployeeResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\AddFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\AddPhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\DeleteFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\DeletePhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\GetFollowUpByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\GetFollowUpsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\GetPhoneEntriesByPredicateResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\GetPhoneEntryByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\phonebook.wsdl" />
+    <None Include="Web References\PhoneBookServiceWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\UpdateFollowUpResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PhoneBookServiceWebReference\UpdatePhoneEntryResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\AddUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\DeleteUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\GetUserByIdResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\GrantRoleToUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UserWebReference\RevokeRoleFromUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\RoleType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\UserWebReference\UpdateUserResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserWebReference\user.wsdl" />
+    <None Include="Web References\UserWebReference\UserType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_list_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_report_bar_24_ns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WebReferenceUrl Include="http://91.98.134.248:8080/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AuthenticationServiceWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8080/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_AuthenticationServiceWebReference_AuthService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8080/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\UserWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8080/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_UserWebReference_UserService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EmployeeWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_EmployeeWebReference_EmployeeService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.134.248:8080/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PhoneBookServiceWebReference\</RelPath>
+      <UpdateFromURL>http://91.98.134.248:8080/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Com_Mftvanak_Edusys_Ui_Desktop_PhoneBook_PhoneBookServiceWebReference_PhoneBookService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

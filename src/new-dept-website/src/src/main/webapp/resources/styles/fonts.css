@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'b-arshia';
+  src: url('../fonts/b-arshia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lotus-bold';
+  src: url('../fonts/lotus-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'compset';
+  src: url('../fonts/compset.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'naskh';
+  src: url('../fonts/naskh.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'traffic-bold';
+  src: url('../fonts/traffic-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'yekan';
+  src: url('../fonts/yekan.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jadid-bold';
+  src: url('../fonts/jadid-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'homa';
+  src: url('../fonts/homa.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nazanin-bold';
+  src: url('../fonts/nazanin-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'two-arshia';
+  src: url("../fonts/2-arshia.eot") format("embedded-opentype"),
+       url('../fonts/2-arshia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'droidnaskh';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Arabic Naskh'),
+  url('../fonts/droidnaskh.eot?#') format('eot'),
+  url('../fonts/droidnaskh.woff') format('woff'),
+  url('../fonts/droidnaskh.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'iraniansans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('IranSansZ'),
+  url('../fonts/iraniansans.eot?#') format('eot'),
+  url('../fonts/iraniansans.woff') format('woff'),
+  url('../fonts/iraniansans.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/DroidNaskh-Regular.eot');
+  src: url('../fonts/DroidNaskh-Regular.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/DroidNaskh-Regular.woff2') format('woff2'), 
+  url('../fonts/DroidNaskh-Regular.woff') format('woff'), 
+  url('../fonts/DroidNaskh-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/DroidNaskh-Bold.eot');
+  src: url('../fonts/DroidNaskh-Bold.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/DroidNaskh-Bold.woff2') format('woff2'), 
+  url('../fonts/DroidNaskh-Bold.woff') format('woff'), 
+  url('../fonts/DroidNaskh-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'mitra';
+  src: url('../fonts/BMitra.eot?#') format('eot'), 
+  url('../fonts/BMitra.ttf') format('truetype'), 
+  url('../fonts/BMitra.woff') format('woff');
+}

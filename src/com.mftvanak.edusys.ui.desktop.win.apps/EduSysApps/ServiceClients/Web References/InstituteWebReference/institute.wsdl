@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://education.ws.edusys.mftvanak.com/schemas/institute" xmlns:tns="http://education.ws.edusys.mftvanak.com/schemas/institute" targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/institute" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://education.ws.edusys.mftvanak.com/schemas/types" xmlns:ms="http://education.ws.edusys.mftvanak.com/schemas" elementFormDefault="qualified" targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/institute" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://education.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddInstituteRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Institute" type="pref:InstituteType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddInstituteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InstituteId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateInstituteRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Institute" type="pref:InstituteType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateInstituteResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteInstituteRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteInstituteResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInstituteByIdRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInstituteByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Institute" type="pref:InstituteType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInstitutesRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetInstitutesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Institutes" type="pref:InstituteType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddDepartmentRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:long" />
+            <xs:element name="DepartmentId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddDepartmentResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveDepartmentRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="InstituteId" type="xs:long" />
+            <xs:element name="DepartmentId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemoveDepartmentResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AddDepartmentRequest">
+    <wsdl:part name="AddDepartmentRequest" element="tns:AddDepartmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteInstituteResponse">
+    <wsdl:part name="DeleteInstituteResponse" element="tns:DeleteInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInstituteResponse">
+    <wsdl:part name="UpdateInstituteResponse" element="tns:UpdateInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstituteByIdResponse">
+    <wsdl:part name="GetInstituteByIdResponse" element="tns:GetInstituteByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDepartmentResponse">
+    <wsdl:part name="AddDepartmentResponse" element="tns:AddDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstitutesRequest">
+    <wsdl:part name="GetInstitutesRequest" element="tns:GetInstitutesRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddInstituteResponse">
+    <wsdl:part name="AddInstituteResponse" element="tns:AddInstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInstituteRequest">
+    <wsdl:part name="UpdateInstituteRequest" element="tns:UpdateInstituteRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInstituteByIdRequest">
+    <wsdl:part name="GetInstituteByIdRequest" element="tns:GetInstituteByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoveDepartmentRequest">
+    <wsdl:part name="RemoveDepartmentRequest" element="tns:RemoveDepartmentRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteInstituteRequest">
+    <wsdl:part name="DeleteInstituteRequest" element="tns:DeleteInstituteRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInstitutesResponse">
+    <wsdl:part name="GetInstitutesResponse" element="tns:GetInstitutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveDepartmentResponse">
+    <wsdl:part name="RemoveDepartmentResponse" element="tns:RemoveDepartmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddInstituteRequest">
+    <wsdl:part name="AddInstituteRequest" element="tns:AddInstituteRequest" />
+  </wsdl:message>
+  <wsdl:portType name="InstituteService">
+    <wsdl:operation name="AddDepartment">
+      <wsdl:input name="AddDepartmentRequest" message="tns:AddDepartmentRequest" />
+      <wsdl:output name="AddDepartmentResponse" message="tns:AddDepartmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstitute">
+      <wsdl:input name="DeleteInstituteRequest" message="tns:DeleteInstituteRequest" />
+      <wsdl:output name="DeleteInstituteResponse" message="tns:DeleteInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstitute">
+      <wsdl:input name="UpdateInstituteRequest" message="tns:UpdateInstituteRequest" />
+      <wsdl:output name="UpdateInstituteResponse" message="tns:UpdateInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstituteById">
+      <wsdl:input name="GetInstituteByIdRequest" message="tns:GetInstituteByIdRequest" />
+      <wsdl:output name="GetInstituteByIdResponse" message="tns:GetInstituteByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstitutes">
+      <wsdl:input name="GetInstitutesRequest" message="tns:GetInstitutesRequest" />
+      <wsdl:output name="GetInstitutesResponse" message="tns:GetInstitutesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInstitute">
+      <wsdl:input name="AddInstituteRequest" message="tns:AddInstituteRequest" />
+      <wsdl:output name="AddInstituteResponse" message="tns:AddInstituteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDepartment">
+      <wsdl:input name="RemoveDepartmentRequest" message="tns:RemoveDepartmentRequest" />
+      <wsdl:output name="RemoveDepartmentResponse" message="tns:RemoveDepartmentResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InstituteServiceSoap11" type="tns:InstituteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDepartment">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddDepartmentRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddDepartmentResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstitute">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteInstituteRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteInstituteResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstitute">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateInstituteRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateInstituteResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstituteById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetInstituteByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetInstituteByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstitutes">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetInstitutesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetInstitutesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInstitute">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddInstituteRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddInstituteResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDepartment">
+      <soap:operation soapAction="" />
+      <wsdl:input name="RemoveDepartmentRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoveDepartmentResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InstituteServiceService">
+    <wsdl:port name="InstituteServiceSoap11" binding="tns:InstituteServiceSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.education-0.0.1-SNAPSHOT/institute/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

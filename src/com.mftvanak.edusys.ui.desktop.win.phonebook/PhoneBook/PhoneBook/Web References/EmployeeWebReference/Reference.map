@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/types.xsd" filename="types.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://91.98.134.248:8080/com.mftvanak.edusys.ws.official-0.0.1-SNAPSHOT/employee.wsdl" filename="employee.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas"
+	xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:import schemaLocation="types.xsd"
+		namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types"></xs:import>
+
+	<xs:element name="AddSendListItemRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="SendListItem" type="pref:SendListItemType" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddSendListItemResponse">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="SendListItemId" type="xs:long" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendListItemsByOwnerIdRequest">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="OwnerId" type="xs:long" />
+				<xs:element name="Count" type="xs:int" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetSendListItemsByOwnerIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" name="SendListItems"
+					type="pref:SendListItemType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

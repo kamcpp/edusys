@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://messaging.ws.edusys.mftvanak.com/schemas" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddSendListItemRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="SendListItem" type="pref:SendListItemType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddSendListItemResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="SendListItemId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendListItemsByOwnerIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="OwnerId" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendListItemsByOwnerIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="SendListItems" type="pref:SendListItemType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSendListItemsByOwnerIdResponse">
+    <wsdl:part name="GetSendListItemsByOwnerIdResponse" element="tns:GetSendListItemsByOwnerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSendListItemResponse">
+    <wsdl:part name="AddSendListItemResponse" element="tns:AddSendListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSendListItemRequest">
+    <wsdl:part name="AddSendListItemRequest" element="tns:AddSendListItemRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSendListItemsByOwnerIdRequest">
+    <wsdl:part name="GetSendListItemsByOwnerIdRequest" element="tns:GetSendListItemsByOwnerIdRequest" />
+  </wsdl:message>
+  <wsdl:portType name="SendList">
+    <wsdl:operation name="GetSendListItemsByOwnerId">
+      <wsdl:input name="GetSendListItemsByOwnerIdRequest" message="tns:GetSendListItemsByOwnerIdRequest" />
+      <wsdl:output name="GetSendListItemsByOwnerIdResponse" message="tns:GetSendListItemsByOwnerIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSendListItem">
+      <wsdl:input name="AddSendListItemRequest" message="tns:AddSendListItemRequest" />
+      <wsdl:output name="AddSendListItemResponse" message="tns:AddSendListItemResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendListSoap11" type="tns:SendList">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSendListItemsByOwnerId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetSendListItemsByOwnerIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSendListItemsByOwnerIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSendListItem">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddSendListItemRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddSendListItemResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendListService">
+    <wsdl:port name="SendListSoap11" binding="tns:SendListSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sendlist/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

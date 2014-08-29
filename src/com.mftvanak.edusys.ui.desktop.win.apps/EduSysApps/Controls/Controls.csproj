@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAFBF5B5-9E0D-4938-B6B7-206F39412A51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Com.MftVanak.EduSys.Ui.Desktop.Win.Apps.Controls</RootNamespace>
+    <AssemblyName>Com.MftVanak.EduSys.Ui.Desktop.Win.Apps.Controls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarsiLibrary.Resources">
+      <HintPath>..\libs\FarsiLibrary\FarsiLibrary.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils">
+      <HintPath>..\libs\FarsiLibrary\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Win">
+      <HintPath>..\libs\FarsiLibrary\FarsiLibrary.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Messaging\SmsSender\EduSysSmsSender.cs" />
+    <Compile Include="Classes\Messaging\SmsSender\ISmsSender.cs" />
+    <Compile Include="Classes\Messaging\SmsWizard\MobileNumberListWizardStep.cs" />
+    <Compile Include="Classes\Messaging\SmsWizard\SendRequestWizardStep.cs" />
+    <Compile Include="Classes\Messaging\SmsWizard\SmsSummaryWizardStep.cs" />
+    <Compile Include="Classes\Messaging\SmsWizard\SmsTemplateWizardStep.cs" />
+    <Compile Include="Classes\Wizard\IWizardStep.cs" />
+    <Compile Include="Classes\Wizard\IWizardStepControl.cs" />
+    <Compile Include="Forms\Authentication\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authentication\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormEditDaneshgahField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormEditDaneshgahField.Designer.cs">
+      <DependentUpon>FormEditDaneshgahField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormEditSmsMessageTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormEditSmsMessageTemplate.Designer.cs">
+      <DependentUpon>FormEditSmsMessageTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMessageTemplateExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMessageTemplateExplorer.Designer.cs">
+      <DependentUpon>FormMessageTemplateExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMessageTemplateManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMessageTemplateManager.Designer.cs">
+      <DependentUpon>FormMessageTemplateManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMobileNumberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormMobileNumberEdit.Designer.cs">
+      <DependentUpon>FormMobileNumberEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormSmsSender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormSmsSender.Designer.cs">
+      <DependentUpon>FormSmsSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormSmsWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\SmsWizard\FormSmsWizard.Designer.cs">
+      <DependentUpon>FormSmsWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Authentication\UcChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Authentication\UcChangePassword.Designer.cs">
+      <DependentUpon>UcChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Common\UcEduSysDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Common\UcEduSysDataGridView.Designer.cs">
+      <DependentUpon>UcEduSysDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\GeneralSettings.cs" />
+    <Compile Include="Classes\LoadingManager.cs" />
+    <Compile Include="Classes\LoadingShower.cs" />
+    <Compile Include="Forms\Authentication\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Authentication\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Common\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Common\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSaving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSaving.Designer.cs">
+      <DependentUpon>FormSaving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education\FormDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education\FormDepartments.Designer.cs">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education\FormEditDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education\FormEditDepartment.Designer.cs">
+      <DependentUpon>FormEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education\FormEditInstitute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education\FormEditInstitute.Designer.cs">
+      <DependentUpon>FormEditInstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education\FormInstitutes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education\FormInstitutes.Designer.cs">
+      <DependentUpon>FormInstitutes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education\FormInstituteSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education\FormInstituteSelector.Designer.cs">
+      <DependentUpon>FormInstituteSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormLoading.Designer.cs">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormListOfStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormListOfStudents.Designer.cs">
+      <DependentUpon>FormListOfStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormSearchClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormSearchClass.Designer.cs">
+      <DependentUpon>FormSearchClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormSearchStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gheyas\FormSearchStudent.Designer.cs">
+      <DependentUpon>FormSearchStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership\FormEditRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership\FormEditRole.Designer.cs">
+      <DependentUpon>FormEditRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership\FormProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership\FormProfile.Designer.cs">
+      <DependentUpon>FormProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership\FormRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership\FormRoles.Designer.cs">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Membership\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Membership\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Messaging\FormEditTodoItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messaging\FormEditTodoItem.Designer.cs">
+      <DependentUpon>FormEditTodoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Official\FormEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Official\FormEditEmployee.Designer.cs">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Official\FormEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Official\FormEmployees.Designer.cs">
+      <DependentUpon>FormEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Phonebook\FormEditPhoneEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Phonebook\FormEditPhoneEntry.Designer.cs">
+      <DependentUpon>FormEditPhoneEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Authentication\UcLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Authentication\UcLogin.Designer.cs">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Common\ColorComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Uc\Common\UcCrudToolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Common\UcCrudToolbar.Designer.cs">
+      <DependentUpon>UcCrudToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcDepartments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcDepartments.Designer.cs">
+      <DependentUpon>UcDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcDepartmentSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcDepartmentSelector.Designer.cs">
+      <DependentUpon>UcDepartmentSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcEditDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcEditDepartment.Designer.cs">
+      <DependentUpon>UcEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcEditInstitute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcEditInstitute.Designer.cs">
+      <DependentUpon>UcEditInstitute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcGeneralReservations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcGeneralReservations.Designer.cs">
+      <DependentUpon>UcGeneralReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcInstitutes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcInstitutes.Designer.cs">
+      <DependentUpon>UcInstitutes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcReservations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcReservations.Designer.cs">
+      <DependentUpon>UcReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Education\UcStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Education\UcStudents.Designer.cs">
+      <DependentUpon>UcStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcDebtors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcDebtors.Designer.cs">
+      <DependentUpon>UcDebtors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcSearchClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcSearchClass.Designer.cs">
+      <DependentUpon>UcSearchClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcSearchStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Gheyas\UcSearchStudent.Designer.cs">
+      <DependentUpon>UcSearchStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Membership\UcEditUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Membership\UcEditUser.Designer.cs">
+      <DependentUpon>UcEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Membership\UcRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Membership\UcRoles.Designer.cs">
+      <DependentUpon>UcRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Membership\UcRolesForUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Membership\UcRolesForUser.Designer.cs">
+      <DependentUpon>UcRolesForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Membership\UcUsersCombobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Membership\UcUsersCombobox.Designer.cs">
+      <DependentUpon>UcUsersCombobox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Wizard\MobileNumber.cs" />
+    <Compile Include="Uc\Messaging\SmsWizard\UcEditSmsMessageTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcEditSmsMessageTemplate.Designer.cs">
+      <DependentUpon>UcEditSmsMessageTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcMessageTemplateExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcMessageTemplateExplorer.Designer.cs">
+      <DependentUpon>UcMessageTemplateExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcMessageTemplates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcMessageTemplates.Designer.cs">
+      <DependentUpon>UcMessageTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlMobileNumberList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlMobileNumberList.Designer.cs">
+      <DependentUpon>UcWizardControlMobileNumberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcSmsSender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcSmsSender.Designer.cs">
+      <DependentUpon>UcSmsSender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSmsSummary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSmsSummary.Designer.cs">
+      <DependentUpon>UcWizardControlSmsSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSmsTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSmsTemplate.Designer.cs">
+      <DependentUpon>UcWizardControlSmsTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcSmsTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcSmsTextEditor.Designer.cs">
+      <DependentUpon>UcSmsTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSendRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\SmsWizard\UcWizardControlSendRequest.Designer.cs">
+      <DependentUpon>UcWizardControlSendRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcAssignedTodoItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcAssignedTodoItems.Designer.cs">
+      <DependentUpon>UcAssignedTodoItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcEditTodoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcEditTodoItem.Designer.cs">
+      <DependentUpon>UcEditTodoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcMyTodoItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Messaging\UcMyTodoItems.Designer.cs">
+      <DependentUpon>UcMyTodoItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Official\UcEditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Official\UcEditEmployee.Designer.cs">
+      <DependentUpon>UcEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Official\UcEmployeeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Official\UcEmployeeEditor.Designer.cs">
+      <DependentUpon>UcEmployeeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Official\UcEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Official\UcEmployees.Designer.cs">
+      <DependentUpon>UcEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Personnel\UcEditPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Personnel\UcEditPerson.Designer.cs">
+      <DependentUpon>UcEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Personnel\UcPersonsComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Personnel\UcPersonsComboBox.Designer.cs">
+      <DependentUpon>UcPersonsComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcDepartmentReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcDepartmentReport.Designer.cs">
+      <DependentUpon>UcDepartmentReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcEditPhoneEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcEditPhoneEntry.Designer.cs">
+      <DependentUpon>UcEditPhoneEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcMyPhoneEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcMyPhoneEntries.Designer.cs">
+      <DependentUpon>UcMyPhoneEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcPhonebookPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcPhonebookPanel.Designer.cs">
+      <DependentUpon>UcPhonebookPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcPhoneEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcPhoneEntries.Designer.cs">
+      <DependentUpon>UcPhoneEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcSearchPhoneEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\Phonebook\UcSearchPhoneEntries.Designer.cs">
+      <DependentUpon>UcSearchPhoneEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcClientInformation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcClientInformation.Designer.cs">
+      <DependentUpon>UcClientInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\UcUserInformationStatusBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uc\UcUserInformationStatusBar.Designer.cs">
+      <DependentUpon>UcUserInformationStatusBar.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Authentication\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gheyas\formEditDaneshgahField.resx">
+      <DependentUpon>FormEditDaneshgahField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\formEditSmsMessageTemplate.resx">
+      <DependentUpon>FormEditSmsMessageTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\formMessageTemplateExplorer.resx">
+      <DependentUpon>FormMessageTemplateExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\FormMessageTemplateManager.resx">
+      <DependentUpon>FormMessageTemplateManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\FormMobileNumberEdit.resx">
+      <DependentUpon>FormMobileNumberEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\FormSmsSender.resx">
+      <DependentUpon>FormSmsSender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\SmsWizard\FormSmsWizard.resx">
+      <DependentUpon>FormSmsWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Authentication\UcChangePassword.resx">
+      <DependentUpon>UcChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Common\UcEduSysDataGridView.resx">
+      <DependentUpon>UcEduSysDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Authentication\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSaving.resx">
+      <DependentUpon>FormSaving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education\FormDepartments.resx">
+      <DependentUpon>FormDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education\FormEditDepartment.resx">
+      <DependentUpon>FormEditDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education\FormEditInstitute.resx">
+      <DependentUpon>FormEditInstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education\FormInstitutes.resx">
+      <DependentUpon>FormInstitutes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education\FormInstituteSelector.resx">
+      <DependentUpon>FormInstituteSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLoading.resx">
+      <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gheyas\FormListOfStudents.resx">
+      <DependentUpon>FormListOfStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gheyas\FormSearchClass.resx">
+      <DependentUpon>FormSearchClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gheyas\FormSearchStudent.resx">
+      <DependentUpon>FormSearchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership\FormEditRole.resx">
+      <DependentUpon>FormEditRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership\FormProfile.resx">
+      <DependentUpon>FormProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership\FormRoles.resx">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Membership\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messaging\FormEditTodoItem.resx">
+      <DependentUpon>FormEditTodoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Official\FormEditEmployee.resx">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Official\FormEmployees.resx">
+      <DependentUpon>FormEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Phonebook\FormEditPhoneEntry.resx">
+      <DependentUpon>FormEditPhoneEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Authentication\UcLogin.resx">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Common\UcCrudToolbar.resx">
+      <DependentUpon>UcCrudToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcDepartments.resx">
+      <DependentUpon>UcDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcDepartmentSelector.resx">
+      <DependentUpon>UcDepartmentSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcEditDepartment.resx">
+      <DependentUpon>UcEditDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcEditInstitute.resx">
+      <DependentUpon>UcEditInstitute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcGeneralReservations.resx">
+      <DependentUpon>UcGeneralReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcInstitutes.resx">
+      <DependentUpon>UcInstitutes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcReservations.resx">
+      <DependentUpon>UcReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Education\UcStudents.resx">
+      <DependentUpon>UcStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Gheyas\UcDebtors.resx">
+      <DependentUpon>UcDebtors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Gheyas\UcSearchClass.resx">
+      <DependentUpon>UcSearchClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Gheyas\UcSearchStudent.resx">
+      <DependentUpon>UcSearchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Membership\UcEditUser.resx">
+      <DependentUpon>UcEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Membership\UcRoles.resx">
+      <DependentUpon>UcRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Membership\UcRolesForUser.resx">
+      <DependentUpon>UcRolesForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Membership\UcUsersCombobox.resx">
+      <DependentUpon>UcUsersCombobox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcEditSmsMessageTemplate.resx">
+      <DependentUpon>UcEditSmsMessageTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcMessageTemplateExplorer.resx">
+      <DependentUpon>UcMessageTemplateExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcMessageTemplates.resx">
+      <DependentUpon>UcMessageTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcWizardControlMobileNumberList.resx">
+      <DependentUpon>UcWizardControlMobileNumberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcSmsSender.resx">
+      <DependentUpon>UcSmsSender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcWizardControlSendRequest.resx">
+      <DependentUpon>UcWizardControlSendRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcWizardControlSmsSummary.resx">
+      <DependentUpon>UcWizardControlSmsSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcWizardControlSmsTemplate.resx">
+      <DependentUpon>UcWizardControlSmsTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\SmsWizard\UcSmsTextEditor.resx">
+      <DependentUpon>UcSmsTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\UcAssignedTodoItems.resx">
+      <DependentUpon>UcAssignedTodoItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\UcEditTodoItem.resx">
+      <DependentUpon>UcEditTodoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Messaging\UcMyTodoItems.resx">
+      <DependentUpon>UcMyTodoItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Official\UcEditEmployee.resx">
+      <DependentUpon>UcEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Official\UcEmployeeEditor.resx">
+      <DependentUpon>UcEmployeeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Official\UcEmployees.resx">
+      <DependentUpon>UcEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Personnel\UcEditPerson.resx">
+      <DependentUpon>UcEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Personnel\UcPersonsComboBox.resx">
+      <DependentUpon>UcPersonsComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcDepartmentReport.resx">
+      <DependentUpon>UcDepartmentReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcEditPhoneEntry.resx">
+      <DependentUpon>UcEditPhoneEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcMyPhoneEntries.resx">
+      <DependentUpon>UcMyPhoneEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcPhonebookPanel.resx">
+      <DependentUpon>UcPhonebookPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcPhoneEntries.resx">
+      <DependentUpon>UcPhoneEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\Phonebook\UcSearchPhoneEntries.resx">
+      <DependentUpon>UcSearchPhoneEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcClientInformation.resx">
+      <DependentUpon>UcClientInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uc\UcUserInformationStatusBar.resx">
+      <DependentUpon>UcUserInformationStatusBar.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{672daadd-b6f4-41f7-8af8-d10d6f466dc3}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{b4768fcd-ea8d-489f-adb6-5771b8de649a}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceClients\ServiceClients.csproj">
+      <Project>{37b763d4-7f63-4b1a-ad84-9cc890a16645}</Project>
+      <Name>ServiceClients</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_toggle_plus.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

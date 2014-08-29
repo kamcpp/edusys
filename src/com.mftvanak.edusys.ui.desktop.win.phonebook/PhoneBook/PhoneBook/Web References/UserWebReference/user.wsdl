@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://membership.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://membership.ws.edusys.mftvanak.com/schemas" targetNamespace="http://membership.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://membership.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://membership.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://membership.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="User" type="pref:UserType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddUserResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="User" type="pref:UserType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateUserResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="UserId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteUserResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUsersRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUsersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Users" type="pref:UserType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="UserId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetUserByIdResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="User" type="pref:UserType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GrantRoleToUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="UserId" type="xs:string" />
+            <xs:element name="RoleId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GrantRoleToUserResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RevokeRoleFromUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="UserId" type="xs:string" />
+            <xs:element name="RoleId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RevokeRoleFromUserResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRolesForUserRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="UserId" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRolesForUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="Roles" type="pref:RoleType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRolesForUserResponse">
+    <wsdl:part name="GetRolesForUserResponse" element="tns:GetRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevokeRoleFromUserRequest">
+    <wsdl:part name="RevokeRoleFromUserRequest" element="tns:RevokeRoleFromUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserRequest">
+    <wsdl:part name="UpdateUserRequest" element="tns:UpdateUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserResponse">
+    <wsdl:part name="DeleteUserResponse" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdResponse">
+    <wsdl:part name="GetUserByIdResponse" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesForUserRequest">
+    <wsdl:part name="GetRolesForUserRequest" element="tns:GetRolesForUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="RevokeRoleFromUserResponse">
+    <wsdl:part name="RevokeRoleFromUserResponse" element="tns:RevokeRoleFromUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrantRoleToUserRequest">
+    <wsdl:part name="GrantRoleToUserRequest" element="tns:GrantRoleToUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdRequest">
+    <wsdl:part name="GetUserByIdRequest" element="tns:GetUserByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddUserRequest">
+    <wsdl:part name="AddUserRequest" element="tns:AddUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserRequest">
+    <wsdl:part name="DeleteUserRequest" element="tns:DeleteUserRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserResponse">
+    <wsdl:part name="UpdateUserResponse" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserResponse">
+    <wsdl:part name="AddUserResponse" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersResponse">
+    <wsdl:part name="GetUsersResponse" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrantRoleToUserResponse">
+    <wsdl:part name="GrantRoleToUserResponse" element="tns:GrantRoleToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersRequest">
+    <wsdl:part name="GetUsersRequest" element="tns:GetUsersRequest" />
+  </wsdl:message>
+  <wsdl:portType name="User">
+    <wsdl:operation name="GetRolesForUser">
+      <wsdl:input name="GetRolesForUserRequest" message="tns:GetRolesForUserRequest" />
+      <wsdl:output name="GetRolesForUserResponse" message="tns:GetRolesForUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeRoleFromUser">
+      <wsdl:input name="RevokeRoleFromUserRequest" message="tns:RevokeRoleFromUserRequest" />
+      <wsdl:output name="RevokeRoleFromUserResponse" message="tns:RevokeRoleFromUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input name="UpdateUserRequest" message="tns:UpdateUserRequest" />
+      <wsdl:output name="UpdateUserResponse" message="tns:UpdateUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input name="DeleteUserRequest" message="tns:DeleteUserRequest" />
+      <wsdl:output name="DeleteUserResponse" message="tns:DeleteUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input name="GetUserByIdRequest" message="tns:GetUserByIdRequest" />
+      <wsdl:output name="GetUserByIdResponse" message="tns:GetUserByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GrantRoleToUser">
+      <wsdl:input name="GrantRoleToUserRequest" message="tns:GrantRoleToUserRequest" />
+      <wsdl:output name="GrantRoleToUserResponse" message="tns:GrantRoleToUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input name="AddUserRequest" message="tns:AddUserRequest" />
+      <wsdl:output name="AddUserResponse" message="tns:AddUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input name="GetUsersRequest" message="tns:GetUsersRequest" />
+      <wsdl:output name="GetUsersResponse" message="tns:GetUsersResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserSoap11" type="tns:User">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRolesForUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetRolesForUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRolesForUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevokeRoleFromUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="RevokeRoleFromUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RevokeRoleFromUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetUserByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetUserByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrantRoleToUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GrantRoleToUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GrantRoleToUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddUserRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetUsersRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetUsersResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port name="UserSoap11" binding="tns:UserSoap11">
+      <soap:address location="http://91.98.134.248:8080/com.mftvanak.edusys.ws.membership-0.0.1-SNAPSHOT/user/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

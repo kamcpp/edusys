@@ -1,0 +1,88 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+-----------------------------------------------------------------
+
+        SYLLABUS FOR
+"SQL SERVER DESIGN/QUERY/DEVELOP"
+
+Course details
+--------------
+
+Course code:      ?
+Course name:      SQL Server 2012 Design/Query/Develop
+Duration:         60 hours
+
+Revisions
+---------
+
+18 Apr 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+
+Syllabus for 5 hours long sessions
+----------------------------------
+
+Session  1: Application architecture, Data Resources (RAM, Hard Disk), RAM vs H.D, 
+            Variables vs. Files, File Systems, Problems of file systems, Parallel 
+            accesses, Redudancy of data, Each file has a format!, Desiging a global 
+            and secure File Format for storing data, Database systems, Client-Server 
+            architecture, TCP & UDP protocols, Stack of protocols, What is SQL?, 
+            What is SQL Server?, DBMS, Host services, DBMS Instance or Engine
+            
+Session  2: What is behind a DBMS?, DBMSs uses models to store data, Relational 
+            Model, What is a database? Tables as blocks for storing data in Relational 
+            Model, Other data models like Graphs or Hashes, DBMS Service or Instance, 
+            Authentication and Authorization concepts, Windows and SQL Server Authentication 
+            mdoes, Installation of a SQL Server Instance, What is SQL Server Management 
+            Studio?, SQL Server database files, .mdf and .ldf files, Making a database, 
+            Making some tables, Detaching and attaching databases
+            
+Session  3: Three layers architecture for DBMSs, Physical layer, Conceptual layer 
+            and View layer, Data Dictionary, Simple Phone database, Creating Phone 
+            database, Using Designer for making tables, Using CREATE TABLE command 
+            for making tables, SQL Server data types, Making rows using Designer 
+            and INSERT INTO command, Introduction to Foreign Key concept, SQL Command 
+            Types, DDL, DML and DCL commands, Introduction to SELECT command
+            
+Session  4: Relational algebra, Tables, Relational Operations, Projection, Restriction, 
+            Union, Subtraction, Intersection, Cartesian Product (Cross), Division, 
+            Joining tables, Relational calculus and SQL, Algebra optimization, Book Store 
+            database design, Introduction to Schema concept
+            
+Session  5: Constraints, Different types of constarins like FKs and Checks, Time Dependent 
+            Constraints and Time Independent Constraints (Design Constraits), Semantic 
+            foreign key relation and FK constraint, Built-in functions, Aggregate functions, 
+            GROUP BY clause, HAVING clause, Restaurant database example, Examples for 
+            aggregation using Restaurant database
+            
+Session  6: Normalization concept, Normal forms, What is Denormalization?, Performance 
+            in relational models, Introduction to View concept, System Defined Views, 
+            Simple Views, Complex Views, CRUD operations on Simple and Complex Views, 
+            Using Query Designer, Indexed or Materialized Views, Introduction to Partitioning, 
+            Partitioned Views
+            
+Session  7: T-SQL, Why T-SQL?, Variables, Conditions, Loops, Blocks, Sequences, Cursors, 
+            FETCH command
+            
+Session  8: Procedures, Arguments, OUTPUT arguments, Return values, Built-in procedures, 
+            User Defined Functions (UDFs), Scalar functions, Table-valued functions 
+            
+Session  9: Performance issues, Index concept, Types of Indexes, Clustered Indexes and B+ Trees, 
+            Unique Indexes, Introduction to Query Execution Plan, Analyzing Query Explain Plan, 
+            Using SQL Profiler to capture and analyze queries
+            
+Session 10: Introduction to Transaction, Isolation Level, Types of Isolation Levels, Autocommit 
+            mode, A real example of flooding a database with data, Analyzing effects of Indexes 
+            on reduction of query retrieval time, Analyzing queries using Query Explain Plan
+            
+Session 11: Triggers, DML Triggers, DDL Triggers, After and Instead-Of Triggers, Issues with 
+            Triggers, SQL Server and CLR Intergation, CLR Procedures, CLR UDFs, CLR User Defined 
+            Types, SQL Server and CLR development using Visual Studio .NET
+            
+Session 12: FINAL EXAM
+
+
+
+
+

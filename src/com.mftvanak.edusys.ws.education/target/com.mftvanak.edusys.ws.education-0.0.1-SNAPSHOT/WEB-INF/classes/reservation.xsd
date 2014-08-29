@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ms="http://edu.ws.edusys.mftvanak.com/schemas"
+	elementFormDefault="qualified"
+	targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/reservation"
+	xmlns:pref="http://education.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:import schemaLocation="types.xsd"
+		namespace="http://education.ws.edusys.mftvanak.com/schemas/types"></xs:import>
+
+	<xs:element name="UpdateCmsGeneralReservationRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="CmsGeneralReservation" type="pref:CmsGeneralReservationType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateCmsGeneralReservationResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetCmsGeneralReservationsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="DepartmentId" type="xs:long" nillable="false" />
+				<xs:element name="GroupId" type="xs:long" nillable="true" />
+				<xs:element name="ClassId" type="xs:long" nillable="true" />
+				<xs:element name="Count" type="xs:int" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetCmsGeneralReservationsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CmsGeneralReservations" minOccurs="1"
+					maxOccurs="unbounded" type="pref:CmsGeneralReservationType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateCmsReservationRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="CmsReservation" type="pref:CmsReservationType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateCmsReservationResponse">
+		<xs:complexType>
+			<xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetCmsReservationsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClientDateTimeYear" type="xs:int" />
+				<xs:element name="ClientDateTimeMonth" type="xs:int" />
+				<xs:element name="ClientDateTimeDay" type="xs:int" />
+				<xs:element name="ClientDateTimeHour" type="xs:int" />
+				<xs:element name="ClientDateTimeMinute" type="xs:int" />
+				<xs:element name="ClientDateTimeSecond" type="xs:int" />
+				<xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+				<xs:element name="ClientMacAddress" type="xs:string" />
+				<xs:element name="ClientIpAddress" type="xs:string" />
+				<xs:element name="ClientComputerName" type="xs:string" />
+				<xs:element name="ApplicationName" type="xs:string" />
+				<xs:element name="Token" type="xs:string" />
+				<xs:element name="DepartmentId" type="xs:long" nillable="false" />
+				<xs:element name="ReservationPlanId" type="xs:long"
+					nillable="false" />
+				<xs:element name="Count" type="xs:int" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GetCmsReservationsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CmsReservations" minOccurs="1"
+					maxOccurs="unbounded" type="pref:CmsReservationType" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

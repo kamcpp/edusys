@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+	targetNamespace="http://personnel.ws.edusys.mftvanak.com/schemas/types"
+	xmlns:Q1="http://personnel.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:complexType name="PersonType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="PersianName" type="xs:string" />
+			<xs:element name="EnglishName" type="xs:string" />
+			<xs:element name="PersianFamily" type="xs:string" />
+			<xs:element name="EnglishFamily" type="xs:string" />
+			<!-- 0 for NotClear, 1 for Male, 2 for Female and 3 for Others -->
+			<xs:element name="Gender" type="xs:int" />
+			<xs:element name="FatherName" type="xs:string" />
+			<xs:element name="ShSh" type="xs:string" />
+			<xs:element name="ShLocation" type="xs:string" />
+			<xs:element name="NationalCode" type="xs:string" />
+			<xs:element name="DateOfBirth" type="xs:long" />
+			<xs:element name="Phone1" type="xs:string" />
+			<xs:element name="Phone2" type="xs:string" />
+			<xs:element name="Phone3" type="xs:string" />
+			<xs:element name="Email1" type="xs:string" />
+			<xs:element name="Email2" type="xs:string" />
+			<xs:element name="WebUrl1" type="xs:string" />
+			<xs:element name="WebUrl2" type="xs:string" />
+			<xs:element name="Address1" type="xs:string" />
+			<xs:element name="Address2" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

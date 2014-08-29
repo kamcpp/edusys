@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.mftvanak.edusys.ws" />
+
+	<bean id="phonebook"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="PhoneBook" p:locationUri="/phonebook/"
+		p:requestSuffix="Request" p:responseSuffix="Response">
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/phonebook.xsd" />
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.ws.soap.server.endpoint.SoapFaultAnnotationExceptionResolver" />
+
+	<bean id="userDao" class="com.mftvanak.edusys.domain.dao.membership.UserDao" />
+	<bean id="roleDao" class="com.mftvanak.edusys.domain.dao.membership.RoleDao" />
+	<bean id="tokenDao" class="com.mftvanak.edusys.domain.dao.membership.TokenDao" />
+	<bean id="auditLogDao" class="com.mftvanak.edusys.domain.dao.audit.AuditLogDao" />
+	<bean id="employeeDao" class="com.mftvanak.edusys.domain.dao.official.EmployeeDao" />
+	<bean id="departmentDao" class="com.mftvanak.edusys.domain.dao.education.DepartmentDao" />
+	<bean id="instituteDao" class="com.mftvanak.edusys.domain.dao.education.InstituteDao" />
+	<bean id="phoneEntryDao" class="com.mftvanak.edusys.domain.dao.phonebook.PhoneEntryDao" />
+	<bean id="followUpDao" class="com.mftvanak.edusys.domain.dao.phonebook.FollowUpDao" />
+
+	<bean id="employeeFacade"
+		class="com.mftvanak.edusys.facade.official.impl.EmployeeFacadeImpl" />
+
+	<bean id="departmentFacade"
+		class="com.mftvanak.edusys.facade.education.impl.DepartmentFacadeImpl" />
+
+	<bean id="phoneEntryFacade"
+		class="com.mftvanak.edusys.facade.phonebook.impl.PhoneEntryFacadeImpl" />
+
+	<bean id="followUpFacade"
+		class="com.mftvanak.edusys.facade.phonebook.impl.FollowUpFacadeImpl" />
+
+	<bean id="authenticationFacade"
+		class="com.mftvanak.edusys.facade.authentication.impl.AuthenticationFacadeImpl" />
+
+	<bean id="auditFacade" class="com.mftvanak.edusys.facade.audit.impl.AuditFacadeImpl" />
+
+	<bean id="educationService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.FacadeEducationService" />
+
+	<bean id="phoneEntryService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.PhoneEntryServiceImpl" />
+
+	<bean id="FollowUpService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.FollowUpServiceImpl" />
+
+	<bean id="authenticationService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.FacadeAuthenticationService" />
+
+	<bean id="authorizationService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.AuthorizationServiceImpl" />
+
+	<bean id="securityService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.SecurityServiceImpl" />
+
+	<bean id="auditService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.AuditServiceImpl" />
+
+	<bean id="officialService"
+		class="com.mftvanak.edusys.ws.phonebook.services.impl.FacadeOfficialService" />
+
+</beans>

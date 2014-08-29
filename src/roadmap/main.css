@@ -1,0 +1,239 @@
+﻿.course-full-description-div {
+	direction: rtl;	
+	overflow-y: auto;			
+	height: 200px;				
+}
+.ui-widget-overlay.custom-overlay {
+	background-color: black;
+	background-image: none;
+	opacity: 0.8;
+	z-index: 0;    
+}
+
+.ui-dialog-titlebar {
+	padding: 0px !important;	
+}
+
+.ui-tooltip {
+	padding: 3px;
+    background: lightyellow;
+    color: black;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: tahoma, verdana;
+}
+
+.course-description {
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family: tahoma, verdana;
+	font-size: 12px;
+	background-color: lightyellow;
+	display: none;
+	padding: 5px 5px 5px 10px;
+	opacity: 0.9;
+	cursor: pointer;				
+	direction: rtl;
+}
+
+.course-description strong {
+    direction: rtl;
+}
+
+.course-full-description {
+	direction: rtl;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family: tahoma, verdana;
+	background-color: lightyellow;
+	display: none;
+	padding: 5px 5px 5px 10px;
+	opacity: 0.9;
+	cursor: pointer;				
+}
+.course-full-description table tr td {
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.course-full-description table tr td:nth-child(1) {
+	width: 100px;
+}
+
+.course-full-description table tr:nth-child(odd) {
+	background-color: lightgray;
+}
+
+.profession-description {
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family: tahoma, verdana;
+	font-size: 12px;
+	background-color: lightgreen;
+	display: none;
+	padding: 5px 5px 5px 10px;
+	opacity: 0.9;
+	cursor: pointer;				
+	direction: rtl;
+}
+
+.course-item text {
+    font-weight: bold;
+    font-size: 10px;
+    font-family: arial;
+}
+.profession-box text {
+    font-weight: normal;
+    font-size: 10px;
+    font-family: arial;
+}
+
+.path[data-category=ciw] {
+    stroke: #004B85;
+    stroke-width: 6px;        
+}
+.profession-box-connector[data-category=ciw] {
+    stroke: #004B85;
+    stroke-width: 1px;
+}
+.profession-box[data-category=ciw] rect {
+    stroke: #004B85;
+    stroke-width: 2px;
+    fill: #004B85;
+}
+
+.path[data-category=php] {
+    stroke: #84004d;
+    stroke-width: 4px;
+}            
+.profession-box-connector[data-category=php] {
+    stroke: #84004d;
+    stroke-width: 1px;
+}
+.profession-box[data-category=php] rect {
+    stroke: #84004d;
+    stroke-width: 2px;
+    fill: #84004d;
+}
+
+.path[data-category=mcts] {
+    stroke: #3da028;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=mcts] {
+    stroke: #3da028;
+    stroke-width: 1px;
+}
+.profession-box[data-category=mcts] rect {
+    stroke: #3da028;
+    stroke-width: 2px;
+    fill: #3da028;
+}
+
+.path[data-category=java] {
+    stroke: #ff4040;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=java] {
+    stroke: #ff4040;
+    stroke-width: 1px;
+}
+.profession-box[data-category=java] rect {
+    stroke: #ff4040;
+    stroke-width: 2px;
+    fill: #ff4040;
+}
+
+.path[data-category=android] {
+    stroke: #ea3a8d;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=android] {
+    stroke: #ea3a8d;
+    stroke-width: 1px;
+}
+.profession-box[data-category=android] rect {
+    stroke: #ea3a8d;
+    stroke-width: 2px;
+    fill: #ea3a8d;
+}
+
+.path[data-category=ios] {
+    stroke: #a368d5;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=ios] {
+    stroke: #a368d5;
+    stroke-width: 1px;
+}
+.profession-box[data-category=ios] rect {
+    stroke: #a368d5;
+    stroke-width: 2px;
+    fill: #a368d5;
+}
+
+.path[data-category=msbi] {
+    stroke: #bf3030;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=msbi] {
+    stroke: #bf3030;
+    stroke-width: 1px;
+}
+.profession-box[data-category=msbi] rect {
+    stroke: #bf3030;
+    stroke-width: 2px;
+    fill: #bf3030;
+}
+
+.path[data-category=cpp] {
+    stroke: #3d9ad1;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=cpp] {
+    stroke: #3d9ad1;
+    stroke-width: 1px;
+}
+.profession-box[data-category=cpp] rect {
+    stroke: #3d9ad1;
+    stroke-width: 2px;
+    fill: #3d9ad1;
+}
+
+.path[data-category=python] {
+    stroke: #009999;
+    stroke-width: 4px;
+}
+.profession-box-connector[data-category=python] {
+    stroke: #009999;
+    stroke-width: 1px;
+}
+.profession-box[data-category=python] rect {
+    stroke: #009999;
+    stroke-width: 2px;
+    fill: #009999;
+}
+
+.register-link:parent {
+	height: 25px;
+}
+
+.register-link {
+	height: 25px;
+}
+
+.register-link a {
+	border: 1px solid #8a0041;
+	border-radius: 3px;
+	padding: 1px;
+	margin-top: 2px;
+	height: 100px;
+	margin-bottom: 2px;
+	text-decoration: none;
+	background-color: #d50065;
+	color: white !important;	
+}
+
+.register-link:hover a {
+	background-color: #85004d;
+}

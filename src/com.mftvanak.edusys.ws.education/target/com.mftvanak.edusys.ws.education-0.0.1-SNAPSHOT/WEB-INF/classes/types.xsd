@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ms="http://education.ws.edusys.mftvanak.com/schemas"
+	elementFormDefault="qualified"
+	targetNamespace="http://education.ws.edusys.mftvanak.com/schemas/types">
+
+	<xs:complexType name="InstituteType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="PersianName" type="xs:string" />
+			<xs:element name="EnglishName" type="xs:string" />
+			<xs:element name="Phone1" type="xs:string" />
+			<xs:element name="Phone2" type="xs:string" />
+			<xs:element name="FaxNumber" type="xs:string" />
+			<xs:element name="Email1" type="xs:string" />
+			<xs:element name="Email2" type="xs:string" />
+			<xs:element name="WebUrl1" type="xs:string" />
+			<xs:element name="WebUrl2" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="DepartmentType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="InstituteId" type="xs:long" />
+			<xs:element name="PersianName" type="xs:string" />
+			<xs:element name="EnglishName" type="xs:string" />
+			<xs:element name="Color" type="xs:string" />
+			<xs:element name="ShowOrder" type="xs:int" />
+			<xs:element name="SeoKeywords" type="xs:string" />
+			<xs:element name="SeoDescription" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="GroupType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="DepartmentId" type="xs:long" />
+			<xs:element name="DepartmentName" type="xs:string" />
+			<xs:element name="PersianName" type="xs:string" />
+			<xs:element name="EnglishName" type="xs:string" />
+			<xs:element name="ShowOrder" type="xs:int" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="CmsGeneralReservationType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="WillRegister" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="WillRegisterWithCondition" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Cancelled" type="xs:boolean" nillable="true" />
+			<xs:element name="NotAnswered" type="xs:boolean" nillable="true" />
+			<xs:element name="Followed" type="xs:boolean" nillable="true" />
+			<xs:element name="WillInformUs" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="HasRegistered" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Seen" type="xs:boolean" nillable="false" />
+			<xs:element name="Called" type="xs:boolean" nillable="false" />
+			<xs:element name="SmsSent" type="xs:boolean" nillable="false" />
+			<xs:element name="CmsDepartmentId" type="xs:long" />
+			<xs:element name="CmsDepartmentName" type="xs:string" />
+			<xs:element name="CmsGroupId" type="xs:long" />
+			<xs:element name="CmsGroupName" type="xs:string" />
+			<xs:element name="CmsClassId" type="xs:long" />
+			<xs:element name="CmsClassName" type="xs:string" />
+			<xs:element name="CalculatedDate" type="xs:long" />
+			<xs:element name="Date" type="xs:string" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Email" type="xs:string" />
+			<xs:element name="Phone" type="xs:string" />
+			<xs:element name="Text" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+			<xs:element name="Source" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="CmsReservationType">
+		<xs:all>
+			<xs:element name="Id" type="xs:long" />
+			<xs:element name="WillRegister" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="WillRegisterWithCondition" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Cancelled" type="xs:boolean" nillable="true" />
+			<xs:element name="NotAnswered" type="xs:boolean" nillable="true" />
+			<xs:element name="Followed" type="xs:boolean" nillable="true" />
+			<xs:element name="WillInformUs" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="HasRegistered" type="xs:boolean"
+				nillable="true" />
+			<xs:element name="Seen" type="xs:boolean" nillable="false" />
+			<xs:element name="Called" type="xs:boolean" nillable="false" />
+			<xs:element name="SmsSent" type="xs:boolean" nillable="false" />
+			<xs:element name="CmsDepartmentId" type="xs:long" />
+			<xs:element name="CmsDepartmentName" type="xs:string" />
+			<xs:element name="CalculatedDate" type="xs:long" />
+			<xs:element name="Date" type="xs:string" />
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Email" type="xs:string" />
+			<xs:element name="Phone" type="xs:string" />
+			<xs:element name="Text" type="xs:string" />
+			<xs:element name="Time" type="xs:string" />
+			<xs:element name="Description" type="xs:string" />
+			<xs:element name="Source" type="xs:string" />
+		</xs:all>
+	</xs:complexType>
+
+</xs:schema>  

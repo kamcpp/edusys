@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.mftvanak.edusys.ws" />
+
+	<bean id="types" class="org.springframework.xml.xsd.SimpleXsdSchema">
+		<property name="xsd" value="classpath:/types.xsd">
+		</property>
+	</bean>
+
+	<bean id="todo"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="Todo" p:locationUri="/todo/" p:requestSuffix="Request"
+		p:responseSuffix="Response">
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/todo.xsd" />
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.ws.soap.server.endpoint.SoapFaultAnnotationExceptionResolver" />
+
+	<bean id="userDao" class="com.mftvanak.edusys.domain.dao.membership.UserDao" />
+	<bean id="roleDao" class="com.mftvanak.edusys.domain.dao.membership.RoleDao" />
+	<bean id="tokenDao" class="com.mftvanak.edusys.domain.dao.membership.TokenDao" />
+	<bean id="auditLogDao" class="com.mftvanak.edusys.domain.dao.audit.AuditLogDao" />
+	<bean id="personDao" class="com.mftvanak.edusys.domain.dao.personnel.PersonDao" />
+
+	<bean id="userFacade"
+		class="com.mftvanak.edusys.facade.membership.impl.UserFacadeImpl" />
+
+	<bean id="roleFacade"
+		class="com.mftvanak.edusys.facade.membership.impl.RoleFacadeImpl" />
+
+	<bean id="authenticationFacade"
+		class="com.mftvanak.edusys.facade.authentication.impl.AuthenticationFacadeImpl" />
+
+	<bean id="personFacade"
+		class="com.mftvanak.edusys.facade.personnel.impl.PersonFacadeImpl" />
+
+	<bean id="auditFacade" class="com.mftvanak.edusys.facade.audit.impl.AuditFacadeImpl" />
+
+	<bean id="userService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.UserServiceImpl" />
+
+	<bean id="roleService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.RoleServiceImpl" />
+
+	<bean id="authenticationService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.FacadeAuthenticationService" />
+
+	<bean id="personnelService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.FacadePersonnelService" />
+
+	<bean id="authorizationService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.AuthorizationServiceImpl" />
+
+	<bean id="securityService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.SecurityServiceImpl" />
+
+	<bean id="auditService"
+		class="com.mftvanak.edusys.ws.membership.services.impl.AuditServiceImpl" />
+
+</beans>

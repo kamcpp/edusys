@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://messaging.ws.edusys.mftvanak.com/schemas" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddMessageTemplateRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="MessageTemplate" type="pref:MessageTemplateType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddMessageTemplateResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="MessageTemplateId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMessageTemplateRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="MessageTemplate" type="pref:MessageTemplateType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMessageTemplateResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMessageTemplateRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="MessageTemplateId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteMessageTemplateResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageTemplateByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="MessageTemplateId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageTemplateByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="MessageTemplate" type="pref:MessageTemplateType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:annotation />
+      <xs:element name="GetMessageTemplatesRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageTemplatesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="MessageTemplates" type="pref:MessageTemplateType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageTemplatesByOwnerIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="OwnerId" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetMessageTemplatesByOwnerIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="MessageTemplates" type="pref:MessageTemplateType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMessageTemplatesByOwnerIdRequest">
+    <wsdl:part name="GetMessageTemplatesByOwnerIdRequest" element="tns:GetMessageTemplatesByOwnerIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageTemplatesResponse">
+    <wsdl:part name="GetMessageTemplatesResponse" element="tns:GetMessageTemplatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageTemplateByIdRequest">
+    <wsdl:part name="GetMessageTemplateByIdRequest" element="tns:GetMessageTemplateByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageTemplatesRequest">
+    <wsdl:part name="GetMessageTemplatesRequest" element="tns:GetMessageTemplatesRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageTemplateResponse">
+    <wsdl:part name="DeleteMessageTemplateResponse" element="tns:DeleteMessageTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMessageTemplateResponse">
+    <wsdl:part name="AddMessageTemplateResponse" element="tns:AddMessageTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMessageTemplateRequest">
+    <wsdl:part name="UpdateMessageTemplateRequest" element="tns:UpdateMessageTemplateRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageTemplateByIdResponse">
+    <wsdl:part name="GetMessageTemplateByIdResponse" element="tns:GetMessageTemplateByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageTemplateRequest">
+    <wsdl:part name="DeleteMessageTemplateRequest" element="tns:DeleteMessageTemplateRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMessageTemplateResponse">
+    <wsdl:part name="UpdateMessageTemplateResponse" element="tns:UpdateMessageTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageTemplatesByOwnerIdResponse">
+    <wsdl:part name="GetMessageTemplatesByOwnerIdResponse" element="tns:GetMessageTemplatesByOwnerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMessageTemplateRequest">
+    <wsdl:part name="AddMessageTemplateRequest" element="tns:AddMessageTemplateRequest" />
+  </wsdl:message>
+  <wsdl:portType name="MessageTemplate">
+    <wsdl:operation name="GetMessageTemplatesByOwnerId">
+      <wsdl:input name="GetMessageTemplatesByOwnerIdRequest" message="tns:GetMessageTemplatesByOwnerIdRequest" />
+      <wsdl:output name="GetMessageTemplatesByOwnerIdResponse" message="tns:GetMessageTemplatesByOwnerIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageTemplates">
+      <wsdl:input name="GetMessageTemplatesRequest" message="tns:GetMessageTemplatesRequest" />
+      <wsdl:output name="GetMessageTemplatesResponse" message="tns:GetMessageTemplatesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageTemplateById">
+      <wsdl:input name="GetMessageTemplateByIdRequest" message="tns:GetMessageTemplateByIdRequest" />
+      <wsdl:output name="GetMessageTemplateByIdResponse" message="tns:GetMessageTemplateByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageTemplate">
+      <wsdl:input name="DeleteMessageTemplateRequest" message="tns:DeleteMessageTemplateRequest" />
+      <wsdl:output name="DeleteMessageTemplateResponse" message="tns:DeleteMessageTemplateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMessageTemplate">
+      <wsdl:input name="AddMessageTemplateRequest" message="tns:AddMessageTemplateRequest" />
+      <wsdl:output name="AddMessageTemplateResponse" message="tns:AddMessageTemplateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageTemplate">
+      <wsdl:input name="UpdateMessageTemplateRequest" message="tns:UpdateMessageTemplateRequest" />
+      <wsdl:output name="UpdateMessageTemplateResponse" message="tns:UpdateMessageTemplateResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MessageTemplateSoap11" type="tns:MessageTemplate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMessageTemplatesByOwnerId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetMessageTemplatesByOwnerIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetMessageTemplatesByOwnerIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageTemplates">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetMessageTemplatesRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetMessageTemplatesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageTemplateById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetMessageTemplateByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetMessageTemplateByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageTemplate">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteMessageTemplateRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteMessageTemplateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMessageTemplate">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddMessageTemplateRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddMessageTemplateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageTemplate">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateMessageTemplateRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateMessageTemplateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageTemplateService">
+    <wsdl:port name="MessageTemplateSoap11" binding="tns:MessageTemplateSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/message-template/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

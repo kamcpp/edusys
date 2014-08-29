@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://phonebook.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://phonebook.ws.edusys.mftvanak.com/schemas" targetNamespace="http://phonebook.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:Q1="http://phonebook.ws.edusys.mftvanak.com/schemas" xmlns:pref="http://phonebook.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://phonebook.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="FollowUpType">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:long" />
+          <xs:element name="PhoneEntryId" type="xs:long" />
+          <xs:element name="OwnerId" type="xs:int" />
+          <xs:element name="Color" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element name="DesiredCourses" type="xs:string" />
+          <xs:element name="DesiredTimes" type="xs:string" />
+          <xs:element name="PhoneFollowUpType" type="xs:int" />
+          <xs:element name="Question" type="xs:string" />
+          <xs:element name="SubmitDate" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhoneEntryType">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:long" />
+          <xs:element name="departmentId" type="xs:long" />
+          <xs:element name="OwnerId" type="xs:long" />
+          <xs:element name="Color" type="xs:string" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Number" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element name="Question" type="xs:string" />
+          <xs:element name="Seen" type="xs:int" />
+          <xs:element name="SubmitDate" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PhoneEntrySearchPredicateType">
+        <xs:sequence>
+          <xs:element name="DepartmentId" type="xs:long" />
+          <xs:element name="OwnerId" type="xs:long" />
+          <xs:element name="SubmitDateStart" type="xs:long" />
+          <xs:element name="SubmitDateEnd" type="xs:long" />
+          <xs:element name="Name" type="xs:string" />
+          <xs:element name="Number" type="xs:string" />
+          <xs:element name="Question" type="xs:string" />
+          <xs:element name="Description" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="FollowUpTypes" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="Colors" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddPhoneEntryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddPhoneEntryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePhoneEntryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdatePhoneEntryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePhoneEntryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePhoneEntryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPhoneEntryByIdRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPhoneEntryByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element name="PhoneEntry" type="Q1:PhoneEntryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPhoneEntriesByPredicateRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="JustToday" type="xs:int" />
+            <xs:element name="Predicate" type="Q1:PhoneEntrySearchPredicateType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPhoneEntriesByPredicateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="PhoneEntries" type="Q1:PhoneEntryType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFollowUpsRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="PhoneEntryId" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFollowUpsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="FollowUps" type="Q1:FollowUpType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddFollowUpRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="FollowUp" type="Q1:FollowUpType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddFollowUpResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateFollowUpRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="FollowUp" type="Q1:FollowUpType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateFollowUpResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFollowUpRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFollowUpResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFollowUpByIdRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Id" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFollowUpByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:int" />
+            <xs:element name="FollowUp" type="Q1:FollowUpType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFollowUpsResponse">
+    <wsdl:part name="GetFollowUpsResponse" element="tns:GetFollowUpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhoneEntriesByPredicateRequest">
+    <wsdl:part name="GetPhoneEntriesByPredicateRequest" element="tns:GetPhoneEntriesByPredicateRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhoneEntryResponse">
+    <wsdl:part name="UpdatePhoneEntryResponse" element="tns:UpdatePhoneEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhoneEntriesByPredicateResponse">
+    <wsdl:part name="GetPhoneEntriesByPredicateResponse" element="tns:GetPhoneEntriesByPredicateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePhoneEntryRequest">
+    <wsdl:part name="UpdatePhoneEntryRequest" element="tns:UpdatePhoneEntryRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeletePhoneEntryRequest">
+    <wsdl:part name="DeletePhoneEntryRequest" element="tns:DeletePhoneEntryRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetFollowUpsRequest">
+    <wsdl:part name="GetFollowUpsRequest" element="tns:GetFollowUpsRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeletePhoneEntryResponse">
+    <wsdl:part name="DeletePhoneEntryResponse" element="tns:DeletePhoneEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPhoneEntryResponse">
+    <wsdl:part name="AddPhoneEntryResponse" element="tns:AddPhoneEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFollowUpByIdResponse">
+    <wsdl:part name="GetFollowUpByIdResponse" element="tns:GetFollowUpByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhoneEntryByIdResponse">
+    <wsdl:part name="GetPhoneEntryByIdResponse" element="tns:GetPhoneEntryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFollowUpResponse">
+    <wsdl:part name="DeleteFollowUpResponse" element="tns:DeleteFollowUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPhoneEntryByIdRequest">
+    <wsdl:part name="GetPhoneEntryByIdRequest" element="tns:GetPhoneEntryByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetFollowUpByIdRequest">
+    <wsdl:part name="GetFollowUpByIdRequest" element="tns:GetFollowUpByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFollowUpRequest">
+    <wsdl:part name="DeleteFollowUpRequest" element="tns:DeleteFollowUpRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFollowUpResponse">
+    <wsdl:part name="UpdateFollowUpResponse" element="tns:UpdateFollowUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFollowUpResponse">
+    <wsdl:part name="AddFollowUpResponse" element="tns:AddFollowUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFollowUpRequest">
+    <wsdl:part name="UpdateFollowUpRequest" element="tns:UpdateFollowUpRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddPhoneEntryRequest">
+    <wsdl:part name="AddPhoneEntryRequest" element="tns:AddPhoneEntryRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddFollowUpRequest">
+    <wsdl:part name="AddFollowUpRequest" element="tns:AddFollowUpRequest" />
+  </wsdl:message>
+  <wsdl:portType name="PhoneBook">
+    <wsdl:operation name="GetFollowUps">
+      <wsdl:input name="GetFollowUpsRequest" message="tns:GetFollowUpsRequest" />
+      <wsdl:output name="GetFollowUpsResponse" message="tns:GetFollowUpsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneEntriesByPredicate">
+      <wsdl:input name="GetPhoneEntriesByPredicateRequest" message="tns:GetPhoneEntriesByPredicateRequest" />
+      <wsdl:output name="GetPhoneEntriesByPredicateResponse" message="tns:GetPhoneEntriesByPredicateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhoneEntry">
+      <wsdl:input name="UpdatePhoneEntryRequest" message="tns:UpdatePhoneEntryRequest" />
+      <wsdl:output name="UpdatePhoneEntryResponse" message="tns:UpdatePhoneEntryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhoneEntry">
+      <wsdl:input name="DeletePhoneEntryRequest" message="tns:DeletePhoneEntryRequest" />
+      <wsdl:output name="DeletePhoneEntryResponse" message="tns:DeletePhoneEntryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoneEntry">
+      <wsdl:input name="AddPhoneEntryRequest" message="tns:AddPhoneEntryRequest" />
+      <wsdl:output name="AddPhoneEntryResponse" message="tns:AddPhoneEntryResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowUpById">
+      <wsdl:input name="GetFollowUpByIdRequest" message="tns:GetFollowUpByIdRequest" />
+      <wsdl:output name="GetFollowUpByIdResponse" message="tns:GetFollowUpByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneEntryById">
+      <wsdl:input name="GetPhoneEntryByIdRequest" message="tns:GetPhoneEntryByIdRequest" />
+      <wsdl:output name="GetPhoneEntryByIdResponse" message="tns:GetPhoneEntryByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFollowUp">
+      <wsdl:input name="DeleteFollowUpRequest" message="tns:DeleteFollowUpRequest" />
+      <wsdl:output name="DeleteFollowUpResponse" message="tns:DeleteFollowUpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFollowUp">
+      <wsdl:input name="UpdateFollowUpRequest" message="tns:UpdateFollowUpRequest" />
+      <wsdl:output name="UpdateFollowUpResponse" message="tns:UpdateFollowUpResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFollowUp">
+      <wsdl:input name="AddFollowUpRequest" message="tns:AddFollowUpRequest" />
+      <wsdl:output name="AddFollowUpResponse" message="tns:AddFollowUpResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PhoneBookSoap11" type="tns:PhoneBook">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFollowUps">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetFollowUpsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFollowUpsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneEntriesByPredicate">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetPhoneEntriesByPredicateRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPhoneEntriesByPredicateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhoneEntry">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdatePhoneEntryRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdatePhoneEntryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhoneEntry">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeletePhoneEntryRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeletePhoneEntryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPhoneEntry">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddPhoneEntryRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddPhoneEntryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFollowUpById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetFollowUpByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFollowUpByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhoneEntryById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetPhoneEntryByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPhoneEntryByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFollowUp">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteFollowUpRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteFollowUpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFollowUp">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateFollowUpRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateFollowUpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFollowUp">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddFollowUpRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddFollowUpResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhoneBookService">
+    <wsdl:port name="PhoneBookSoap11" binding="tns:PhoneBookSoap11">
+      <soap:address location="http://91.98.134.248:8080/com.mftvanak.edusys.ws.phonebook-0.0.1-SNAPSHOT/phonebook/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

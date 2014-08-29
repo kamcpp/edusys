@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://authentication.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://authentication.ws.edusys.mftvanak.com/schemas" targetNamespace="http://authentication.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:Q1="http://authentication.ws.edusys.mftvanak.com/schemas" elementFormDefault="qualified" targetNamespace="http://authentication.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="RoleType">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:long" />
+          <xs:element name="Name" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AuthenticationRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Username" type="xs:string" />
+            <xs:element name="Password" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AuthenticationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserId" type="xs:long" />
+            <xs:element name="Username" type="xs:string" />
+            <xs:element name="PersianFullName" type="xs:string" />
+            <xs:element name="EnglishFullName" type="xs:string" />
+            <xs:element name="AccountEmail" type="xs:string" />
+            <xs:element name="Phone1" type="xs:string" />
+            <xs:element name="Phone2" type="xs:string" />
+            <xs:element name="Phone3" type="xs:string" />
+            <xs:element name="Email1" type="xs:string" />
+            <xs:element name="Email2" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="Roles" type="Q1:RoleType" />
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidateTokenRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidateTokenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserId" type="xs:long" />
+            <xs:element name="Username" type="xs:string" />
+            <xs:element name="PersianFullName" type="xs:string" />
+            <xs:element name="EnglishFullName" type="xs:string" />
+            <xs:element name="Email" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="Roles" type="Q1:RoleType" />
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateTokenRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateTokenResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UserExistsByUsernameRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Username" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UserExistsByUsernameResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UserExistsByEmailRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Email" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UserExistsByEmailResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Result" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangePasswordRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="Username" type="xs:string" />
+            <xs:element name="CurrentHashedPassword" type="xs:string" />
+            <xs:element name="NewHashedPassword" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangePasswordResponse">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UserExistsByEmailResponse">
+    <wsdl:part name="UserExistsByEmailResponse" element="tns:UserExistsByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationRequest">
+    <wsdl:part name="AuthenticationRequest" element="tns:AuthenticationRequest" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenResponse">
+    <wsdl:part name="ValidateTokenResponse" element="tns:ValidateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByEmailRequest">
+    <wsdl:part name="UserExistsByEmailRequest" element="tns:UserExistsByEmailRequest" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByUsernameResponse">
+    <wsdl:part name="UserExistsByUsernameResponse" element="tns:UserExistsByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenRequest">
+    <wsdl:part name="ValidateTokenRequest" element="tns:ValidateTokenRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateTokenResponse">
+    <wsdl:part name="DeactivateTokenResponse" element="tns:DeactivateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateTokenRequest">
+    <wsdl:part name="DeactivateTokenRequest" element="tns:DeactivateTokenRequest" />
+  </wsdl:message>
+  <wsdl:message name="UserExistsByUsernameRequest">
+    <wsdl:part name="UserExistsByUsernameRequest" element="tns:UserExistsByUsernameRequest" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordResponse">
+    <wsdl:part name="ChangePasswordResponse" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticationResponse">
+    <wsdl:part name="AuthenticationResponse" element="tns:AuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordRequest">
+    <wsdl:part name="ChangePasswordRequest" element="tns:ChangePasswordRequest" />
+  </wsdl:message>
+  <wsdl:portType name="Authentication">
+    <wsdl:operation name="UserExistsByEmail">
+      <wsdl:input name="UserExistsByEmailRequest" message="tns:UserExistsByEmailRequest" />
+      <wsdl:output name="UserExistsByEmailResponse" message="tns:UserExistsByEmailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <wsdl:input name="AuthenticationRequest" message="tns:AuthenticationRequest" />
+      <wsdl:output name="AuthenticationResponse" message="tns:AuthenticationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <wsdl:input name="ValidateTokenRequest" message="tns:ValidateTokenRequest" />
+      <wsdl:output name="ValidateTokenResponse" message="tns:ValidateTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UserExistsByUsername">
+      <wsdl:input name="UserExistsByUsernameRequest" message="tns:UserExistsByUsernameRequest" />
+      <wsdl:output name="UserExistsByUsernameResponse" message="tns:UserExistsByUsernameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateToken">
+      <wsdl:input name="DeactivateTokenRequest" message="tns:DeactivateTokenRequest" />
+      <wsdl:output name="DeactivateTokenResponse" message="tns:DeactivateTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input name="ChangePasswordRequest" message="tns:ChangePasswordRequest" />
+      <wsdl:output name="ChangePasswordResponse" message="tns:ChangePasswordResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthenticationSoap11" type="tns:Authentication">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserExistsByEmail">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UserExistsByEmailRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UserExistsByEmailResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AuthenticationRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AuthenticationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateToken">
+      <soap:operation soapAction="" />
+      <wsdl:input name="ValidateTokenRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ValidateTokenResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserExistsByUsername">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UserExistsByUsernameRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UserExistsByUsernameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateToken">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeactivateTokenRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeactivateTokenResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="" />
+      <wsdl:input name="ChangePasswordRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChangePasswordResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthenticationService">
+    <wsdl:port name="AuthenticationSoap11" binding="tns:AuthenticationSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.authentication-0.0.1-SNAPSHOT/authentication/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

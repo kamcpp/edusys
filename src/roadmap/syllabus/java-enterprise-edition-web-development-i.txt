@@ -1,0 +1,110 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+-----------------------------------------------------------------
+
+        SYLLABUS FOR
+"Java Web Development I (JEE)"
+
+Course details
+--------------
+
+Course code:      ?
+Course name:      Java Web Development I (JEE)
+Duration:         42 hours
+
+Revisions
+---------
+
+10 Apr 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+Final Project
+-------------
+
+- A simple and light-weight MVC engine
+
+Syllabus
+--------
+
+[JEE Enterprise Applications and Architecture] (3 hours, 3 hours)
+- What is JEE?
+- JEE 6 and JEE 7
+- JCP (Java Community Process) and JSR (Java Specification Request)
+- JEE Application Model
+
+[JEE 7 Multi-tier architecture] (5 hours, 8 hours)
+- Introduction to JEE 7 Multi-tier architecture
+- Client tier
+- Middle tier
+- Data tier (Enterprise Information System tier)
+- JEE 7 Components
+- JEE 7 Components in each tier
+- Web tier and Business tier
+- What are Enterprise Java Beans (EJB)?
+- JEE Server
+- Java EE 7 Containers
+- Containers for different components
+- Security model for a JEE 7 application
+- Security issues regarding JEE 7 architecture
+
+[JEE 7 Web Components] (5 hours, 13 hours)
+- Introduction to Java Servlets
+- Choosing a Java EE 7 Web Container
+- Different Java EE 7 Web Containers
+- We choose Tomcat for now
+- Making a hello-world servlet
+- Generating standard output from a servlet
+- What are standard formats for servlet? HTML, XML, XHTML, etc.
+
+[Java Server Pages] (5 hours, 18 hours) 1
+- Introduction to JSP (Java Server Pages)
+- Technologies for generation of HTML or other standard format output
+- A simple example
+- How Web Containers interprete JSPs?
+- JSP Standard Tags Library (JSTL)
+- Introduction to frameworks related to JSPs
+
+[Deployment of Web Components] (3 hours, 21 hours)
+- Some Web Containers for JEE 7 Web Components
+- Settings of a Web Container
+- What is an Application Server?
+- Introduction to GlassFish Application Server
+- Deployment of a simple web application on GlassFish
+
+[Simple Library Project] (10 hours, 31 hours)
+- A simple Library website written with JSP and Java Servlets
+- Database design, it is very simple!
+- Data access layer using JDBC
+- Which DBMS we should use?
+- Design and implementation of Business-tier
+- Introduction to EJBs
+- Session Beans
+- Message-Driven Beans
+- CRUD operations in Business-tier
+- What are ORMs? Do we really need an ORM?
+- Design and implementation of Web-tier
+- JSP files
+- Introduction to EL (Expression Language)
+- Adding some CSS and JS elements to the website
+- Server-side vaidation
+
+[Introduction to Java Server Faces] (5 hours, 36 hours)
+- What is JSF?
+- Facelets
+- A small project
+- Server-side validation with JSF
+- What is MVC architectural pattern?
+- Model? Controller? View?
+- JSF can be a View generation framework 
+
+[Introduction to Java EE 7 API] (4 hours, 40 hours)
+- What are new in Java EE 7?
+- Java EE APIs in each tier
+- WebSocket technology
+- Concurrency utilities in Java EE 7
+- JSON-P technology
+
+[FINAL EXAM] (2 hours, 42 hours)
+
+[End]

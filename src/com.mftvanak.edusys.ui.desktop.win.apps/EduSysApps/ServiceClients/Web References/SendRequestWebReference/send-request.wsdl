@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://messaging.ws.edusys.mftvanak.com/schemas" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="types.xsd" namespace="http://messaging.ws.edusys.mftvanak.com/schemas/types" />
+      <xs:element name="AddSendRequestRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="SendRequest" type="pref:SendRequestType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddSendRequestResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="SendRequestId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateSendRequestRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="SendRequest" type="pref:SendRequestType" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateSendRequestResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteSendRequestRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="SendRequestId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteSendRequestResponse">
+        <xs:complexType>
+          <xs:all />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendRequestByIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="SendRequestId" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendRequestByIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SendRequest" type="pref:SendRequestType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:annotation />
+      <xs:element name="GetSendRequestsRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendRequestsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="SendRequests" type="pref:SendRequestType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendRequestsByOwnerIdRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+            <xs:element name="OwnerId" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSendRequestsByOwnerIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="unbounded" name="SendRequests" type="pref:SendRequestType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="AddSendRequestRequest">
+    <wsdl:part name="AddSendRequestRequest" element="tns:AddSendRequestRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestsByOwnerIdResponse">
+    <wsdl:part name="GetSendRequestsByOwnerIdResponse" element="tns:GetSendRequestsByOwnerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestByIdResponse">
+    <wsdl:part name="GetSendRequestByIdResponse" element="tns:GetSendRequestByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSendRequestRequest">
+    <wsdl:part name="DeleteSendRequestRequest" element="tns:DeleteSendRequestRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSendRequestResponse">
+    <wsdl:part name="UpdateSendRequestResponse" element="tns:UpdateSendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestByIdRequest">
+    <wsdl:part name="GetSendRequestByIdRequest" element="tns:GetSendRequestByIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestsRequest">
+    <wsdl:part name="GetSendRequestsRequest" element="tns:GetSendRequestsRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddSendRequestResponse">
+    <wsdl:part name="AddSendRequestResponse" element="tns:AddSendRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestsResponse">
+    <wsdl:part name="GetSendRequestsResponse" element="tns:GetSendRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSendRequestsByOwnerIdRequest">
+    <wsdl:part name="GetSendRequestsByOwnerIdRequest" element="tns:GetSendRequestsByOwnerIdRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSendRequestRequest">
+    <wsdl:part name="UpdateSendRequestRequest" element="tns:UpdateSendRequestRequest" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSendRequestResponse">
+    <wsdl:part name="DeleteSendRequestResponse" element="tns:DeleteSendRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SendRequest">
+    <wsdl:operation name="AddSendRequest">
+      <wsdl:input name="AddSendRequestRequest" message="tns:AddSendRequestRequest" />
+      <wsdl:output name="AddSendRequestResponse" message="tns:AddSendRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequestsByOwnerId">
+      <wsdl:input name="GetSendRequestsByOwnerIdRequest" message="tns:GetSendRequestsByOwnerIdRequest" />
+      <wsdl:output name="GetSendRequestsByOwnerIdResponse" message="tns:GetSendRequestsByOwnerIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequestById">
+      <wsdl:input name="GetSendRequestByIdRequest" message="tns:GetSendRequestByIdRequest" />
+      <wsdl:output name="GetSendRequestByIdResponse" message="tns:GetSendRequestByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSendRequest">
+      <wsdl:input name="DeleteSendRequestRequest" message="tns:DeleteSendRequestRequest" />
+      <wsdl:output name="DeleteSendRequestResponse" message="tns:DeleteSendRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSendRequest">
+      <wsdl:input name="UpdateSendRequestRequest" message="tns:UpdateSendRequestRequest" />
+      <wsdl:output name="UpdateSendRequestResponse" message="tns:UpdateSendRequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequests">
+      <wsdl:input name="GetSendRequestsRequest" message="tns:GetSendRequestsRequest" />
+      <wsdl:output name="GetSendRequestsResponse" message="tns:GetSendRequestsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendRequestSoap11" type="tns:SendRequest">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddSendRequest">
+      <soap:operation soapAction="" />
+      <wsdl:input name="AddSendRequestRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddSendRequestResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequestsByOwnerId">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetSendRequestsByOwnerIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSendRequestsByOwnerIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequestById">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetSendRequestByIdRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSendRequestByIdResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSendRequest">
+      <soap:operation soapAction="" />
+      <wsdl:input name="DeleteSendRequestRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteSendRequestResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSendRequest">
+      <soap:operation soapAction="" />
+      <wsdl:input name="UpdateSendRequestRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateSendRequestResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendRequests">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetSendRequestsRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSendRequestsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendRequestService">
+    <wsdl:port name="SendRequestSoap11" binding="tns:SendRequestSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/send-request/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

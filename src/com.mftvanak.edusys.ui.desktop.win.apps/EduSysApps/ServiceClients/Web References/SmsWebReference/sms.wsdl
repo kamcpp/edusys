@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:tns="http://messaging.ws.edusys.mftvanak.com/schemas" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:pref="http://messaging.ws.edusys.mftvanak.com/schemas/types" elementFormDefault="qualified" targetNamespace="http://messaging.ws.edusys.mftvanak.com/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetCurrentBalanceRequest">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ClientDateTimeYear" type="xs:int" />
+            <xs:element name="ClientDateTimeMonth" type="xs:int" />
+            <xs:element name="ClientDateTimeDay" type="xs:int" />
+            <xs:element name="ClientDateTimeHour" type="xs:int" />
+            <xs:element name="ClientDateTimeMinute" type="xs:int" />
+            <xs:element name="ClientDateTimeSecond" type="xs:int" />
+            <xs:element name="ClientDateTimeMilliSecond" type="xs:int" />
+            <xs:element name="ClientMacAddress" type="xs:string" />
+            <xs:element name="ClientIpAddress" type="xs:string" />
+            <xs:element name="ClientComputerName" type="xs:string" />
+            <xs:element name="ApplicationName" type="xs:string" />
+            <xs:element name="Token" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetCurrentBalanceResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="Balance" type="xs:long" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCurrentBalanceResponse">
+    <wsdl:part name="GetCurrentBalanceResponse" element="tns:GetCurrentBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentBalanceRequest">
+    <wsdl:part name="GetCurrentBalanceRequest" element="tns:GetCurrentBalanceRequest" />
+  </wsdl:message>
+  <wsdl:portType name="Sms">
+    <wsdl:operation name="GetCurrentBalance">
+      <wsdl:input name="GetCurrentBalanceRequest" message="tns:GetCurrentBalanceRequest" />
+      <wsdl:output name="GetCurrentBalanceResponse" message="tns:GetCurrentBalanceResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsSoap11" type="tns:Sms">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCurrentBalance">
+      <soap:operation soapAction="" />
+      <wsdl:input name="GetCurrentBalanceRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCurrentBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsService">
+    <wsdl:port name="SmsSoap11" binding="tns:SmsSoap11">
+      <soap:address location="http://91.98.134.248:8090/com.mftvanak.edusys.ws.messaging-0.0.1-SNAPSHOT/sms/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

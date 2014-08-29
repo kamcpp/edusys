@@ -1,0 +1,67 @@
+Tehran Institute of Technology, Mojtama E Fanni E Tehran and MFT 
+are registered trademarks for Tehran Institute of Technology.
+All rights are reserved for Tehran Institute of Technology (MFT) 
+Vanak delegacy @ 2014
+-----------------------------------------------------------------
+
+ SYLLABUS FOR
+"JAVA ADVANCED"
+
+Course details
+--------------
+
+Course code:      ?
+Course name:      Java Advanced
+Duration:         50 hours
+
+Revisions
+---------
+
+03 Dec 2013:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+05 Mar 2014:  Kamran Amini   <kam.cpp@gmail.com> <k.amini@mftvanak.com>
+
+Syllabus for 5 hours long sessions
+----------------------------------
+
+Session1  (5h): JDK, JRE, Environment variables, Using command line to compile Java
+                source files, .class files, javac compiler, Eclipse environment, Sorting
+                sources accoring to packages, Folder hierarchy behind the packages, .jar
+                files, Using other jar files, Review on application architecture, 
+                Exact definition for J2SE and J2EE frameworks, Review on Object Oriented,
+                Review on inheritance
+
+Session2  (5h): Polymorphism, Abstraction, Overriding a behavior, SenderTask example
+
+Session3  (5h): Interfaces and flows, Downloader example, Dependency Injection, Why
+                interfaces are such important?, Introduction to Context Managers, 
+                Java bean, Spring and IoC, Application analysis using interfaces, 
+                SOA and interfaces
+
+Session4  (5h): Exception handling, Policies regarding different types of exceptions, 
+                Exception class, Working with text files, java.io package, Sequential 
+                and random files, Object serialization, CommandLineEmulator example
+
+Session5  (5h): Collections, Lists, Queues, Stacks, Multithreading, Thread lifecycle, 
+                Runnable interface, Thread synchronization, Wait-Notify, synchronized 
+                keyword, Generic types
+
+Session6  (5h): javax.* package and classes, Swing classes and javax.swing package, JFrame,
+                JLabel, JButton, Container, Event handling, Handling keyboard and mouse 
+                events, Multithreaded Swing applications
+
+Session7  (5h): Reflection concept, Class class, What is an annotation?, Making annotations,
+                XML format, Working with XML parsers, DOM SAX and JDOM frameworks, Making xml 
+                config files, JFileChooser swing control, SimpleContextManager example
+
+Session8  (5h): Introduction to databases, Protocol stack for accessing a database, SQL 
+                standard, Relational databases, JDBC Framework, DriverManager class, 
+                JDBC Driver, JDBC drivers  for MySQL-Access-SQL Server, JTable and JTableModel 
+                from swing package, JTree control
+
+Session9  (5h): What is network programming?, OSI model and Internet Protocol Suite model,
+                Frame, Ethernet, IPv4, ARP, UDP, TCP, Application layer protocols, A network 
+                programmer should know the networking very well, What is Socket Programming?, 
+                java.net package, Why do we need Socket Programming?, Streams and Datagrams,
+                Client-server chatting system example
+
+Session10 (5h): FINAL EXAM
