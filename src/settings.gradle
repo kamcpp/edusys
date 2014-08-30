@@ -4,3 +4,4 @@ include 'org.labcrypto.edusys.common',
         'org.labcrypto.edusys.ws',
         'org.labcrypto.edusys.ws.authentication',
         'org.labcrypto.edusys.ws.education'
+        'org.labcrypto.edusys.ws.gheyas'
