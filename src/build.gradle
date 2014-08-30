@@ -77,6 +77,30 @@ project (':org.labcrypto.edusys.ws.authentication') {
   }
 }
 
+project (':org.labcrypto.edusys.ws.education') {
+  apply plugin: 'war'
+  war {
+    baseName = 'org.labcrypto.edusys.ws.education'
+    from 'webapp'
+  }
+  dependencies {
+    compile project (':org.labcrypto.edusys.facade')
+    compile project (':org.labcrypto.edusys.ws')
+    compile project (':org.labcrypto.edusys.domain.pg')
+    compile "org.springframework.ws:spring-ws-core:2.1.3.RELEASE"
+    compile "javax.xml:jaxb-impl:2.1"
+    compile "javax.servlet:servlet-api:2.5"
+    compile "joda-time:joda-time:2.3"
+    compile "org.slf4j:slf4j-api:1.7.5"
+    compile "org.slf4j:slf4j-log4j12:1.6.1"
+    compile "javassist:javassist:3.12.1.GA"
+    compile "postgresql:postgresql:9.1-901.jdbc4"
+    compile "org.hibernate:hibernate-annotations:3.5.6-Final"
+    compile "org.hibernate:hibernate-validator:4.2.0.Final"
+    compile "javax.validation:validation-api:1.1.0.Final"
+  }
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
