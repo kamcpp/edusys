@@ -55,7 +55,8 @@ project (':org.labcrypto.edusys.facade') {
 }
 
 project (':org.labcrypto.edusys.ws.authentication') {
-  jar {
+  apply plugin: 'war'
+  war {
     baseName = 'org.labcrypto.edusys.ws.authentication'
   }
   dependencies {
