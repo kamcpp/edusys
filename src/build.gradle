@@ -34,6 +34,17 @@ project ('org.labcrypto.edusys.domain.pg') {
   } 
 }
 
+project ('org.labcrypto.edusys.domain.mongo') {
+  jar {
+    baseName = 'org.labcrypto.edusys.domain.mongo'
+  }
+  dependencies {
+    compile project (':org.labcrypto.edusys.common')
+    compile 'org.springframework.data:spring-data-mongodb:1.5.1.RELEASE'
+    compile 'org.mongodb:mongo-java-driver:2.12.2'
+  } 
+}
+
 project (':org.labcrypto.edusys.ws') {
   jar {
     baseName = 'org.labcrypto.edusys.ws'

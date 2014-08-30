@@ -1,7 +1,8 @@
 include 'org.labcrypto.edusys.common', 
         'org.labcrypto.edusys.domain.pg', 
+        'org.labcrypto.edusys.domain.mongo',
         'org.labcrypto.edusys.facade',
         'org.labcrypto.edusys.ws',
         'org.labcrypto.edusys.ws.authentication',
-        'org.labcrypto.edusys.ws.education'
+        'org.labcrypto.edusys.ws.education',
         'org.labcrypto.edusys.ws.gheyas'
