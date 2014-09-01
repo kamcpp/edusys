@@ -239,6 +239,12 @@ public class User {
 		}
 	}
 
+	// TODO
+	public static class Teacher {
+		@Id
+		private ObjectId id;
+	}
+
 	@Id
 	private ObjectId d;
 	private String username;
