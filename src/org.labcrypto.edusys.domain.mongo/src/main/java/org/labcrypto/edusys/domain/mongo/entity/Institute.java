@@ -799,6 +799,9 @@ public class Institute {
 		private Institute institute;
 		private Set<Group> groups;
 
+		public Department() {
+		}
+
 		@PersistenceConstructor
 		public Department(Set<Group> groups) {
 			this.groups = new HashSet<Group>();
@@ -909,6 +912,9 @@ public class Institute {
 	private String email1;
 	private String email2;
 	private Set<Department> departments;
+
+	public Institute() {
+	}
 
 	@PersistenceConstructor
 	public Institute(Set<Department> departments) {

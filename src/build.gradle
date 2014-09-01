@@ -50,9 +50,9 @@ project (':org.labcrypto.edusys.ws') {
     baseName = 'org.labcrypto.edusys.ws'
   }
   dependencies {
-    compile "org.springframework.ws:spring-ws-core:2.1.3.RELEASE"
-    compile "javax.xml:jaxb-impl:2.1"
-    compile "javax.validation:validation-api:1.1.0.Final"
+    compile 'org.springframework.ws:spring-ws-core:2.1.3.RELEASE'
+    compile 'javax.xml:jaxb-impl:2.1'
+    compile 'javax.validation:validation-api:1.1.0.Final'
   }
 }
 
