@@ -7,7 +7,7 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="com.mftvanak.edusys.ws" />
+	<context:component-scan base-package="org.labcrypto.edusys.ws" />
 
 	<bean id="gheyas"
 		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"

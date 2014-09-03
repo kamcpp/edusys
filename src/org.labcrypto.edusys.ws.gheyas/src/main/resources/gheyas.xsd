@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified" targetNamespace="http://gheyas.ws.edusys.mftvanak.com/schemas"
-	xmlns:Q1="http://gheyas.ws.edusys.mftvanak.com/schemas">
+	elementFormDefault="qualified" targetNamespace="http://gheyas.ws.edusys.labcrypto.org/schemas"
+	xmlns:Q1="http://gheyas.ws.edusys.labcrypto.org/schemas">
 
 	<xs:complexType name="GheyasTermType">
 		<xs:sequence>
