@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry exported="true" kind="src" path="/org.labcrypto.edusys.domain.pg"/>
+	<classpathentry exported="true" kind="src" path="/org.labcrypto.edusys.domain.mongo"/>
 	<classpathentry exported="true" kind="src" path="/org.labcrypto.edusys.facade"/>
 	<classpathentry exported="true" kind="src" path="/org.labcrypto.edusys.ws"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>

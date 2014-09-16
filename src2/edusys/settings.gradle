@@ -1,0 +1,6 @@
+rootProject.name = 'edusys'
+
+include 'domain'
+
+include 'pg-to-mongo-convertor'
+

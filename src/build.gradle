@@ -61,7 +61,7 @@ project (':org.labcrypto.edusys.facade') {
     baseName = 'org.labcrypto.edusys.facade'
   }
   dependencies {
-    compile project (':org.labcrypto.edusys.domain.pg')
+    compile project (':org.labcrypto.edusys.domain.mongo')
   }
 }
 
@@ -121,7 +121,7 @@ project (':org.labcrypto.edusys.ws.gheyas') {
   dependencies {
     compile project (':org.labcrypto.edusys.facade')
     compile project (':org.labcrypto.edusys.ws')
-    compile project (':org.labcrypto.edusys.domain.pg')
+    compile project (':org.labcrypto.edusys.domain.mongo')
     compile "org.springframework.ws:spring-ws-core:2.1.3.RELEASE"
     compile "javax.xml:jaxb-impl:2.1"
     compile "javax.servlet:servlet-api:2.5"
