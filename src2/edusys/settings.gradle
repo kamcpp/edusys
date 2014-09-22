@@ -4,3 +4,9 @@ include 'domain'
 
 include 'pg-to-mongo-convertor'
 
+include 'department-report-portal'
+
+include 'facade'
+
+include 'common'
+

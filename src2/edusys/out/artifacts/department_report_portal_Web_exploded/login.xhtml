@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body dir="RTL">
+    <f:view>
+        <div style="margin: auto; width: 900px; height: 300px;">
+            <h:form>
+                <p:outputLabel>#{msg['message.login.username']}</p:outputLabel>
+                <p:inputText value="#{loginBean.username}"/> <br/>
+                <p:outputLabel>#{msg['message.login.password']}</p:outputLabel>
+                <p:inputText value="#{loginBean.username}"/>
+                <p:commandButton action="#{loginProcessorBean.doLogin()}" value="#{msg['message.login.button']}"/>
+            </h:form>
+        </div>
+    </f:view>
+</h:body>
+</html>
