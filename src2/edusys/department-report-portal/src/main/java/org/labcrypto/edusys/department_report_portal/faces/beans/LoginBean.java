@@ -11,10 +11,6 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
-    public LoginBean() {
-        System.out.println("Login Bean has been created.");
-    }
-
     public boolean isRememberMe() {
         return rememberMe;
     }
@@ -45,5 +41,9 @@ public class LoginBean implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String doLogin() {
+        return "login";
     }
 }

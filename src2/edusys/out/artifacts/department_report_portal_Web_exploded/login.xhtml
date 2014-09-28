@@ -9,15 +9,13 @@
 <h:head></h:head>
 <h:body dir="RTL">
     <f:view>
-        <div style="margin: auto; width: 900px; height: 300px;">
-            <h:form>
-                <p:outputLabel>#{msg['message.login.username']}</p:outputLabel>
-                <p:inputText value="#{loginBean.username}"/> <br/>
-                <p:outputLabel>#{msg['message.login.password']}</p:outputLabel>
-                <p:inputText value="#{loginBean.username}"/>
-                <p:commandButton action="#{loginProcessorBean.doLogin()}" value="#{msg['message.login.button']}"/>
-            </h:form>
-        </div>
+        <h:form>
+            <p:outputLabel>#{msg['message.login.username']}</p:outputLabel>
+            <p:inputText value="#{loginBean.username}"/> <br/>
+            <p:outputLabel>#{msg['message.login.password']}</p:outputLabel>
+            <p:inputText value="#{loginBean.username}"/>
+            <p:commandButton action="#{loginProcessorBean.doLogin()}" value="#{msg['message.login.button']}"/>
+        </h:form>
     </f:view>
 </h:body>
 </html>
