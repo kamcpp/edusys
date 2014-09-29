@@ -12,6 +12,8 @@
             <option value="$PROJECT_DIR$/department-report-portal" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/facade" />
+            <option value="$PROJECT_DIR$/facade-api" />
+            <option value="$PROJECT_DIR$/facade-test-app" />
             <option value="$PROJECT_DIR$/pg-to-mongo-convertor" />
           </set>
         </option>

@@ -10,3 +10,7 @@ include 'facade'
 
 include 'common'
 
+include 'facade-api'
+
+include 'facade-test-app'
+

@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/edusys.iml" filepath="$PROJECT_DIR$/edusys.iml" />
       <module fileurl="file://$PROJECT_DIR$/facade/facade.iml" filepath="$PROJECT_DIR$/facade/facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facade-api/facade-api.iml" filepath="$PROJECT_DIR$/facade-api/facade-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facade-test-app/facade-test-app.iml" filepath="$PROJECT_DIR$/facade-test-app/facade-test-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" filepath="$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" />
     </modules>
   </component>

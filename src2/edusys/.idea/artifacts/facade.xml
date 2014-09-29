@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="facade">
+    <output-path>$PROJECT_DIR$/out/artifacts/facade</output-path>
+    <root id="archive" name="facade.jar">
+      <element id="javaee-facet-resources" facet="facade/ejb/EJB" />
+      <element id="module-output" name="facade" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/facade/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

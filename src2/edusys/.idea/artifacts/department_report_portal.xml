@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="department-report-portal">
+    <output-path>$PROJECT_DIR$/out/artifacts/department_report_portal</output-path>
+    <root id="archive" name="department-report-portal.war">
+      <element id="javaee-facet-resources" facet="department-report-portal/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.primefaces/primefaces/5.0/65bdce80509320280b3b5210fcddae9b7d50338/primefaces-5.0.jar" />
+          <element id="artifact" artifact-name="facade-api:jar" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="department-report-portal" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

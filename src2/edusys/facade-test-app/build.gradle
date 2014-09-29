@@ -1,0 +1,4 @@
+dependencies {
+    compile 'org.apache.openejb:openejb-client:4.7.1'
+
+}

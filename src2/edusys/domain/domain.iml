@@ -16,7 +16,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Gradle: spring-data-mongodb-1.5.1.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: mongo-java-driver-2.12.2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: sqljdbc4-3.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: hibernate-annotations-3.5.6-Final" level="project" />
     <orderEntry type="library" exported="" name="Gradle: joda-time-2.3" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-tx-3.2.9.RELEASE" level="project" />
@@ -38,6 +37,7 @@
     <orderEntry type="library" exported="" name="Gradle: spring-context-3.2.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: spring-aop-3.2.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: aopalliance-1.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: sqljdbc4-3.0" level="project" />
   </component>
 </module>
 

@@ -1,15 +1,5 @@
-apply plugin: 'java'
-
-sourceCompatibility = 1.7
-version = '1.0'
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
-
 dependencies {
-    compile 'javax:javaee-api:6.0'
     compile 'log4j:log4j:1.2.16'
+    compile 'javax:javaee-api:6.0'
     compile 'org.primefaces:primefaces:5.0'
 }

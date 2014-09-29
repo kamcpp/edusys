@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="edusys">
+    <output-path>$PROJECT_DIR$/out/artifacts/edusys</output-path>
+    <root id="archive" name="edusys.ear">
+      <element id="archive" name="facade.jar">
+        <element id="module-output" name="facade" />
+        <element id="javaee-facet-resources" facet="facade/ejb/EJB" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Gradle: antlr-2.7.6" />
+        <element id="library" level="project" name="Gradle: aopalliance-1.0" />
+        <element id="library" level="project" name="Gradle: commons-collections-3.1" />
+        <element id="library" level="project" name="Gradle: commons-logging-1.1.3" />
+        <element id="library" level="project" name="Gradle: dom4j-1.6.1" />
+        <element id="library" level="project" name="Gradle: hibernate-annotations-3.5.6-Final" />
+        <element id="library" level="project" name="Gradle: hibernate-commons-annotations-3.2.0.Final" />
+        <element id="library" level="project" name="Gradle: hibernate-core-3.5.6-Final" />
+        <element id="library" level="project" name="Gradle: hibernate-jpa-2.0-api-1.0.0.Final" />
+        <element id="library" level="project" name="Gradle: jcl-over-slf4j-1.7.7" />
+        <element id="library" level="project" name="Gradle: joda-time-2.3" />
+        <element id="library" level="project" name="Gradle: jta-1.1" />
+        <element id="library" level="project" name="Gradle: mongo-java-driver-2.12.2" />
+        <element id="library" level="project" name="Gradle: slf4j-api-1.7.7" />
+        <element id="library" level="project" name="Gradle: spring-aop-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-beans-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-context-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-core-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-data-commons-1.8.1.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-data-mongodb-1.5.1.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-expression-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: spring-tx-3.2.9.RELEASE" />
+        <element id="library" level="project" name="Gradle: sqljdbc4-3.0" />
+        <element id="library" level="project" name="Gradle: xml-apis-1.0.b2" />
+        <element id="artifact" artifact-name="common:jar" />
+        <element id="artifact" artifact-name="domain:jar" />
+        <element id="artifact" artifact-name="facade-api:jar" />
+        <element id="library" level="project" name="Gradle: ejb-api-3.0" />
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="artifact" artifact-name="department-report-portal" />
+    </root>
+  </artifact>
+</component>
