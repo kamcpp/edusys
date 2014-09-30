@@ -14,9 +14,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="facade-api" />
-    <orderEntry type="library" exported="" name="Gradle: openejb-client-4.7.1" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: javaee-api-6.0-6" level="project" />
   </component>
 </module>
 

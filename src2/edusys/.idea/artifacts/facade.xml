@@ -7,6 +7,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/facade/META-INF/MANIFEST.MF" />
       </element>
+      <element id="jpa-descriptors" facet="facade/jpa/JPA" />
     </root>
   </artifact>
 </component>

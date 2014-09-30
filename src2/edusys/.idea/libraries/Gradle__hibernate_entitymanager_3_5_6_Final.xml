@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: hibernate-entitymanager-3.5.6-Final">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.5.6-Final/f0d8ef059798a9fe8f84532e6aed27f9a25934f4/hibernate-entitymanager-3.5.6-Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.5.6-Final/7dcc6a85b33456f480b9713d161d78f86c31d52e/hibernate-entitymanager-3.5.6-Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

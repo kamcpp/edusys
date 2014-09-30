@@ -1,6 +1,13 @@
 package org.labcrypto.edusys.department_report_portal.faces.beans;
 
+import org.labcrypto.edusys.facade.FacadeException;
+import org.labcrypto.edusys.facade.membership.AuthenticationException;
+import org.labcrypto.edusys.facade.membership.AuthenticationToken;
+import org.labcrypto.edusys.facade.membership.MembershipFacade;
+import org.labcrypto.edusys.facade.membership.UsernamePasswordCredential;
+
 import javax.faces.bean.ManagedBean;
+import javax.inject.Inject;
 import java.io.Serializable;
 
 @ManagedBean
@@ -10,6 +17,9 @@ public class LoginBean implements Serializable {
     private String captcha;
     private String username;
     private String password;
+
+    @Inject
+    private MembershipFacade membershipFacade;
 
     public boolean isRememberMe() {
         return rememberMe;
@@ -44,6 +54,13 @@ public class LoginBean implements Serializable {
     }
 
     public String doLogin() {
-        return "login";
+        try {
+            AuthenticationToken authenticationToken = membershipFacade.authenticate(new UsernamePasswordCredential(username, password));
+            System.out.println("----> " + authenticationToken);
+            return "login";
+        } catch (FacadeException e) {
+            e.printStackTrace();
+            return "login";
+        }
     }
 }

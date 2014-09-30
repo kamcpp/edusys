@@ -14,7 +14,7 @@
             <p:inputText value="#{loginBean.username}"/> <br/>
             <p:outputLabel>#{msg['message.login.password']}</p:outputLabel>
             <p:inputText value="#{loginBean.username}"/>
-            <p:commandButton action="#{loginProcessorBean.doLogin()}" value="#{msg['message.login.button']}"/>
+            <p:commandButton action="#{loginBean.doLogin()}" value="#{msg['message.login.button']}"/>
         </h:form>
     </f:view>
 </h:body>

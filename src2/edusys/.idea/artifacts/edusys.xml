@@ -5,6 +5,7 @@
       <element id="archive" name="facade.jar">
         <element id="module-output" name="facade" />
         <element id="javaee-facet-resources" facet="facade/ejb/EJB" />
+        <element id="jpa-descriptors" facet="facade/jpa/JPA" />
       </element>
       <element id="directory" name="lib">
         <element id="library" level="project" name="Gradle: antlr-2.7.6" />
@@ -35,6 +36,12 @@
         <element id="artifact" artifact-name="domain:jar" />
         <element id="artifact" artifact-name="facade-api:jar" />
         <element id="library" level="project" name="Gradle: ejb-api-3.0" />
+        <element id="library" level="project" name="Gradle: cglib-2.2" />
+        <element id="library" level="project" name="Gradle: hibernate-entitymanager-3.5.6-Final" />
+        <element id="library" level="project" name="Gradle: asm-3.1" />
+        <element id="library" level="project" name="Gradle: javassist-3.9.0.GA" />
+        <element id="library" level="project" name="Gradle: slf4j-api-1.5.8" />
+        <element id="library" level="project" name="Gradle: postgresql-9.1-901.jdbc4" />
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
