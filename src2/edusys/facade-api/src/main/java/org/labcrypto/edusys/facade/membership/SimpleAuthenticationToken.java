@@ -3,10 +3,16 @@ package org.labcrypto.edusys.facade.membership;
 import java.util.Random;
 
 public class SimpleAuthenticationToken implements AuthenticationToken {
+
     private String token;
+    private User user;
 
     public SimpleAuthenticationToken() {
         this.token = "" + new Random().nextInt(Integer.MAX_VALUE);
+    }
+
+    public SimpleAuthenticationToken(User user) {
+        this.user = user;
     }
 
     public String getToken() {
@@ -20,5 +26,10 @@ public class SimpleAuthenticationToken implements AuthenticationToken {
     @Override
     public String toString() {
         return "<<" + token + ">>";
+    }
+
+    @Override
+    public User getUser() {
+        return user;
     }
 }

@@ -10,8 +10,10 @@ import org.labcrypto.edusys.facade.membership.UsernamePasswordCredential;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
 import java.io.Serializable;
 
+@Named
 @ManagedBean
 public class LoginBean implements Serializable {
 

@@ -7,6 +7,6 @@ public class AuthenticationTokenFactoryImpl implements AuthenticationTokenFactor
 
     @Override
     public AuthenticationToken create(Credential credential, User user) {
-        return new SimpleAuthenticationToken();
+        return new SimpleAuthenticationToken(user);
     }
 }
