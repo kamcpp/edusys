@@ -1,9 +1,6 @@
 package org.labcrypto.edusys.facade.membership;
 
-import org.labcrypto.edusys.domain.jpa.dao.membership.TokenDao;
-
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 
 @ApplicationScoped
 public class AuthenticationTokenRepositoryImpl implements AuthenticationTokenRepository {

@@ -1,12 +1,12 @@
 package org.labcrypto.edusys.domain.jpa.dao.education;
 
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDao;
+import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
 import org.labcrypto.edusys.domain.jpa.entity.education.Tag;
 
-public class TagDao extends EntityDao<Tag> {
+public class TagDaoImpl extends EntityDaoImpl<Tag> {
 
-  public TagDao () {
+  public TagDaoImpl() {
     super (Tag.class);
   }
 }

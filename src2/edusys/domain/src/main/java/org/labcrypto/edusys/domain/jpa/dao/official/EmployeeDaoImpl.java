@@ -1,6 +1,6 @@
 package org.labcrypto.edusys.domain.jpa.dao.official;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDao;
+import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
 import org.labcrypto.edusys.domain.jpa.entity.official.Employee;
 
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 
-public class EmployeeDao extends EntityDao < Employee > {
+public class EmployeeDaoImpl extends EntityDaoImpl< Employee > {
 
-  public EmployeeDao () {
+  public EmployeeDaoImpl() {
     super (Employee.class);
   }
 

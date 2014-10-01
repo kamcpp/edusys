@@ -1,6 +1,6 @@
 package org.labcrypto.edusys.domain.jpa.dao.messaging;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDao;
+import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
 import org.labcrypto.edusys.domain.jpa.entity.messaging.SendListItem;
 
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 
-public class SendListItemDao extends EntityDao < SendListItem > {
+public class SendListItemDaoImpl extends EntityDaoImpl< SendListItem > {
 
-  public SendListItemDao () {
+  public SendListItemDaoImpl() {
     super (SendListItem.class);
   }
 

@@ -1,6 +1,6 @@
 package org.labcrypto.edusys.domain.jpa.dao.phonebook;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDao;
+import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
 import org.labcrypto.edusys.domain.jpa.entity.phonebook.FollowUp;
 
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 
-public class FollowUpDao extends EntityDao < FollowUp > {
+public class FollowUpDaoImpl extends EntityDaoImpl< FollowUp > {
 
-  public FollowUpDao () {
+  public FollowUpDaoImpl() {
     super (FollowUp.class);
   }
 

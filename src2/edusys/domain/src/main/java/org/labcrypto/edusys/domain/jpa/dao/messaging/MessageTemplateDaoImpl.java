@@ -1,6 +1,6 @@
 package org.labcrypto.edusys.domain.jpa.dao.messaging;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDao;
+import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
 import org.labcrypto.edusys.domain.jpa.entity.messaging.MessageTemplate;
 
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MessageTemplateDao extends EntityDao < MessageTemplate > {
+public class MessageTemplateDaoImpl extends EntityDaoImpl< MessageTemplate > {
 
-  public MessageTemplateDao () {
+  public MessageTemplateDaoImpl() {
     super (MessageTemplate.class);
   }
 
