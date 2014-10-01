@@ -7,6 +7,7 @@
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
+
     <servlet>
         <servlet-name>faces</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -19,4 +20,13 @@
         <param-name>javax.faces.CONFIG_FILES</param-name>
         <param-value>/WEB-INF/faces-config.xml</param-value>
     </context-param>
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>org.labcrypto.edusys.department_report_portal.servlet.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/user/*</url-pattern>
+    </filter-mapping>
 </web-app>

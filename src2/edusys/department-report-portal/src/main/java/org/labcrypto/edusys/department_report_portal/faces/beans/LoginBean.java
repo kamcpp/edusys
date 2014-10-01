@@ -1,5 +1,6 @@
 package org.labcrypto.edusys.department_report_portal.faces.beans;
 
+import org.labcrypto.edusys.department_report_portal.interceptors.Loggable;
 import org.labcrypto.edusys.facade.FacadeException;
 import org.labcrypto.edusys.facade.membership.AuthenticationException;
 import org.labcrypto.edusys.facade.membership.AuthenticationToken;
@@ -7,6 +8,7 @@ import org.labcrypto.edusys.facade.membership.MembershipFacade;
 import org.labcrypto.edusys.facade.membership.UsernamePasswordCredential;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import java.io.Serializable;
 
@@ -53,11 +55,12 @@ public class LoginBean implements Serializable {
         this.password = password;
     }
 
+    @Loggable
     public String doLogin() {
         try {
             AuthenticationToken authenticationToken = membershipFacade.authenticate(new UsernamePasswordCredential(username, password));
-            System.out.println("----> " + authenticationToken);
-            return "login";
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("token", authenticationToken);
+            return "home";
         } catch (FacadeException e) {
             e.printStackTrace();
             return "login";
