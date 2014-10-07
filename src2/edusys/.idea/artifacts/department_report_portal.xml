@@ -7,7 +7,7 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.16/log4j-1.2.16.jar" />
           <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.primefaces/primefaces/5.0/65bdce80509320280b3b5210fcddae9b7d50338/primefaces-5.0.jar" />
-          <element id="artifact" artifact-name="facade-api:jar" />
+          <element id="artifact" artifact-name="edusys-ejb-api:jar" />
         </element>
         <element id="directory" name="classes">
           <element id="module-output" name="department-report-portal" />

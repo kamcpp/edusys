@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="edusys-ejb-api:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/edusys_ejb_api_jar</output-path>
+    <root id="archive" name="facade-api.jar">
+      <element id="module-output" name="edusys-ejb-api" />
+    </root>
+  </artifact>
+</component>

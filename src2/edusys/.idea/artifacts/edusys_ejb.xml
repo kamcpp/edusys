@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="edusys-ejb">
+    <output-path>$PROJECT_DIR$/out/artifacts/edusys_ejb</output-path>
+    <root id="archive" name="edusys-ejb.jar">
+      <element id="javaee-facet-resources" facet="edusys-ejb/ejb/EJB" />
+      <element id="module-output" name="edusys-ejb" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/edusys-ejb/src/main/resources/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="jpa-descriptors" facet="edusys-ejb/jpa/JPA" />
+    </root>
+  </artifact>
+</component>

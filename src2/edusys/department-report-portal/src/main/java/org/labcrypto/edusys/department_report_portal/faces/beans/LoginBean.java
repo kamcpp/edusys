@@ -1,11 +1,10 @@
 package org.labcrypto.edusys.department_report_portal.faces.beans;
 
 import org.labcrypto.edusys.department_report_portal.interceptors.Loggable;
-import org.labcrypto.edusys.facade.FacadeException;
-import org.labcrypto.edusys.facade.membership.AuthenticationException;
-import org.labcrypto.edusys.facade.membership.AuthenticationToken;
-import org.labcrypto.edusys.facade.membership.MembershipFacade;
-import org.labcrypto.edusys.facade.membership.UsernamePasswordCredential;
+import org.labcrypto.edusys.ejb.EdusysEJBException;
+import org.labcrypto.edusys.ejb.membership.AuthenticationToken;
+import org.labcrypto.edusys.ejb.membership.Membership;
+import org.labcrypto.edusys.ejb.membership.UsernamePasswordCredential;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -23,7 +22,7 @@ public class LoginBean implements Serializable {
     private String password;
 
     @Inject
-    private MembershipFacade membershipFacade;
+    private Membership membership;
 
     public boolean isRememberMe() {
         return rememberMe;
@@ -60,10 +59,10 @@ public class LoginBean implements Serializable {
     @Loggable
     public String doLogin() {
         try {
-            AuthenticationToken authenticationToken = membershipFacade.authenticate(new UsernamePasswordCredential(username, password));
+            AuthenticationToken authenticationToken = membership.authenticate(new UsernamePasswordCredential(username, password));
             FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("token", authenticationToken);
             return "home";
-        } catch (FacadeException e) {
+        } catch (EdusysEJBException e) {
             e.printStackTrace();
             return "login";
         }

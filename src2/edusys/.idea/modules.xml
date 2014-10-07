@@ -6,8 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/department-report-portal/department-report-portal.iml" filepath="$PROJECT_DIR$/department-report-portal/department-report-portal.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/edusys.iml" filepath="$PROJECT_DIR$/edusys.iml" />
-      <module fileurl="file://$PROJECT_DIR$/facade/facade.iml" filepath="$PROJECT_DIR$/facade/facade.iml" />
-      <module fileurl="file://$PROJECT_DIR$/facade-api/facade-api.iml" filepath="$PROJECT_DIR$/facade-api/facade-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edusys-ejb/edusys-ejb.iml" filepath="$PROJECT_DIR$/edusys-ejb/edusys-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edusys-ejb-api/edusys-ejb-api.iml" filepath="$PROJECT_DIR$/edusys-ejb-api/edusys-ejb-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" filepath="$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" />
     </modules>
   </component>

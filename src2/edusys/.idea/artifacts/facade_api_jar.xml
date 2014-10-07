@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="facade-api:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/facade_api_jar</output-path>
-    <root id="archive" name="facade-api.jar">
-      <element id="module-output" name="facade-api" />
-      <element id="module-output" name="common" />
-    </root>
-  </artifact>
-</component>
