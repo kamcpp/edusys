@@ -6,8 +6,8 @@ import org.labcrypto.edusys.ejb.interceptors.Auditable;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
-@Stateless
-public class MembershipEJB implements Membership {
+@Stateless(name="membershipEJB")
+public class MembershipEJB implements MembershipLocal, MembershipRemote {
 
     @Inject
     private UserRepository userRepository;

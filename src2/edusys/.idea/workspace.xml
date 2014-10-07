@@ -63,11 +63,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edusys-ejb/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="900">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MembershipLocal.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipLocal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MembershipRemote.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipRemote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MembershipEJB.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipEJB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="666">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="666">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,46 +115,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepositoryImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/UserRepositoryImpl.java">
+      <file leaf-file-name="LoginBean.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/beans/LoginBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="414">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/org/labcrypto/edusys/domain/jpa/dao/membership/impl/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1062">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DaoProducer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/DaoProducer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.28846154" vertical-offset="702" max-vertical-offset="1080">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/edusys-ejb/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46710527" vertical-offset="271" max-vertical-offset="900">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,17 +131,17 @@
         <entry file="file://$PROJECT_DIR$/common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="540">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/department-report-portal/pom.xml">
+      <file leaf-file-name="login.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/department-report-portal/web/login.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="810">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="486">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -144,26 +152,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="1080">
               <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edusys-ejb-api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="630">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EdusysEJBException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/EdusysEJBException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -278,9 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/facade/src/main/java/META-INF/beans.xml" />
-        <option value="$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/LoginFilter.java" />
-        <option value="$PROJECT_DIR$/department-report-portal/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/servlet/LoginFilter.java" />
         <option value="$PROJECT_DIR$/department-report-portal/web/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/interceptors/Loggable.java" />
@@ -295,11 +280,9 @@
         <option value="$PROJECT_DIR$/facade/src/main/java/org/labcrypto/edusys/facade/interceptors/AuditingInterceptor.java" />
         <option value="$PROJECT_DIR$/facade/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/department-report-portal/build.gradle" />
-        <option value="$PROJECT_DIR$/department-report-portal/web/login.xhtml" />
         <option value="$PROJECT_DIR$/department-report-portal/web/user/home.xhtml" />
         <option value="$PROJECT_DIR$/facade-api/src/main/java/org/labcrypto/edusys/facade/membership/Membership.java" />
         <option value="$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipFacadeImpl.java" />
-        <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/Membership.java" />
         <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipRepository.java" />
         <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/UserRepository.java" />
         <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/EdusysEJBException.java" />
@@ -321,14 +304,19 @@
         <option value="$PROJECT_DIR$/common/build.gradle" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipEJB.java" />
-        <option value="$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/beans/LoginBean.java" />
         <option value="$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/DaoProducer.java" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/edusys-ejb-api/pom.xml" />
         <option value="$PROJECT_DIR$/domain/pom.xml" />
-        <option value="$PROJECT_DIR$/department-report-portal/pom.xml" />
         <option value="$PROJECT_DIR$/edusys-ejb/pom.xml" />
+        <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/Membership.java" />
+        <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipLocal.java" />
+        <option value="$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipRemote.java" />
+        <option value="$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipEJB.java" />
+        <option value="$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/beans/LoginBean.java" />
+        <option value="$PROJECT_DIR$/department-report-portal/web/login.xhtml" />
+        <option value="$PROJECT_DIR$/department-report-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/edusys-ejb/src/main/resources/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
@@ -481,6 +469,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="edusys-ejb-api" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys-ejb-api" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ejb" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edusys-ejb-api" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ejb" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="membership" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -659,6 +711,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -813,6 +869,9 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.labcrypto.edusys.ejb.membership" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/edusys-ejb-api" />
       <recent name="$PROJECT_DIR$/edusys-ejb" />
@@ -1165,6 +1224,7 @@
     </configuration>
     <configuration default="false" name="Wildfly Java EE 7.0" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 8.1.0.Final" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
       <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+      <option name="COMMON_VM_ARGUMENTS" value=" -Dnull=8080" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="edusys">
@@ -1427,12 +1487,12 @@
       <workItem from="1412671469099" duration="54000" />
       <workItem from="1412671524551" duration="407000" />
       <workItem from="1412671934395" duration="6608000" />
-      <workItem from="1412708986916" duration="3036000" />
+      <workItem from="1412708986916" duration="6692000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88329000" />
+    <option name="totallyTimeSpent" value="91985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -1456,7 +1516,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33014354" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23640484" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5885168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40350878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1509,13 +1569,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/department-report-portal/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3809524" vertical-offset="255" max-vertical-offset="570">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/servlet/LoginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49668875" vertical-offset="90" max-vertical-offset="510">
@@ -1603,13 +1656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/department-report-portal/web/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="405">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/department-report-portal/web/user/home.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="270">
@@ -1665,13 +1711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/Membership.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="600">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1793,14 +1832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36" vertical-offset="0" max-vertical-offset="600">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/interceptors/AuditingInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63" vertical-offset="0" max-vertical-offset="882">
@@ -1812,26 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15332198" vertical-offset="0" max-vertical-offset="587">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/beans/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.050561797" vertical-offset="270" max-vertical-offset="1080">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipEJB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="666">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1879,6 +1890,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipEJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="666">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/department-report-portal/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8506224" vertical-offset="281" max-vertical-offset="918">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="540">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/department-report-portal/web/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335" vertical-offset="0" max-vertical-offset="486">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipRemote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edusys-ejb-api/src/main/java/org/labcrypto/edusys/ejb/membership/MembershipLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edusys-ejb/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edusys-ejb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="900">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="1080">
@@ -1887,27 +1964,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/department-report-portal/pom.xml">
+    <entry file="file://$PROJECT_DIR$/department-report-portal/src/main/java/org/labcrypto/edusys/department_report_portal/faces/beans/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="810">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="540">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edusys-ejb/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46710527" vertical-offset="271" max-vertical-offset="900">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.28846154" vertical-offset="702" max-vertical-offset="1080">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

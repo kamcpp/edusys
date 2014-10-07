@@ -3,12 +3,12 @@ package org.labcrypto.edusys.department_report_portal.faces.beans;
 import org.labcrypto.edusys.department_report_portal.interceptors.Loggable;
 import org.labcrypto.edusys.ejb.EdusysEJBException;
 import org.labcrypto.edusys.ejb.membership.AuthenticationToken;
-import org.labcrypto.edusys.ejb.membership.Membership;
+import org.labcrypto.edusys.ejb.membership.MembershipLocal;
 import org.labcrypto.edusys.ejb.membership.UsernamePasswordCredential;
 
+import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -21,8 +21,8 @@ public class LoginBean implements Serializable {
     private String username;
     private String password;
 
-    @Inject
-    private Membership membership;
+    @EJB(name="membershipEJB")
+    private MembershipLocal membership;
 
     public boolean isRememberMe() {
         return rememberMe;

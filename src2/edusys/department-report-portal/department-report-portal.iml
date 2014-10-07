@@ -28,6 +28,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: javax:javaee-api:6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.primefaces:primefaces:5.0" level="project" />
     <orderEntry type="module" module-name="common" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
     <orderEntry type="module" module-name="domain" />
@@ -54,7 +55,7 @@
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.3" level="project" />
-    <orderEntry type="module" module-name="edusys-ejb-api" />
+    <orderEntry type="module" module-name="edusys-ejb-api" scope="PROVIDED" />
   </component>
   <component name="com.intellij.jsf.UserDefinedFacesConfigs">
     <option name="USER_DEFINED_CONFIGS">
