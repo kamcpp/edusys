@@ -2,11 +2,7 @@ package org.labcrypto.edusys.domain.gheyas.dao;
 
 import java.util.List;
 
-import org.labcrypto.edusys.domain.beans.gheyas.GheyasClass;
-import org.labcrypto.edusys.domain.gheyas.entity.GheyasClassGroup;
-import org.labcrypto.edusys.domain.gheyas.entity.GheyasDebtor;
-import org.labcrypto.edusys.domain.gheyas.entity.GheyasStudent;
-import org.labcrypto.edusys.domain.gheyas.entity.GheyasTerm;
+import org.labcrypto.edusys.domain.gheyas.entity.*;
 
 public interface GheyasDao {
 

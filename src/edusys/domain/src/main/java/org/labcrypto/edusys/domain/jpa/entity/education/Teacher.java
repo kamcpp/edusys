@@ -1,7 +1,5 @@
 package org.labcrypto.edusys.domain.jpa.entity.education;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
 import org.labcrypto.edusys.domain.jpa.entity.personnel.Person;
 
 import javax.persistence.*;
@@ -12,8 +10,7 @@ import javax.persistence.*;
 public class Teacher {
 
   @Id
-  @GenericGenerator (name = "generator", strategy = "foreign", parameters = @Parameter (name = "property", value = "person"))
-  @GeneratedValue (generator = "generator")
+  @GeneratedValue
   @Column (name = "person_id", unique = true, nullable = false)
   private Long personId;
   @OneToOne (fetch = FetchType.EAGER)
