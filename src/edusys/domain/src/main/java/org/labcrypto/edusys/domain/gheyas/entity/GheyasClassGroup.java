@@ -1,4 +1,4 @@
-package org.labcrypto.edusys.domain.beans.gheyas;
+package org.labcrypto.edusys.domain.gheyas.entity;
 
 public class GheyasClassGroup {
 

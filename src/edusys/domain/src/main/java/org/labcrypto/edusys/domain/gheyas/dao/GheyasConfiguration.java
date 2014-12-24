@@ -1,4 +1,4 @@
-package org.labcrypto.edusys.domain.dao.gheyas;
+package org.labcrypto.edusys.domain.gheyas.dao;
 
 public class GheyasConfiguration {
 

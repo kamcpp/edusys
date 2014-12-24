@@ -1,4 +1,4 @@
-package org.labcrypto.edusys.domain.dao.gheyas.impl;
+package org.labcrypto.edusys.domain.gheyas.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,12 +12,10 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.labcrypto.edusys.domain.beans.gheyas.GheyasClass;
-import org.labcrypto.edusys.domain.beans.gheyas.GheyasClassGroup;
-import org.labcrypto.edusys.domain.beans.gheyas.GheyasDebtor;
-import org.labcrypto.edusys.domain.beans.gheyas.GheyasStudent;
-import org.labcrypto.edusys.domain.beans.gheyas.GheyasTerm;
-import org.labcrypto.edusys.domain.dao.gheyas.GheyasConfiguration;
-import org.labcrypto.edusys.domain.dao.gheyas.GheyasDao;
+import org.labcrypto.edusys.domain.gheyas.entity.GheyasClassGroup;
+import org.labcrypto.edusys.domain.gheyas.entity.GheyasDebtor;
+import org.labcrypto.edusys.domain.gheyas.entity.GheyasStudent;
+import org.labcrypto.edusys.domain.gheyas.entity.GheyasTerm;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public class GheyasDaoImpl implements GheyasDao {
@@ -35,7 +33,7 @@ public class GheyasDaoImpl implements GheyasDao {
 							.getConnectionUrl());
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec GetTerms");
-			List<GheyasTerm> toReturn = new ArrayList<GheyasTerm>();
+			List<GheyasTerm> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasTerm gheyasTerm = new GheyasTerm();
 				gheyasTerm.setInstituteId(instituteId);
@@ -45,14 +43,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasClassGroup> getGroups(int instituteId) {
@@ -63,7 +58,7 @@ public class GheyasDaoImpl implements GheyasDao {
 							.getConnectionUrl());
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec GetGroups");
-			List<GheyasClassGroup> toReturn = new ArrayList<GheyasClassGroup>();
+			List<GheyasClassGroup> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasClassGroup gheyasClassGroup = new GheyasClassGroup();
 				gheyasClassGroup.setInstituteId(instituteId);
@@ -74,14 +69,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasClass> getClasses(int instituteId, String groupCodes,
@@ -97,7 +89,7 @@ public class GheyasDaoImpl implements GheyasDao {
 					+ groupCodes + "', '" + termCodes + "', "
 					+ classNamePattern + ", " + (showAll ? 1 : 0) + ", '"
 					+ className + "', " + classCode);
-			List<GheyasClass> toReturn = new ArrayList<GheyasClass>();
+			List<GheyasClass> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasClass gheyasClass = new GheyasClass();
 				gheyasClass.setInstituteId(instituteId);
@@ -120,14 +112,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasStudent> getStudents(int instituteId, String classCode) {
@@ -139,7 +128,7 @@ public class GheyasDaoImpl implements GheyasDao {
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec GetStudents "
 					+ classCode);
-			List<GheyasStudent> toReturn = new ArrayList<GheyasStudent>();
+			List<GheyasStudent> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasStudent gheyasStudent = new GheyasStudent();
 				gheyasStudent.setInstituteId(instituteId);
@@ -166,14 +155,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasStudent> searchStudents(int instituteId, String name,
@@ -186,7 +172,7 @@ public class GheyasDaoImpl implements GheyasDao {
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec SearchStudents N'%"
 					+ name + "%', N'%" + family + "%'");
-			List<GheyasStudent> toReturn = new ArrayList<GheyasStudent>();
+			List<GheyasStudent> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasStudent gheyasStudent = new GheyasStudent();
 				gheyasStudent.setInstituteId(instituteId);
@@ -213,14 +199,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasDebtor> getDebtors(int instituteId) {
@@ -231,7 +214,7 @@ public class GheyasDaoImpl implements GheyasDao {
 							.getConnectionUrl());
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec GetDebtors");
-			List<GheyasDebtor> toReturn = new ArrayList<GheyasDebtor>();
+			List<GheyasDebtor> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasDebtor gheyasDebtor = new GheyasDebtor();
 				gheyasDebtor.setInstituteId(instituteId);
@@ -250,14 +233,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public void updateStudentDaneshgahField(int instituteId,
@@ -271,14 +251,11 @@ public class GheyasDaoImpl implements GheyasDao {
 			statement.execute("exec UpdateStudentDaneshgahValue " + karamuzCode
 					+ ", N'" + daneshgahFieldNewValue + "'");
 			connection.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 
 	@Override
 	public List<GheyasClass> getCommonClasses(String groupCodes,
@@ -299,7 +276,7 @@ public class GheyasDaoImpl implements GheyasDao {
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("exec GetCommonClasses '"
 					+ groupCodes + "', '" + termCodes + "'");
-			List<GheyasClass> toReturn = new ArrayList<GheyasClass>();
+			List<GheyasClass> toReturn = new ArrayList<>();
 			while (rs.next()) {
 				GheyasClass gheyasClass = new GheyasClass();
 				gheyasClass.setInstituteId(1);
@@ -322,12 +299,9 @@ public class GheyasDaoImpl implements GheyasDao {
 			}
 			connection.close();
 			return toReturn;
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e);
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-	}
+    }
 }
