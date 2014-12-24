@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 
 
-public abstract class EntityDaoImpl<T> implements EntityDao<T> {
+public abstract class HibernateEntityDao<T> implements EntityDao<T> {
 
     private Class<T> type;
 
-    public EntityDaoImpl(Class<T> type) {
+    public HibernateEntityDao(Class<T> type) {
         this.type = type;
     }
 
@@ -25,7 +25,9 @@ public abstract class EntityDaoImpl<T> implements EntityDao<T> {
             session.saveOrUpdate(entity);
             transaction.commit();
         } catch (HibernateException e) {
-            transaction.rollback();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
             throw e;
         } finally {
@@ -43,7 +45,9 @@ public abstract class EntityDaoImpl<T> implements EntityDao<T> {
             session.delete(entity);
             transaction.commit();
         } catch (HibernateException e) {
-            transaction.rollback();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
             throw e;
         } finally {
@@ -61,7 +65,9 @@ public abstract class EntityDaoImpl<T> implements EntityDao<T> {
             transaction.commit();
             return entity;
         } catch (HibernateException e) {
-            transaction.rollback();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
             throw e;
         } finally {
@@ -75,8 +81,7 @@ public abstract class EntityDaoImpl<T> implements EntityDao<T> {
         if (tokens.length > 1) {
             className = tokens[1];
         }
-        List<T> entities = executeQueryAsList("from " + className, null, 0);
-        return entities;
+        return executeQueryAsList("from " + className, null, 0);
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
@@ -98,7 +103,9 @@ public abstract class EntityDaoImpl<T> implements EntityDao<T> {
             transaction.commit();
             return result;
         } catch (HibernateException e) {
-            transaction.rollback();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
             throw e;
         } finally {

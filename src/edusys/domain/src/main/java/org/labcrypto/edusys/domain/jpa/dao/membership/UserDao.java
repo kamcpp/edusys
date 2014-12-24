@@ -6,6 +6,7 @@ import org.labcrypto.edusys.domain.jpa.entity.membership.User;
 import java.util.List;
 
 public interface UserDao extends EntityDao<User> {
+
     User getUserByUsername(String username);
 
     User getUserByEmail(String accountEmail);

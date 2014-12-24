@@ -1,4 +1,4 @@
-package org.labcrypto.edusys.domain.jpa.dao.gheyas.impl;
+package org.labcrypto.edusys.domain.jpa.dao.gheyas;
 
 import org.labcrypto.edusys.domain.jpa.dao.gheyas.GheyasConfiguration;
 import org.labcrypto.edusys.domain.jpa.dao.gheyas.GheyasDao;

@@ -1,23 +1,22 @@
 package org.labcrypto.edusys.domain.jpa.dao.messaging;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
+import org.labcrypto.edusys.domain.jpa.dao.JpaEntityDao;
 import org.labcrypto.edusys.domain.jpa.entity.messaging.SendRequest;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+public class SendRequestDaoImpl extends JpaEntityDao<SendRequest> implements SendRequestDao {
 
-public class SendRequestDaoImpl extends EntityDaoImpl< SendRequest > {
+    public SendRequestDaoImpl() {
+        super(SendRequest.class);
+    }
 
-  public SendRequestDaoImpl() {
-    super (SendRequest.class);
-  }
-
-  public List < SendRequest > getSendRequestsByOwnerId (long ownerId, int count) {
-    String query = "from SendRequest sr mt where sr.owner.id = :ownerId order by sr.submitDateTime desc";
-    Map < String, Object > params = new HashMap < String, Object > ();
-    params.put ("ownerId", ownerId);
-    return executeQueryAsList (query, params, count);
-  }
+    @Override
+    public List<SendRequest> getSendRequestsByOwnerId(long ownerId, int count) {
+        return entityManager.createQuery(
+                "from SendRequest sr where sr.owner.id = :ownerId order by sr.submitDateTime desc", SendRequest.class)
+                .setParameter("ownerId", ownerId)
+                .setMaxResults(count)
+                .getResultList();
+    }
 }

@@ -1,23 +1,22 @@
 package org.labcrypto.edusys.domain.jpa.dao.messaging;
 
-import org.labcrypto.edusys.domain.jpa.dao.EntityDaoImpl;
+import org.labcrypto.edusys.domain.jpa.dao.JpaEntityDao;
 import org.labcrypto.edusys.domain.jpa.entity.messaging.MessageTemplate;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+public class MessageTemplateDaoImpl extends JpaEntityDao<MessageTemplate> implements MessageTemplateDao {
 
-public class MessageTemplateDaoImpl extends EntityDaoImpl< MessageTemplate > {
+    public MessageTemplateDaoImpl() {
+        super(MessageTemplate.class);
+    }
 
-  public MessageTemplateDaoImpl() {
-    super (MessageTemplate.class);
-  }
-
-  public List < MessageTemplate > getMessageTemplatesByOwnerId (long ownerId, int count) {
-    String query = "from MessageTemplate as mt where mt.owner.id = :ownerId order by mt.submitDateTime desc";
-    Map < String, Object > params = new HashMap < String, Object > ();
-    params.put ("ownerId", ownerId);
-    return executeQueryAsList (query, params, count);
-  }
+    @Override
+    public List<MessageTemplate> getMessageTemplatesByOwnerId(long ownerId, int count) {
+        return entityManager.createQuery(
+                "from MessageTemplate as mt where mt.owner.id = :ownerId order by mt.submitDateTime desc", MessageTemplate.class)
+                .setParameter("ownerId", ownerId)
+                .setMaxResults(count)
+                .getResultList();
+    }
 }
