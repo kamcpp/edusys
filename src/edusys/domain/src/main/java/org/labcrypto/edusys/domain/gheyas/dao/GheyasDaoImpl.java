@@ -1,31 +1,26 @@
 package org.labcrypto.edusys.domain.gheyas.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.sql.DataSource;
 
 import org.labcrypto.edusys.domain.gheyas.entity.*;
 
 public class GheyasDaoImpl implements GheyasDao {
 
-    @Resource
-    // @Qualifier("gheyasConfigurations")
-    private Map<Integer, GheyasConfiguration> gheyasConfigurations;
+    @Resource(lookup = "java:/jboss/datasources/VanakGheyasDS")
+    private DataSource vanakGheyasDS;
 
     @Override
     public List<GheyasTerm> getTerms(int instituteId) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetTerms");
             List<GheyasTerm> toReturn = new ArrayList<>();
@@ -38,7 +33,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -47,10 +42,7 @@ public class GheyasDaoImpl implements GheyasDao {
     @Override
     public List<GheyasClassGroup> getGroups(int instituteId) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetGroups");
             List<GheyasClassGroup> toReturn = new ArrayList<>();
@@ -64,7 +56,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -75,10 +67,7 @@ public class GheyasDaoImpl implements GheyasDao {
                                         String termCodes, String classNamePattern, boolean showAll,
                                         String className, long classCode) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetClasses '"
                     + groupCodes + "', '" + termCodes + "', "
@@ -107,7 +96,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -116,10 +105,7 @@ public class GheyasDaoImpl implements GheyasDao {
     @Override
     public List<GheyasStudent> getStudents(int instituteId, String classCode) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetStudents "
                     + classCode);
@@ -150,7 +136,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -160,10 +146,7 @@ public class GheyasDaoImpl implements GheyasDao {
     public List<GheyasStudent> searchStudents(int instituteId, String name,
                                               String family) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec SearchStudents N'%"
                     + name + "%', N'%" + family + "%'");
@@ -194,7 +177,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -203,10 +186,7 @@ public class GheyasDaoImpl implements GheyasDao {
     @Override
     public List<GheyasDebtor> getDebtors(int instituteId) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetDebtors");
             List<GheyasDebtor> toReturn = new ArrayList<>();
@@ -228,7 +208,7 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -238,15 +218,12 @@ public class GheyasDaoImpl implements GheyasDao {
     public void updateStudentDaneshgahField(int instituteId,
                                             String karamuzCode, String daneshgahFieldNewValue) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(instituteId)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             statement.execute("exec UpdateStudentDaneshgahValue " + karamuzCode
                     + ", N'" + daneshgahFieldNewValue + "'");
             connection.close();
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -264,10 +241,7 @@ public class GheyasDaoImpl implements GheyasDao {
     public List<GheyasClass> getCommonClasses(int instituteId,
                                               String groupCodes, String termCodes) {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            Connection connection = DriverManager
-                    .getConnection(gheyasConfigurations.get(1)
-                            .getConnectionUrl());
+            Connection connection = getConnection(instituteId);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("exec GetCommonClasses '"
                     + groupCodes + "', '" + termCodes + "'");
@@ -294,9 +268,16 @@ public class GheyasDaoImpl implements GheyasDao {
             }
             connection.close();
             return toReturn;
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
+    }
+
+    private Connection getConnection(int instituteId) throws SQLException {
+        if (instituteId == 1) {
+            return vanakGheyasDS.getConnection();
+        }
+        throw new SQLException("Institute id is invalid.");
     }
 }

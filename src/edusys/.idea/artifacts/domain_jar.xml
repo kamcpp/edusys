@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/domain_jar</output-path>
     <root id="archive" name="domain.jar">
       <element id="module-output" name="domain" />
+      <element id="jpa-descriptors" facet="domain/jpa/JPA" />
     </root>
   </artifact>
 </component>

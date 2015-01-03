@@ -14,5 +14,6 @@
         <module>edusys-ejb</module>
         <module>edusys-ejb-api</module>
         <module>department-report-portal</module>
+        <module>mftvanak-services-api</module>
     </modules>
 </project>

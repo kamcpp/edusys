@@ -1,13 +1,15 @@
 package org.labcrypto.edusys.ejb.membership;
 
 public class UsernamePasswordCredential implements Credential {
-
     private String username;
-    private String password;
+    private String passwordHash;
 
-    public UsernamePasswordCredential(String username, String password) {
+    public UsernamePasswordCredential() {
+    }
+
+    public UsernamePasswordCredential(String username, String passwordHash) {
         this.username = username;
-        this.password = password;
+        this.passwordHash = passwordHash;
     }
 
     public String getUsername() {
@@ -18,11 +20,11 @@ public class UsernamePasswordCredential implements Credential {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 }

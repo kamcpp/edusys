@@ -11,7 +11,7 @@ import java.util.List;
 
 public class JpaEntityDao<T> implements EntityDao<T> {
 
-    @PersistenceContext(unitName = "edusys")
+    // @PersistenceContext(unitName = "edusys")
     protected EntityManager entityManager;
 
     private Class<T> type;

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/edusys.iml" filepath="$PROJECT_DIR$/edusys.iml" />
       <module fileurl="file://$PROJECT_DIR$/edusys-ejb/edusys-ejb.iml" filepath="$PROJECT_DIR$/edusys-ejb/edusys-ejb.iml" />
       <module fileurl="file://$PROJECT_DIR$/edusys-ejb-api/edusys-ejb-api.iml" filepath="$PROJECT_DIR$/edusys-ejb-api/edusys-ejb-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mftvanak-services/mftvanak-services.iml" filepath="$PROJECT_DIR$/mftvanak-services/mftvanak-services.iml" />
       <module fileurl="file://$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" filepath="$PROJECT_DIR$/pg-to-mongo-convertor/pg-to-mongo-convertor.iml" />
     </modules>
   </component>

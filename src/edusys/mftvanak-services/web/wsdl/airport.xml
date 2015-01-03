@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="DefaultAirportFinderService" targetNamespace="http://tempuri.org/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://tempuri.org/"
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://tempuri.org/Imports">
+            <xsd:import schemaLocation="xsd0.xml" namespace="http://tempuri.org/"/>
+            <xsd:import schemaLocation="xsd1.xml"
+                        namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+            <xsd:import schemaLocation="xsd2.xml"
+                        namespace="http://schemas.datacontract.org/2004/07/ServicesAPI"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="IAirportFinderService_FindAirportsNearThePoint_InputMessage">
+        <wsdl:part name="parameters" element="tns:FindAirportsNearThePoint"/>
+    </wsdl:message>
+    <wsdl:message name="IAirportFinderService_FindAirportsNearThePoint_OutputMessage">
+        <wsdl:part name="parameters" element="tns:FindAirportsNearThePointResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="IAirportFinderService">
+        <wsdl:operation name="FindAirportsNearThePoint">
+            <wsdl:input wsam:Action="http://tempuri.org/IAirportFinderService/FindAirportsNearThePoint"
+                        message="tns:IAirportFinderService_FindAirportsNearThePoint_InputMessage"/>
+            <wsdl:output wsam:Action="http://tempuri.org/IAirportFinderService/FindAirportsNearThePointResponse"
+                         message="tns:IAirportFinderService_FindAirportsNearThePoint_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_IAirportFinderService" type="tns:IAirportFinderService">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="FindAirportsNearThePoint">
+            <soap:operation soapAction="http://tempuri.org/IAirportFinderService/FindAirportsNearThePoint"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="DefaultAirportFinderService">
+        <wsdl:port name="BasicHttpBinding_IAirportFinderService" binding="tns:BasicHttpBinding_IAirportFinderService">
+            <soap:address location="http://10.10.2.37:8090/airports"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

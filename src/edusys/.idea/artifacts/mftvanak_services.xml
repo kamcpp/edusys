@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mftvanak-services">
+    <output-path>$PROJECT_DIR$/out/artifacts/mftvanak_services</output-path>
+    <root id="archive" name="mftvanak-services.war">
+      <element id="javaee-facet-resources" facet="mftvanak-services/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.3" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:sqljdbc4:3.0" />
+          <element id="artifact" artifact-name="domain:jar" />
+          <element id="artifact" artifact-name="common:jar" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="mftvanak-services" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
